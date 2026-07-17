@@ -1,0 +1,179 @@
+{
+  "info": {
+    "name": "Kaleyra CPaaS API",
+    "description": "Kaleyra (a Tata Communications company) omnichannel CPaaS REST API - SMS, WhatsApp, RCS, Voice, Verify (OTP), and Kaleyra Video. Authenticate with the `api-key` header and set {{sid}} to your account SID. Choose {{baseUrl}} for your region: https://api.kaleyra.io (default), https://api.in.kaleyra.io (India), https://api.ap.kaleyra.io (APAC), or https://api.eu.kaleyra.io (EU). Modeled from developers.kaleyra.io.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      { "key": "key", "value": "api-key", "type": "string" },
+      { "key": "value", "value": "{{apiKey}}", "type": "string" },
+      { "key": "in", "value": "header", "type": "string" }
+    ]
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "https://api.kaleyra.io", "type": "string" },
+    { "key": "sid", "value": "", "type": "string" },
+    { "key": "apiKey", "value": "", "type": "string" }
+  ],
+  "item": [
+    {
+      "name": "Messages",
+      "item": [
+        {
+          "name": "Send SMS / WhatsApp / RCS message",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "api-key", "value": "{{apiKey}}" },
+              { "key": "Content-Type", "value": "application/x-www-form-urlencoded" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v2/{{sid}}/messages",
+              "host": ["{{baseUrl}}"],
+              "path": ["v2", "{{sid}}", "messages"]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                { "key": "to", "value": "919XXXXXXXXX" },
+                { "key": "sender", "value": "MYSNDR" },
+                { "key": "type", "value": "TXN" },
+                { "key": "body", "value": "Hello from Kaleyra" },
+                { "key": "channel", "value": "sms" }
+              ]
+            },
+            "description": "Send an outbound message. Set channel to sms, whatsapp, or rcs. type = MKT | TXN | OTP for SMS."
+          },
+          "response": []
+        },
+        {
+          "name": "Get message logs / status",
+          "request": {
+            "method": "GET",
+            "header": [ { "key": "api-key", "value": "{{apiKey}}" } ],
+            "url": {
+              "raw": "{{baseUrl}}/v2/{{sid}}/messages?type=TXN",
+              "host": ["{{baseUrl}}"],
+              "path": ["v2", "{{sid}}", "messages"],
+              "query": [ { "key": "type", "value": "TXN" } ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get single message status",
+          "request": {
+            "method": "GET",
+            "header": [ { "key": "api-key", "value": "{{apiKey}}" } ],
+            "url": {
+              "raw": "{{baseUrl}}/v2/{{sid}}/messages/{{messageId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["v2", "{{sid}}", "messages", "{{messageId}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Verify",
+      "item": [
+        {
+          "name": "Generate OTP",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "api-key", "value": "{{apiKey}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v1/{{sid}}/verify",
+              "host": ["{{baseUrl}}"],
+              "path": ["v1", "{{sid}}", "verify"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"to\": \"919XXXXXXXXX\",\n  \"flow_id\": \"YOUR_FLOW_ID\"\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Validate OTP",
+          "request": {
+            "method": "GET",
+            "header": [ { "key": "api-key", "value": "{{apiKey}}" } ],
+            "url": {
+              "raw": "{{baseUrl}}/v1/{{sid}}/verify/validate?verify_id={{verifyId}}&otp=123456",
+              "host": ["{{baseUrl}}"],
+              "path": ["v1", "{{sid}}", "verify", "validate"],
+              "query": [
+                { "key": "verify_id", "value": "{{verifyId}}" },
+                { "key": "otp", "value": "123456" }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Voice",
+      "item": [
+        {
+          "name": "Click-to-call (bridge two numbers)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "api-key", "value": "{{apiKey}}" },
+              { "key": "Content-Type", "value": "application/x-www-form-urlencoded" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v1/{{sid}}/voice/click-to-call",
+              "host": ["{{baseUrl}}"],
+              "path": ["v1", "{{sid}}", "voice", "click-to-call"]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                { "key": "from", "value": "919XXXXXXXXX" },
+                { "key": "to", "value": "918XXXXXXXXX" },
+                { "key": "caller_id", "value": "911XXXXXXXX" }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Video",
+      "item": [
+        {
+          "name": "Create video room",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "api-key", "value": "{{apiKey}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v2/rooms",
+              "host": ["{{baseUrl}}"],
+              "path": ["v2", "rooms"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"participants\": [\"user_a\", \"user_b\"],\n  \"recording\": \"none\"\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

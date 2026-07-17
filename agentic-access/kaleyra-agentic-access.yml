@@ -1,0 +1,121 @@
+generated: '2026-07-17'
+method: generated
+source: openapi/kaleyra-openapi.yml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the modeled OpenAPI. A governance starting point for exposing this API to AI agents - review and bind
+  audience per deployment. Kaleyra sends real-world messages, calls, and OTPs, so acting operations
+  carry outbound-communication risk (spend + recipient contact) and default to human-in-the-loop on
+  abnormal/high-value triggers. See research/curity/agentic-governance/.
+summary:
+  operations: 7
+  by_action_class:
+    acting: 5
+    connected: 2
+  by_consequence:
+    write: 5
+    read: 2
+  human_in_the_loop_required: 0
+operations:
+- path: /v2/{sid}/messages
+  method: post
+  operationId: sendMessage
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+      - outbound-communication
+    audit: required
+- path: /v2/{sid}/messages
+  method: get
+  operationId: listMessages
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/{sid}/messages/{message_id}
+  method: get
+  operationId: getMessageStatus
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/{sid}/verify
+  method: post
+  operationId: generateOtp
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+      - outbound-communication
+    audit: required
+- path: /v1/{sid}/verify/validate
+  method: get
+  operationId: validateOtp
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /v1/{sid}/voice/click-to-call
+  method: post
+  operationId: clickToCall
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+      - outbound-communication
+    audit: required
+- path: /v2/rooms
+  method: post
+  operationId: createVideoRoom
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required

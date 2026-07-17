@@ -1,0 +1,187 @@
+aid: kaleyra
+url: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/apis.yml
+name: Kaleyra
+kind: company
+description: Kaleyra is a global omnichannel CPaaS provider (a Tata Communications
+  company since October 2023) offering SMS, WhatsApp, RCS, Voice, Email, Verify (OTP),
+  and Video communication APIs. Its REST APIs authenticate with an api-key header,
+  address accounts by SID in the path, and are served from region-specific hosts for
+  India, APAC, and EU data residency.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- CPaaS
+- Messaging
+- SMS
+- WhatsApp
+- Voice
+- OTP
+- India
+created: '2026-07-17'
+modified: '2026-07-17'
+specificationVersion: '0.19'
+apis:
+- aid: kaleyra:kaleyra-sms-api
+  name: Kaleyra SMS API
+  tags:
+  - SMS
+  - Messaging
+  - OTP
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developers.kaleyra.io/docs/sms-api
+  baseURL: https://api.kaleyra.io
+  properties:
+  - url: https://developers.kaleyra.io/docs/sms-api
+    type: Documentation
+  - url: https://developers.kaleyra.io/reference/single-sms-api
+    type: APIReference
+  - url: openapi/kaleyra-openapi.yml
+    type: OpenAPI
+  description: Send single and bulk SMS (MKT/TXN/OTP) via POST /v2/{sid}/messages,
+    manage sender IDs and templates, and pull delivery status and logs. India DLT
+    entity/template fields are supported.
+- aid: kaleyra:kaleyra-whatsapp-api
+  name: Kaleyra WhatsApp API
+  tags:
+  - WhatsApp
+  - Messaging
+  - Templates
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developers.kaleyra.io/docs/whatsapp-api-v2-overview
+  baseURL: https://api.kaleyra.io
+  properties:
+  - url: https://developers.kaleyra.io/docs/whatsapp-api-v2-overview
+    type: Documentation
+  - url: https://developers.kaleyra.io/reference/whatsapp-messages-api-v2-overview
+    type: APIReference
+  - url: openapi/kaleyra-openapi.yml
+    type: OpenAPI
+  description: Send WhatsApp Business messages (text, media, interactive, template)
+    over the WhatsApp API V2, with number registration, template management, group
+    management, and WhatsApp Payment support.
+- aid: kaleyra:kaleyra-rcs-api
+  name: Kaleyra RCS API
+  tags:
+  - RCS
+  - Messaging
+  - Rich Messaging
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developers.kaleyra.io/docs/rcs-overview
+  baseURL: https://api.kaleyra.io
+  properties:
+  - url: https://developers.kaleyra.io/docs/rcs-overview
+    type: Documentation
+  - url: openapi/kaleyra-openapi.yml
+    type: OpenAPI
+  description: Send Rich Communication Services (RCS) messages, manage brands and
+    agents, handle templates, and perform device capability lookups.
+- aid: kaleyra:kaleyra-voice-api
+  name: Kaleyra Voice API
+  tags:
+  - Voice
+  - Click to Call
+  - IVR
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developers.kaleyra.io/docs/voice-api
+  baseURL: https://api.kaleyra.io
+  properties:
+  - url: https://developers.kaleyra.io/docs/voice-api
+    type: Documentation
+  - url: https://developers.kaleyra.io/docs/click-to-call-api
+    type: APIReference
+  - url: openapi/kaleyra-openapi.yml
+    type: OpenAPI
+  description: Click-to-call bridging via POST /v1/{sid}/voice/click-to-call, outbound
+    calling campaigns, call log pull, and call recording extraction.
+- aid: kaleyra:kaleyra-verify-api
+  name: Kaleyra Verify (OTP) API
+  tags:
+  - OTP
+  - Verify
+  - Two Factor
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developers.kaleyra.io/docs/generating-otp
+  baseURL: https://api.kaleyra.io
+  properties:
+  - url: https://developers.kaleyra.io/docs/generating-otp
+    type: Documentation
+  - url: openapi/kaleyra-openapi.yml
+    type: OpenAPI
+  description: Generate and validate one-time passwords via POST /v1/{sid}/verify,
+    with configurable multichannel verification flows (SMS, WhatsApp, Voice) and
+    Verify templates.
+- aid: kaleyra:kaleyra-email-api
+  name: Kaleyra Email API
+  tags:
+  - Email
+  - Transactional Email
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developers.kaleyra.io/reference/email-api-v2-overview
+  baseURL: https://api.kaleyra.io
+  properties:
+  - url: https://developers.kaleyra.io/reference/email-api-v2-overview
+    type: Documentation
+  - url: https://developers.kaleyra.io/reference/email-api-v2-send-a-single-email
+    type: APIReference
+  description: Send single and batch transactional email (Email API v2) with domain
+    management, templates, webhooks, and delivery statistics.
+- aid: kaleyra:kaleyra-video-api
+  name: Kaleyra Video API
+  tags:
+  - Video
+  - WebRTC
+  - Conferencing
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api
+  baseURL: https://api.kaleyra.io
+  properties:
+  - url: https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api
+    type: Documentation
+  - url: https://developers.kaleyra.io/reference/video-v2-roomcall-postl
+    type: APIReference
+  - url: openapi/kaleyra-openapi.yml
+    type: OpenAPI
+  description: Create and orchestrate WebRTC video rooms via the Kaleyra Video REST
+    API (POST /v2/rooms), plus recording, transcription, e-signature, and Web/Android/iOS
+    SDK integration.
+- aid: kaleyra:kaleyra-platform-api
+  name: Kaleyra Platform API
+  tags:
+  - Platform
+  - Subaccounts
+  - Billing
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developers.kaleyra.io/reference/api-reference-overview
+  baseURL: https://api.kaleyra.io
+  properties:
+  - url: https://developers.kaleyra.io/reference/api-reference-overview
+    type: Documentation
+  description: Account-level platform operations - subaccount management, billing,
+    numbers provisioning, callback profiles, consent, and blocklist management.
+common:
+- type: AgenticAccess
+  url: agentic-access/kaleyra-agentic-access.yml
+- type: TrustCenter
+  url: security/kaleyra-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/kaleyra-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/kaleyra-domain-security.yml
+- type: Authentication
+  url: authentication/kaleyra-authentication.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/kaleyra
+- type: Website
+  url: https://www.kaleyra.com/
+- type: Documentation
+  url: https://developers.kaleyra.io/
+- type: Plans
+  url: plans/kaleyra-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/kaleyra-rate-limits.yml
+- type: FinOps
+  url: finops/kaleyra-finops.yml
+- url: https://www.kaleyra.com/blog/
+  type: Blog
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

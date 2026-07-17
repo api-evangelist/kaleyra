@@ -1,0 +1,144 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Kaleyra
+providerId: kaleyra
+created: '2026-07-17'
+modified: '2026-07-17'
+reconciled: false
+tags:
+- CPaaS
+- Messaging
+- SMS
+- WhatsApp
+- Voice
+- OTP
+- Plans
+description: >-
+  Kaleyra (a Tata Communications company) uses usage-based, quote-driven CPaaS
+  pricing rather than a public self-serve rate card. Messaging (SMS, WhatsApp,
+  RCS), Voice, Verify (OTP), Email, and Video are billed per unit (per message /
+  segment, per WhatsApp conversation or template category, per minute, per
+  verification, per email, per participant-minute), and rates vary by
+  destination country, operator, and volume. India traffic is subject to TRAI
+  DLT registration (entity ID, sender/header, and template approval).
+  Pricing is obtained via sales / account onboarding.
+notes: >-
+  No public per-country rate card was confirmed on the developer hub or
+  corporate site in this pass; values below are structural (units and billing
+  model), not specific prices. Capture negotiated per-country rates and any
+  Tata Communications catalog alignment on reconciliation.
+sources:
+- https://www.kaleyra.com/
+- https://developers.kaleyra.io/
+- https://developers.kaleyra.io/docs/sms-api
+plans:
+- id: kaleyra-usage
+  name: Usage-Based (Quote)
+  type: usage
+  description: >-
+    Per-unit CPaaS usage across channels, priced by destination and volume.
+    Contact Kaleyra / Tata Communications sales for a rate card.
+  entries:
+  - label: SMS (per message segment)
+    name: sms
+    type: usage
+    metric: messages
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: per-segment, varies by destination country / operator (quote)
+    userMultiplied: false
+  - label: WhatsApp (per conversation / template)
+    name: whatsapp
+    type: usage
+    metric: conversations
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: per Meta conversation category + Kaleyra fee (quote)
+    userMultiplied: false
+  - label: RCS (per message)
+    name: rcs
+    type: usage
+    metric: messages
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: per-message, varies by destination (quote)
+    userMultiplied: false
+  - label: Voice (per minute)
+    name: voice
+    type: usage
+    metric: minutes
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: per-minute, varies by destination (quote)
+    userMultiplied: false
+  - label: Verify / OTP (per verification)
+    name: verify
+    type: usage
+    metric: verifications
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: per successful verification + channel delivery (quote)
+    userMultiplied: false
+  - label: Email (per email)
+    name: email
+    type: usage
+    metric: emails
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1000
+    price: per email / per 1,000 (quote)
+    userMultiplied: false
+  - label: Video (per participant-minute)
+    name: video
+    type: usage
+    metric: participant_minutes
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: per participant-minute + recording/storage (quote)
+    userMultiplied: false
+  elements:
+  - name: SMS
+  - name: WhatsApp
+  - name: RCS
+  - name: Voice
+  - name: Verify
+  - name: Email
+  - name: Video
+- id: kaleyra-enterprise
+  name: Enterprise
+  type: enterprise
+  description: >-
+    Committed-volume agreements, dedicated onboarding, regional data residency
+    (India / APAC / EU), subaccounts, and SLA. Contact sales.
+  entries:
+  - label: Enterprise Agreement
+    name: enterprise
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: Committed Volume Pricing
+  - name: Regional Data Residency
+  - name: Subaccounts and SLA
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,61 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Kaleyra
+providerId: kaleyra
+created: '2026-07-17'
+modified: '2026-07-17'
+reconciled: false
+tags:
+- CPaaS
+- Messaging
+- SMS
+- WhatsApp
+- Voice
+- Rate Limiting
+- Throttling
+description: >-
+  Kaleyra applies account-level throughput controls (API requests per second
+  and per-channel send throughput/TPS) that are provisioned per account, plan,
+  and region rather than published as a fixed public table. Downstream carrier,
+  WhatsApp (Meta) messaging tiers, and India DLT scrubbing further govern
+  effective throughput. Specific numeric limits are not published on the
+  developer hub and are not reconciled in this artifact.
+notes: >-
+  No public numeric rate-limit table was confirmed on developers.kaleyra.io in
+  this pass. Confirm per-account TPS, burst, and WhatsApp messaging-tier limits
+  with Kaleyra during onboarding / reconciliation.
+sources:
+- https://developers.kaleyra.io/
+- https://developers.kaleyra.io/reference/api-reference-overview
+responseCodes:
+  throttled: 429
+limits:
+- name: API Requests Per Second
+  scope: account
+  metric: requests
+  limit: see provider documentation
+  notes: Provisioned per account/plan/region; not publicly tabled.
+- name: SMS Send Throughput (TPS)
+  scope: account
+  metric: messages
+  limit: see provider documentation
+  notes: Effective SMS TPS depends on account tier and destination carrier.
+- name: WhatsApp Messaging Tier
+  scope: account
+  metric: conversations
+  limit: governed by Meta messaging tier
+  notes: WhatsApp Business messaging limits (1K/10K/100K/unlimited) are set by Meta on the registered number.
+- name: Voice Concurrency
+  scope: account
+  metric: concurrent_calls
+  limit: see provider documentation
+  notes: Concurrent outbound call channels provisioned per account.
+policies:
+- name: Provisioned Limits
+  description: Throughput is set per account/plan/region and raised via account management.
+- name: Backoff Strategy
+  description: Clients should implement exponential backoff with jitter and honor Retry-After on HTTP 429.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

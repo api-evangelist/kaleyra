@@ -1,0 +1,22 @@
+generated: '2026-07-17'
+method: derived
+source: openapi/kaleyra-openapi.yml
+summary:
+  types:
+  - apiKey
+notes: >-
+  Kaleyra authenticates every REST request with the `api-key` HTTP header
+  carrying the API key generated in the kaleyra.io console (e.g. "Ac4XXXXX21f").
+  The account SID (Security Identifier) is supplied as a path segment
+  (/v2/{sid}/... or /v1/{sid}/...). There is no OAuth 2.0 flow on the core
+  messaging/voice/verify surface; Kaleyra Video issues short-lived access
+  tokens for room/participant sessions via its REST API.
+schemes:
+- name: apiKeyAuth
+  type: apiKey
+  in: header
+  parameterName: api-key
+  sources:
+  - openapi/kaleyra-openapi.yml
+  - https://developers.kaleyra.io/docs/generating-otp
+  - https://developers.kaleyra.io/docs/click-to-call-api

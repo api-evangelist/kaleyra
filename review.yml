@@ -1,0 +1,75 @@
+aid: kaleyra
+name: Kaleyra
+review:
+  question: Does Kaleyra expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-17'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was created. Kaleyra's documented public developer
+    surface (developers.kaleyra.io) is HTTPS REST only. Kaleyra Video is a
+    WebRTC product, but real-time media/signaling is reached exclusively
+    through the Web/Android/iOS SDKs and REST room orchestration - no raw
+    ws:// or wss:// endpoint is documented for developers to connect to
+    directly, and no server-sent-events streaming surface is documented for
+    messaging or voice.
+findings:
+  summary: |
+    Kaleyra does not publish a documented public WebSocket API. All documented
+    channels - SMS, WhatsApp, RCS, Voice, Verify (OTP), Email, and the Kaleyra
+    Video REST API - are exposed as HTTPS REST endpoints under region-specific
+    hosts (api.kaleyra.io, api.in.kaleyra.io, api.ap.kaleyra.io,
+    api.eu.kaleyra.io), authenticated with the `api-key` header and an account
+    SID in the path. Asynchronous delivery/status is delivered via outbound
+    HTTP callbacks (webhooks / callback profiles), not a client-consumed
+    WebSocket. Kaleyra Video uses WebRTC under the hood, but developers reach
+    it through the REST API and the platform SDKs; no public signaling
+    WebSocket endpoint is documented.
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: https://api.kaleyra.io
+      documented: true
+    - protocol: Webhook
+      scheme: https
+      note: Delivery/status updates are pushed to customer callback URLs (callback profiles); this is an outbound HTTP callback, not a WebSocket the client connects to.
+      documented: true
+    - protocol: WebRTC
+      scheme: n/a
+      note: Kaleyra Video uses WebRTC media via the Web/Android/iOS SDKs; no raw signaling WebSocket endpoint is documented for direct developer use.
+      documented: false
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No ws:// or wss:// endpoint is documented across Kaleyra's SMS, WhatsApp, RCS, Voice, Verify, Email, or Video reference as of the review date.
+  endpointsConfirmedRest:
+    - POST https://api.kaleyra.io/v2/{sid}/messages
+    - GET  https://api.kaleyra.io/v2/{sid}/messages
+    - GET  https://api.kaleyra.io/v2/{sid}/messages/{message_id}
+    - POST https://api.kaleyra.io/v1/{sid}/verify
+    - GET  https://api.kaleyra.io/v1/{sid}/verify/validate
+    - POST https://api.kaleyra.io/v1/{sid}/voice/click-to-call
+    - POST https://api.kaleyra.io/v2/rooms
+sources:
+  - url: https://developers.kaleyra.io/
+    type: Documentation
+    note: Developer hub; lists SMS/WhatsApp/RCS/Voice/Verify/Email/Video channels, all HTTPS REST.
+  - url: https://developers.kaleyra.io/reference/api-reference-overview
+    type: APIReference
+    note: Regional REST hosts and api-key header auth; no WebSocket surface.
+  - url: https://developers.kaleyra.io/docs/click-to-call-api
+    type: Documentation
+    note: Voice click-to-call is POST /v1/{sid}/voice/click-to-call over HTTPS.
+  - url: https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api
+    type: Documentation
+    note: Kaleyra Video is created via REST (POST /v2/rooms); media is WebRTC via SDKs, no documented client WebSocket.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: false
+  reason: |
+    No WebSocket protocol surface exists and no SSE streaming surface is
+    documented. Asynchronous events are delivered via outbound HTTP callback
+    profiles (webhooks), which are out of scope for AsyncAPI WebSocket/SSE
+    modeling here. No asyncapi/ artifact was authored and no AsyncAPI pointer
+    was added to apis.yml.

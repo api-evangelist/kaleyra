@@ -1,0 +1,118 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Kaleyra
+providerId: kaleyra
+created: '2026-07-17'
+modified: '2026-07-17'
+reconciled: false
+tags:
+- CPaaS
+- Messaging
+- SMS
+- WhatsApp
+- Voice
+- FinOps
+- Cost Management
+- FOCUS
+description: >-
+  FinOps view of Kaleyra (a Tata Communications company) CPaaS spend. Kaleyra
+  bills usage-based per-unit rates that vary by channel, destination country,
+  and operator: per SMS segment, per WhatsApp conversation/template category,
+  per RCS message, per voice minute, per verification, per email, and per video
+  participant-minute. Costs are driven by destination mix and message volume;
+  India traffic additionally carries DLT/operator scrubbing considerations.
+notes: >-
+  Per-country rates are quote-based and were not publicly confirmed in this
+  pass; verify negotiated rate cards and any Tata Communications billing
+  consolidation on reconciliation.
+sources:
+- https://www.kaleyra.com/
+- https://developers.kaleyra.io/
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Kaleyra
+serviceCategory: Communication and Messaging
+billingModel:
+  pricingCategory: Usage-Based
+  billingFrequency: Monthly
+  billingCurrency: USD
+  chargeCategories:
+  - Usage
+  - Purchase
+  - Adjustment
+focusColumns:
+  ServiceName: Kaleyra CPaaS
+  ServiceCategory: Communication and Messaging
+  ProviderName: Kaleyra
+  PublisherName: Kaleyra (Tata Communications)
+  InvoiceIssuerName: Kaleyra
+  BillingCurrency: USD
+  ChargeCategory: Usage
+  PricingCategory: Usage-Based
+meters:
+- name: sms_segments
+  description: SMS segments sent, billed per segment by destination country/operator.
+  unit: messages
+  aggregation: sum
+  dimensions:
+  - account
+  - country
+  - type
+- name: whatsapp_conversations
+  description: WhatsApp conversations/templates billed by Meta category plus Kaleyra fee.
+  unit: conversations
+  aggregation: sum
+  dimensions:
+  - account
+  - category
+- name: rcs_messages
+  description: RCS messages sent, billed per message by destination.
+  unit: messages
+  aggregation: sum
+  dimensions:
+  - account
+  - country
+- name: voice_minutes
+  description: Voice minutes (click-to-call / outbound) billed per minute by destination.
+  unit: minutes
+  aggregation: sum
+  dimensions:
+  - account
+  - country
+- name: verifications
+  description: Verify/OTP verifications billed per verification plus channel delivery.
+  unit: verifications
+  aggregation: sum
+  dimensions:
+  - account
+  - channel
+- name: emails
+  description: Transactional emails sent, billed per email / per 1,000.
+  unit: emails
+  aggregation: sum
+  dimensions:
+  - account
+- name: video_participant_minutes
+  description: Kaleyra Video participant-minutes plus recording/storage.
+  unit: participant_minutes
+  aggregation: sum
+  dimensions:
+  - account
+principles:
+- name: Visibility
+  description: Pull per-channel, per-country usage from the kaleyra.io console / billing exports.
+- name: Allocation
+  description: Use subaccounts and API keys to map spend to teams, brands, and workloads.
+- name: Optimization
+  description: Route by cheapest compliant channel (e.g. WhatsApp utility vs SMS), consolidate templates, and monitor destination mix.
+- name: Accountability
+  description: Assign owners per subaccount; review destination-mix-driven cost monthly against budget.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
