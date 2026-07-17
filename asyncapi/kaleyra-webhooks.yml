@@ -1,0 +1,40 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.kaleyra.io/docs/account-settings-callback-profiles
+spec_type: Webhooks
+notes: >-
+  Kaleyra exposes an event/callback surface (not a published AsyncAPI document).
+  Delivery reports (DLR), inbound messages, and status updates are pushed to
+  customer endpoints via configurable Callback Profiles per channel; Kaleyra
+  Video additionally offers programmable Webhooks with a 200-OK ack + retry
+  logic. Callback authentication supports basic, advanced (HMAC), and payload
+  encryption. This captures the webhook/event catalog; no AsyncAPI spec is
+  fabricated.
+delivery:
+  mechanism: HTTP callback (Callback Profiles) + Kaleyra Video Webhooks
+  ack: 200 OK required; failed deliveries are retried
+  auth: [basic, advanced-hmac, encryption]
+  docs: https://developers.kaleyra.io/docs/account-settings-callback-profiles
+events:
+- channel: SMS
+  types:
+  - outbound delivery report (DLR / status update)
+  - inbound (MO) message received
+  docs: https://developers.kaleyra.io/docs/create-callback-profile-for-sms
+- channel: WhatsApp
+  types:
+  - outgoing message status
+  - incoming message
+  - template status update
+  docs: https://developers.kaleyra.io/docs/create-wa-callback-profiles-using-dynamic-variables
+- channel: Email
+  types:
+  - email delivery/status events
+  docs: https://developers.kaleyra.io/docs/create-email-callback-profiles-with-dynamic-variables
+- channel: Voice
+  types:
+  - call status callback
+- channel: Video
+  types:
+  - Kaleyra Video programmable webhook events (room/call lifecycle)
+  docs: https://developers.kaleyra.io/reference/video-v2-webhook-post

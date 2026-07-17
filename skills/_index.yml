@@ -1,0 +1,20 @@
+generated: '2026-07-17'
+method: generated
+source: openapi/kaleyra-openapi.yml
+skills:
+- file: kaleyra-send-sms.md
+  name: Send an SMS and track delivery
+  api: openapi/kaleyra-openapi.yml
+  operations: [sendMessage, getMessageStatus, listMessages]
+- file: kaleyra-verify-otp.md
+  name: Verify a user with an OTP
+  api: openapi/kaleyra-openapi.yml
+  operations: [generateOtp, validateOtp]
+- file: kaleyra-click-to-call.md
+  name: Place a click-to-call bridged call
+  api: openapi/kaleyra-openapi.yml
+  operations: [clickToCall]
+- file: kaleyra-create-video-room.md
+  name: Create a Kaleyra Video room
+  api: openapi/kaleyra-openapi.yml
+  operations: [createVideoRoom]

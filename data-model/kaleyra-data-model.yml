@@ -1,0 +1,48 @@
+generated: '2026-07-17'
+method: derived
+source: openapi/kaleyra-openapi.yml
+notes: >-
+  Entity graph derived from the modeled OpenAPI schemas and id-reference fields.
+  Every resource is scoped to an Account (addressed by SID in the path). Message,
+  Verify, Voice, and Room are the top-level operational entities.
+entities:
+- name: Account
+  id_field: sid
+  notes: Root tenant; supplied as a path segment on every operation.
+- name: Message
+  id_field: id
+  fields: [status, channel, recipient]
+  schema: MessageResponse
+- name: Verify
+  id_field: verify_id
+  fields: [status, valid]
+  schema: VerifyResponse
+- name: Voice
+  id_field: id
+  fields: [status]
+  schema: VoiceResponse
+- name: Room
+  id_field: room_id
+  fields: [room_url, participants]
+  schema: RoomResponse
+relationships:
+- from: Message
+  to: Account
+  type: belongs_to
+  via: sid
+- from: Verify
+  to: Account
+  type: belongs_to
+  via: sid
+- from: Voice
+  to: Account
+  type: belongs_to
+  via: sid
+- from: Room
+  to: Account
+  type: belongs_to
+  via: sid
+- from: Account
+  to: Message
+  type: has_many
+  via: sid

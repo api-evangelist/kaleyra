@@ -1,0 +1,24 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.kaleyra.io/docs/release-notes-summary + https://status.kaleyra.io/
+notes: >-
+  Kaleyra versions its REST surface via URI path (v1 for verify/voice/older
+  endpoints, v2 for messages/video/email). API and platform changes are
+  published as dated release notes per channel. A public Atlassian Statuspage
+  reports per-region service health. Deprecations are announced in the release
+  notes (e.g. April 2024 removal of failover and SOIP API support, plus an SMS
+  archival-policy notice) rather than via a standalone deprecation-policy page
+  or RFC 8594 Sunset headers.
+versioning:
+  scheme: uri-path
+  current: v2
+  also_present: [v1]
+  docs: https://developers.kaleyra.io/reference/api-reference-overview
+deprecation:
+  policy_url: https://developers.kaleyra.io/docs/release-notes-summary
+  sunset_header: false
+  observed:
+  - "2024-04-22: Removed failover and SOIP API support; SMS archival policy notice."
+status_page: https://status.kaleyra.io/
+status_page_provider: Atlassian Statuspage
+deprecated_operations: []

@@ -162,12 +162,64 @@ common:
   url: agentic-access/kaleyra-agentic-access.yml
 - type: TrustCenter
   url: security/kaleyra-trust-center.yml
+- type: Compliance
+  url: security/kaleyra-trust-center.yml
 - type: VulnerabilityDisclosure
   url: security/kaleyra-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.kaleyra.com/security/
 - type: DomainSecurity
   url: security/kaleyra-domain-security.yml
 - type: Authentication
   url: authentication/kaleyra-authentication.yml
+- type: Conformance
+  url: conformance/kaleyra-conformance.yml
+- type: Packages
+  url: packages/kaleyra-packages.yml
+- type: SDKs
+  url: packages/kaleyra-packages.yml
+- type: WellKnown
+  url: well-known/kaleyra-well-known.yml
+- type: MCPServer
+  url: mcp/kaleyra-mcp.yml
+- type: LLMsTxt
+  url: llms/kaleyra-llms.txt
+- type: Overlay
+  url: overlays/kaleyra-overlay.yaml
+- type: ErrorCatalog
+  url: errors/kaleyra-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/kaleyra-lifecycle.yml
+- type: StatusPage
+  url: https://status.kaleyra.io/
+- type: Conventions
+  url: conventions/kaleyra-conventions.yml
+- type: ChangeLog
+  url: changelog/kaleyra-changelog.yml
+- type: Components
+  url: components/kaleyra-components.yml
+- type: DataModel
+  url: data-model/kaleyra-data-model.yml
+- type: Webhooks
+  url: asyncapi/kaleyra-webhooks.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DeveloperPortal
+  url: https://developers.kaleyra.io/
+- type: GettingStarted
+  url: https://developers.kaleyra.io/docs/kcloud-getting-started
+- type: APIReference
+  url: https://developers.kaleyra.io/reference/api-reference-overview
+- type: Support
+  url: https://support.kaleyra.com/
+- type: GitHubOrganization
+  url: https://github.com/kaleyra
+- type: TermsOfService
+  url: https://www.kaleyra.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://www.kaleyra.com/privacy-policy/
+- type: Postman
+  url: collections/kaleyra.postman_collection.json
 - type: LinkedIn
   url: https://www.linkedin.com/company/kaleyra
 - type: Website

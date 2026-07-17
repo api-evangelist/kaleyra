@@ -1,0 +1,30 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Kaleyra CPaaS API
+  version: 1.0.0
+extends: openapi/kaleyra-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: kaleyra
+    x-apievangelist-category: CPaaS
+    x-apievangelist-parent: Tata Communications
+    x-apievangelist-regions: [global, india, apac, eu]
+    x-apievangelist-auth: api-key-header
+- target: $.info
+  update:
+    x-status-page: https://status.kaleyra.io/
+    x-changelog: https://developers.kaleyra.io/docs/release-notes-summary
+    x-developer-hub: https://developers.kaleyra.io/
+- target: $.paths['/v2/{sid}/messages'].post
+  update:
+    x-agentic-consequence: outbound-communication
+    x-agentic-audit: required
+- target: $.paths['/v1/{sid}/voice/click-to-call'].post
+  update:
+    x-agentic-consequence: outbound-communication
+    x-agentic-audit: required
+- target: $.paths['/v1/{sid}/verify'].post
+  update:
+    x-agentic-consequence: outbound-communication
+    x-agentic-audit: required

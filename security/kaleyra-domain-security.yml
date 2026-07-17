@@ -4,31 +4,32 @@ source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
 hosts:
 - host: www.kaleyra.com
   https: true
-  note: Corporate site; probe TLS/HSTS on reconciliation.
+  tls_version: TLSv1.3
+  cert_expires: Sep 21 08:13:47 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
 - host: developers.kaleyra.io
   https: true
-  note: Developer hub / API reference.
+  tls_version: TLSv1.3
+  cert_expires: Oct  2 20:57:05 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
 - host: api.kaleyra.io
   https: true
-  note: Default REST API host.
-- host: api.in.kaleyra.io
-  https: true
-  note: India regional REST host (data residency).
-- host: api.ap.kaleyra.io
-  https: true
-  note: APAC / South East Asia regional REST host.
-- host: api.eu.kaleyra.io
-  https: true
-  note: Europe regional REST host (data residency).
+  tls_version: TLSv1.3
+  cert_expires: Dec 13 23:59:59 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
 domains:
-- domain: kaleyra.io
-  note: >-
-    Regional API hosts under kaleyra.io provide data-residency separation
-    for India, APAC, and EU. Verify SPF/DMARC/DNSSEC/CAA on reconciliation.
 - domain: kaleyra.com
-  note: Corporate and support domain (support.kaleyra.com).
-notes: >-
-  Host list confirmed from developers.kaleyra.io reference pages (regional
-  base URLs api.in / api.ap / api.eu .kaleyra.io and default api.kaleyra.io).
-  Per-host TLS version, certificate expiry, and HSTS were not live-probed in
-  this pass and should be captured on reconciliation.
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+- domain: kaleyra.io
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

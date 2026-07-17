@@ -1,0 +1,39 @@
+generated: '2026-07-17'
+method: derived
+source: openapi/kaleyra-openapi.yml + https://developers.kaleyra.io/
+notes: >-
+  Cross-cutting request/response semantics for the Kaleyra REST APIs, derived
+  from the modeled OpenAPI and the developer hub. Kaleyra does NOT document an
+  idempotency-key mechanism, so this artifact carries no Idempotency pointer.
+authentication:
+  style: api-key header
+  header: api-key
+  account_scoping: account SID in the URL path (/v2/{sid}/... , /v1/{sid}/...)
+  docs: https://developers.kaleyra.io/docs/generating-an-api-key
+idempotency:
+  supported: false
+  notes: No idempotency-key header/param documented; retries may duplicate sends.
+pagination:
+  style: date-range filter (not cursor/offset)
+  params: [from_date, to_date, type]
+  applies_to: [listMessages]
+request_body:
+  content_types: [application/x-www-form-urlencoded, application/json]
+versioning:
+  style: uri-path (v1 / v2)
+error_envelope:
+  fields: [error, message]
+  channel_status: status / status_trace (see errors/kaleyra-error-codes.yml)
+callbacks:
+  model: configurable callback profiles (DLR / inbound / status) per channel
+  auth_options: [basic, advanced/HMAC, encryption]
+  docs: https://developers.kaleyra.io/docs/account-settings-callback-profiles
+rate_limit_signaling:
+  throttled_status: 429
+  notes: Per-account TPS provisioned; no public numeric table (see rate-limits/).
+cross_links:
+  errors: errors/kaleyra-problem-types.yml
+  error_codes: errors/kaleyra-error-codes.yml
+  lifecycle: lifecycle/kaleyra-lifecycle.yml
+  authentication: authentication/kaleyra-authentication.yml
+  rate_limits: rate-limits/kaleyra-rate-limits.yml

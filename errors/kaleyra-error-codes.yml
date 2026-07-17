@@ -1,0 +1,57 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.kaleyra.io/docs/sms-status-and-status-trace-codes
+notes: >-
+  SMS delivery status and status-trace codes registry harvested from the Kaleyra
+  developer hub. These are channel-level delivery outcomes returned on message
+  status pulls and DLR callbacks (not HTTP API errors, which live in
+  kaleyra-problem-types.yml). The page documents ~90+ trace codes; the codes
+  below are the representative/most-common set. Trace codes surface on the
+  message status object and on callback (DLR) payloads.
+envelope_field: status / status_trace
+statuses:
+- code: SUBMITTED
+  meaning: Message submitted to operator.
+- code: DELIVRD
+  meaning: Message successfully delivered to the handset.
+- code: SENT - NO DLR
+  meaning: Delivered to operator but no delivery report received.
+- code: Undelivered
+  meaning: Message sent but failed to reach the recipient.
+- code: NOT-SENT
+  meaning: Message was not transmitted.
+- code: ENROUTE
+  meaning: Message submitted to operator and in transit.
+- code: EXPIRED
+  meaning: SMS expired after retries.
+trace_codes:
+- code: NOTALLOWED
+  meaning: Country not enabled for the account.
+  action: Enable the destination country / contact support.
+- code: NO-CREDITS
+  meaning: Insufficient account credits.
+  action: Add credits to the account.
+- code: BLACKLIST
+  meaning: Mobile number is blacklisted.
+  action: Remove the number from the blacklist if valid.
+- code: CON-DND
+  meaning: Contact registered on Do Not Disturb.
+  action: Send only transactional/OTP traffic to DND numbers.
+- code: TEMPLATE-NOT-FOUND
+  meaning: Template not mapped / not found.
+  action: Register and map an approved template (India DLT).
+- code: OPT-OUT
+  meaning: Recipient has opted out.
+  action: Do not message opted-out recipients.
+- code: INVALID-SUB
+  meaning: Number does not exist in the HLR database.
+  action: Validate the MSISDN.
+- code: MOB-OFF
+  meaning: Mobile handset switched off.
+  action: Retry later.
+- code: BLOCKED-COUNTRY
+  meaning: Country blocked for the account.
+  action: Request the country be unblocked.
+- code: KYC-NOT-APPROVED
+  meaning: KYC verification pending.
+  action: Complete KYC on the Kaleyra platform.

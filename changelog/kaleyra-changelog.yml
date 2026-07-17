@@ -1,0 +1,43 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.kaleyra.io/docs/release-notes-kaleyra-io-sms
+notes: >-
+  Kaleyra publishes dated release notes per channel/product under the developer
+  hub (release-notes-summary aggregates SMS, WhatsApp, Voice, Email, RCS,
+  integrations, solutions). Recent SMS-channel entries captured below; the live
+  release notes remain the source of truth.
+scheme: dated release notes (per channel)
+index: https://developers.kaleyra.io/docs/release-notes-summary
+entries:
+- date: '2024-12-09'
+  channel: SMS
+  highlights: Added dynamic variables for SMS callbacks; fixed URL shortener and filter issues.
+- date: '2024-11-20'
+  channel: SMS
+  highlights: SMS message bodies can now be sent via callback; resolved double-hyphen URL issues.
+- date: '2024-08-05'
+  channel: SMS
+  highlights: Added support for underscore character in template/keyword fields.
+- date: '2024-07-16'
+  channel: SMS
+  breaking: false
+  highlights: Increased JSON/XML API node limit to 1000; improved error messaging.
+- date: '2024-06-25'
+  channel: SMS
+  highlights: Long URLs auto-shortened in SMS API; added campaign_name parameter support.
+- date: '2024-06-03'
+  channel: SMS
+  highlights: Updated operator rejection status language; added URL expiry support.
+- date: '2024-05-13'
+  channel: SMS
+  highlights: Long messages can be delivered in parts; charging for shared codes.
+- date: '2024-04-22'
+  channel: SMS
+  breaking: true
+  highlights: Removed failover and SOIP API support; added SMS archival-policy notice.
+- date: '2024-04-01'
+  channel: SMS
+  highlights: SMS APIs now support country codes in the prefix attribute.
+- date: '2024-03-11'
+  channel: SMS
+  highlights: Removed pricing change alert; fixed Verify feature configuration issues.

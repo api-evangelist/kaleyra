@@ -1,0 +1,27 @@
+generated: '2026-07-17'
+method: derived
+format: simple
+source: openapi/kaleyra-openapi.yml
+notes: >-
+  API-level error responses derived from the modeled OpenAPI. Kaleyra returns a
+  simple JSON error envelope {error, message} (not RFC 9457 problem+json). The
+  channel-level delivery/decline reasons (DLR status trace codes) are captured
+  separately in errors/kaleyra-error-codes.yml.
+envelope:
+  fields: [error, message]
+problems:
+- status: 400
+  title: Bad Request
+  description: The request was malformed or missing required fields.
+  source_operation: openapi/kaleyra-openapi.yml#sendMessage
+- status: 401
+  title: Unauthorized
+  description: Missing or invalid api-key header.
+  applies_to_operations:
+  - sendMessage
+  - listMessages
+  - getMessageStatus
+  - generateOtp
+  - validateOtp
+  - clickToCall
+  - createVideoRoom

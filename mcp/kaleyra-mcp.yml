@@ -1,0 +1,36 @@
+generated: '2026-07-17'
+method: derived
+status: candidate
+source: openapi/kaleyra-openapi.yml
+notes: >-
+  No official hosted/remote Kaleyra MCP server was found in this pass (no entry
+  on the developer hub, npm @modelcontextprotocol, or public MCP registries).
+  This is a CANDIDATE tool surface derived one-tool-per-operation from the
+  modeled OpenAPI, to seed an MCP wrapper. api-key header auth maps to a single
+  server credential; the account SID is a required tool argument.
+server:
+  name: kaleyra
+  transport: http
+  auth: api-key header
+tools:
+- name: send_message
+  description: Send an SMS, WhatsApp, or RCS message.
+  source_operation: openapi/kaleyra-openapi.yml#sendMessage
+- name: list_messages
+  description: Get message logs and delivery status.
+  source_operation: openapi/kaleyra-openapi.yml#listMessages
+- name: get_message_status
+  description: Get the delivery status of a single message.
+  source_operation: openapi/kaleyra-openapi.yml#getMessageStatus
+- name: generate_otp
+  description: Generate and send a one-time password over the configured Verify flow.
+  source_operation: openapi/kaleyra-openapi.yml#generateOtp
+- name: validate_otp
+  description: Validate a submitted OTP against a verify_id.
+  source_operation: openapi/kaleyra-openapi.yml#validateOtp
+- name: click_to_call
+  description: Initiate a click-to-call bridged voice call.
+  source_operation: openapi/kaleyra-openapi.yml#clickToCall
+- name: create_video_room
+  description: Create a Kaleyra Video (WebRTC) room.
+  source_operation: openapi/kaleyra-openapi.yml#createVideoRoom

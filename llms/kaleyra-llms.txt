@@ -1,0 +1,1001 @@
+# Kaleyra.io, WhatsApp, SMS, Email, Voice, Video, Chatbot and OTP API: all you need to know Documentation
+
+> Kaleyra.io API documentation: learn how to utilize the Kaleyra suite at its best for your business.
+
+## Guides
+- [Welcome](https://developers.kaleyra.io/docs/home-kaleyra-cloud-developer-hub.md)
+- [Glossary](https://developers.kaleyra.io/docs/glossary.md)
+- [Support](https://developers.kaleyra.io/docs/support.md)
+- [Overview](https://developers.kaleyra.io/docs/kcloud-getting-started.md)
+- [Kaleyra Platform Interface](https://developers.kaleyra.io/docs/understanding-the-kcloud-interface.md)
+- [Create a Kaleyra Platform Account](https://developers.kaleyra.io/docs/create-an-account-in-kcloud.md)
+- [Sign In to Kaleyra Platform Using Two Factor Authentication(2FA)](https://developers.kaleyra.io/docs/two-factor-authentication-2fa.md)
+- [Onboarding onto Kaleyra](https://developers.kaleyra.io/docs/onboarding_kcloud.md)
+- [Complete the Know Your Customer (KYC) Procedure](https://developers.kaleyra.io/docs/document-submission-and-approval.md): Enter your KYC details
+- [Opt-in for Kaleyra Services](https://developers.kaleyra.io/docs/opt-in-for-kaleyra-services.md)
+- [Create a Sender ID](https://developers.kaleyra.io/docs/sender-id.md)
+- [Create Kaleyra.io API Key](https://developers.kaleyra.io/docs/generating-an-api-key.md)
+- [View API Key and SID](https://developers.kaleyra.io/docs/view-api-key-and-sid.md)
+- [Add a TAN Number (Optional)](https://developers.kaleyra.io/docs/adding-tan-number.md)
+- [Add Credits](https://developers.kaleyra.io/docs/adding-credits.md)
+- [Settings](https://developers.kaleyra.io/docs/account-settings.md)
+- [General Settings](https://developers.kaleyra.io/docs/general-settings.md)
+- [User](https://developers.kaleyra.io/docs/update-user-profile-information.md)
+- [Notifications](https://developers.kaleyra.io/docs/settings-notifications.md)
+- [Low Balance Alert](https://developers.kaleyra.io/docs/notification-low-balance-alert.md)
+- [SMS Automated Reports](https://developers.kaleyra.io/docs/notification-sms-automated-reports.md)
+- [SMS Automated Performance Report](https://developers.kaleyra.io/docs/notification-sms-automated-performance-report.md)
+- [SMS Count Report](https://developers.kaleyra.io/docs/notification-sms-count-report.md)
+- [Credit History Report](https://developers.kaleyra.io/docs/notification-credit-history-report.md)
+- [Callback Report](https://developers.kaleyra.io/docs/notification-callback-report.md)
+- [WhatsApp Message Based Summary Report](https://developers.kaleyra.io/docs/notification-whatsapp-message-based-summary-report.md)
+- [WhatsApp Conversation Based Summary Report](https://developers.kaleyra.io/docs/notification-whatsapp-conversation-based-summary-report.md)
+- [Daily Sender Wise Report](https://developers.kaleyra.io/docs/notifications-daily-sender-wise-report.md)
+- [Daily Campaign Wise Report](https://developers.kaleyra.io/docs/notification-daily-campaign-wise-report.md)
+- [Monthly Day Wise Summary Report](https://developers.kaleyra.io/docs/notification-monthly-day-wise-summary-report.md)
+- [SMS Location wise](https://developers.kaleyra.io/docs/notifications-sms-location-wise-report.md)
+- [Links Detailed Report](https://developers.kaleyra.io/docs/notification-links-detailed-report.md)
+- [URLs Summary Report](https://developers.kaleyra.io/docs/notifications-urls-summary-report.md)
+- [SMS Subaccount Blocked Countries Report](https://developers.kaleyra.io/docs/notification-sms-subaccount-blocked-countries-report.md)
+- [Team](https://developers.kaleyra.io/docs/team.md)
+- [Login History](https://developers.kaleyra.io/docs/login-history.md)
+- [Documents](https://developers.kaleyra.io/docs/documents.md)
+- [Security](https://developers.kaleyra.io/docs/security.md)
+- [IP Restriction](https://developers.kaleyra.io/docs/security-ip-restriction.md)
+- [Disable IP Restriction](https://developers.kaleyra.io/docs/security-disable-ip-restriction.md)
+- [Two Factor Authentication](https://developers.kaleyra.io/docs/security-two-factor-authentication.md)
+- [Disable Two Factor Authentication](https://developers.kaleyra.io/docs/disable-two-factor-authentication.md)
+- [Callback Profiles](https://developers.kaleyra.io/docs/account-settings-callback-profiles.md)
+- [Create a Callback Profile](https://developers.kaleyra.io/docs/create-a-callback-profile.md)
+- [Edit a Callback Profile](https://developers.kaleyra.io/docs/edit-a-callback-profile.md)
+- [Duplicate a Callback Profile](https://developers.kaleyra.io/docs/duplicate-a-callback-profile.md)
+- [Re-trigger a Failed Request](https://developers.kaleyra.io/docs/callback-re-trigger-a-failed-request.md)
+- [Disable a Callback Profile](https://developers.kaleyra.io/docs/disable-a-callback-profile.md)
+- [Enable a Callback Profile](https://developers.kaleyra.io/docs/enable-a-callback-profile.md)
+- [Delete a Callback Profile](https://developers.kaleyra.io/docs/delete-a-callback-profile.md)
+- [Callback Reports](https://developers.kaleyra.io/docs/callback-reports.md)
+- [Callback Encryption](https://developers.kaleyra.io/docs/callback-encryption.md)
+- [Create SMS Callback Profiles using Dynamic Variables](https://developers.kaleyra.io/docs/create-callback-profile-for-sms.md)
+- [Create Callback Profile for Incoming SMS Messages](https://developers.kaleyra.io/docs/create-sms-callback-profile-to-receive-incoming-sms-messages.md)
+- [Create WhatsApp Callback Profiles using Dynamic Variables](https://developers.kaleyra.io/docs/create-wa-callback-profiles-using-dynamic-variables.md)
+- [Create Callback Profile for Incoming WhatsApp Messages](https://developers.kaleyra.io/docs/create-callback-profile-for-incoming-whatsapp-messages.md)
+- [Create Callback Profile for WhatsApp Template Status Update](https://developers.kaleyra.io/docs/template-status-update.md)
+- [Create Callback Profile for Outgoing WhatsApp Messages](https://developers.kaleyra.io/docs/create-callback-profile-for-outgoing-whatsapp-messages.md)
+- [Create Email Callback Profiles with Dynamic Variables](https://developers.kaleyra.io/docs/create-email-callback-profiles-with-dynamic-variables.md)
+- [Callback Basic Authentication](https://developers.kaleyra.io/docs/callback-basic-authentication.md)
+- [Callback Advanced Authentication](https://developers.kaleyra.io/docs/callback-profiles-advanced-authentication.md)
+- [User Management](https://developers.kaleyra.io/docs/user-management.md)
+- [Users](https://developers.kaleyra.io/docs/user-management-users.md)
+- [Kaleyra Expert Role ](https://developers.kaleyra.io/docs/user-management-kaleyra-expert-role.md)
+- [Overview](https://developers.kaleyra.io/docs/sms-overview.md)
+- [Templates Overview](https://developers.kaleyra.io/docs/sms-template-overview.md)
+- [Create an SMS Template](https://developers.kaleyra.io/docs/sms-create-template.md)
+- [Search and Filter SMS Template](https://developers.kaleyra.io/docs/sms-search-and-filter-template.md)
+- [View SMS Template](https://developers.kaleyra.io/docs/sms-view-template.md)
+- [Delete SMS Template](https://developers.kaleyra.io/docs/sms-delete-template.md)
+- [Download SMS Template](https://developers.kaleyra.io/docs/sms-download-template.md)
+- [Request an SMS Report](https://developers.kaleyra.io/docs/request-an-sms-report.md)
+- [SMS MT Summary Reports](https://developers.kaleyra.io/docs/sms-mt-summary-reports.md)
+- [SMS MO Summary Report](https://developers.kaleyra.io/docs/sms-mo-summary-report.md)
+- [SMS Tabular MT and MO Reports](https://developers.kaleyra.io/docs/sms-tabular-mt-and-mo-reports.md)
+- [SMS Tabular only MT Report](https://developers.kaleyra.io/docs/sms-tabular-only-mt-report.md)
+- [SMS By Template Report](https://developers.kaleyra.io/docs/sms-by-template-report.md)
+- [SMS BY Campaign Report](https://developers.kaleyra.io/docs/sms-by-campaign-report.md)
+- [SMS Logs](https://developers.kaleyra.io/docs/understanding-sms-analytics-logs.md)
+- [Uploaded Reports](https://developers.kaleyra.io/docs/uploaded-reports.md): This page describes the details available on the Uploaded Reports screen.
+- [Configure SMS Settings](https://developers.kaleyra.io/docs/configuring-sms-settings.md)
+- [Daily Limit](https://developers.kaleyra.io/docs/campaign-daily-limit.md)
+- [Automatic blacklisting of contacts on directory](https://developers.kaleyra.io/docs/auto-blacklisting-on-directory.md): Blacklist the invalid or incorrect contact numbers on the directory automatically.
+- [Receive Message](https://developers.kaleyra.io/docs/sms-receive-message.md): Configure a Virtual Mobile Number (VMN) to receive SMS.
+- [Configure Receive Message](https://developers.kaleyra.io/docs/sms-configure-receive-message.md)
+- [View Configurations and Logs](https://developers.kaleyra.io/docs/sms-view-receive-message-configurations-and-logs.md): View VMN Configurations and SMS Logs
+- [Overview](https://developers.kaleyra.io/docs/rcs-overview.md)
+- [Brands](https://developers.kaleyra.io/docs/rcs-brands.md)
+- [Brands Dashboard Overview](https://developers.kaleyra.io/docs/brands-dashboard.md)
+- [Search Brand](https://developers.kaleyra.io/docs/rcs-brand-search-brand.md)
+- [Add a New Brand](https://developers.kaleyra.io/docs/rcs-brands-add-a-new-brand.md)
+- [Brand Details](https://developers.kaleyra.io/docs/rcs-brand-brand-details.md)
+- [Agents](https://developers.kaleyra.io/docs/rcs-agents.md)
+- [Agent Dashboard Overview](https://developers.kaleyra.io/docs/rcs-agent-dashboard.md)
+- [Search and Filter Agents](https://developers.kaleyra.io/docs/rcs-search-and-filter-agents.md)
+- [Add a New Agent](https://developers.kaleyra.io/docs/rcs-agents-add-a-new-agent.md)
+- [Edit Agent Details](https://developers.kaleyra.io/docs/rcs-edit-agent-details.md)
+- [Add New Test Device](https://developers.kaleyra.io/docs/rcs-add-new-test-device.md)
+- [Tasks for Test Device](https://developers.kaleyra.io/docs/rcs-tasks-for-test-device.md)
+- [Send Test Message](https://developers.kaleyra.io/docs/rcs-send-test-message.md)
+- [Search Test Device](https://developers.kaleyra.io/docs/rcs-search-test-device.md)
+- [Delete a Test Device](https://developers.kaleyra.io/docs/rcs-delete-a-test-device.md)
+- [Add Template](https://developers.kaleyra.io/docs/rcs-add-template.md)
+- [RCS Text Template](https://developers.kaleyra.io/docs/rcs-text-template.md)
+- [RCS Rich Multimedia Template](https://developers.kaleyra.io/docs/rcs-rich-multimedia-template.md)
+- [RCS Rich Card Template](https://developers.kaleyra.io/docs/rcs-rich-card-template.md)
+- [RCS Rich Card Carousel Template](https://developers.kaleyra.io/docs/rcs-rich-card-carousel-template.md)
+- [Test Template](https://developers.kaleyra.io/docs/rcs-test-template.md)
+- [View Template Details](https://developers.kaleyra.io/docs/rcs-view-template-details.md)
+- [Preview Template Details](https://developers.kaleyra.io/docs/rcs-preview-template-details.md)
+- [Download Template](https://developers.kaleyra.io/docs/rcs-download-template.md)
+- [Template History](https://developers.kaleyra.io/docs/rcs-template-history.md)
+- [Edit Template Details](https://developers.kaleyra.io/docs/rcs-edit-template-details.md)
+- [Send Template for Approval](https://developers.kaleyra.io/docs/rcs-send-template-for-approval.md)
+- [Delete Template](https://developers.kaleyra.io/docs/rcs-delete-template.md)
+- [Verify and Launch Agent](https://developers.kaleyra.io/docs/rcs-launch-agent.md)
+- [Request an RCS Report ](https://developers.kaleyra.io/docs/requeat-an-rcs-report.md)
+- [RCS Tabular Report](https://developers.kaleyra.io/docs/rcs-tabular-report.md)
+- [RCS MT Summary Report](https://developers.kaleyra.io/docs/rcs-summary-report.md)
+- [RCS MO Summary Report](https://developers.kaleyra.io/docs/rcs-mo-summary-report.md)
+- [RCS Campaign Summary Report](https://developers.kaleyra.io/docs/rcs-campaign-summary-report.md)
+- [Overview](https://developers.kaleyra.io/docs/whatsapp-overview.md)
+- [Kaleyra WhatsApp API](https://developers.kaleyra.io/docs/frequently-asked-questions.md)
+- [WhatsApp Conversations](https://developers.kaleyra.io/docs/whatsapp-conversations.md)
+- [WhatsApp Business Messaging](https://developers.kaleyra.io/docs/messaging-on-whatsapp.md)
+- [Product Catalog Messages](https://developers.kaleyra.io/docs/whatsapp-product-catalog-messages.md)
+- [Opt-in](https://developers.kaleyra.io/docs/optin.md)
+- [Find your Facebook Business Manager ID](https://developers.kaleyra.io/docs/find-your-facebook-business-manager-id.md)
+- [Manual Signup](https://developers.kaleyra.io/docs/manual-signup.md)
+- [Embedded Signup](https://developers.kaleyra.io/docs/embedded-signup.md)
+- [Automated WhatsApp Number Registration](https://developers.kaleyra.io/docs/automated-whatsapp-number-registration.md)
+- [Add a new WABA ID](https://developers.kaleyra.io/docs/whatsapp-add-a-new-waba-id.md)
+- [Add a Number](https://developers.kaleyra.io/docs/add-a-number.md)
+- [Upload Media](https://developers.kaleyra.io/docs/wa-upload-media.md)
+- [WhatsApp Business | Message Templates](https://developers.kaleyra.io/docs/message-templates.md)
+- [WhatsApp Templates](https://developers.kaleyra.io/docs/creating-whatsapp-template.md)
+- [Add WhatsApp Templates from UI](https://developers.kaleyra.io/docs/add-whatsapp-templates-from-ui.md)
+- [Template Bypass using Business Manager](https://developers.kaleyra.io/docs/add-whatsapp-templates-using-business-manager.md)
+- [Edit WhatsApp Template](https://developers.kaleyra.io/docs/editing-whatsapp-template.md)
+- [Authentication Templates](https://developers.kaleyra.io/docs/whatsapp_authentication_templates.md)
+- [Multi-Product Message Templates](https://developers.kaleyra.io/docs/multi-product-message-templates.md)
+- [WhatsApp Number Messaging Limits and Quality Rating](https://developers.kaleyra.io/docs/whatsapp-webhook-for-messaging-limits.md)
+- [Messaging Limits](https://developers.kaleyra.io/docs/whatsapp-messaging-limits.md)
+- [Quality Rating](https://developers.kaleyra.io/docs/whatsapp-quality-rating.md)
+- [Receive Updates about Messaging Limits using Webhooks](https://developers.kaleyra.io/docs/receive-updates-about-rating-and-limits-using-webhooks.md): Use a WhatsApp webhook to know your phone number messaging limit and the quality rating.
+- [WhatsApp Address Message](https://developers.kaleyra.io/docs/use-cases-wa-address-messages.md)
+- [WhatsApp Pay](https://developers.kaleyra.io/docs/whatsapp-pay.md)
+- [WhatsApp Business Message Limit](https://developers.kaleyra.io/docs/capacity-and-messaging-limits.md)
+- [Request a WhatsApp Report](https://developers.kaleyra.io/docs/whatsapp-request-a-whatsapp-report.md)
+- [WhatsApp Tabular Report](https://developers.kaleyra.io/docs/whatsapp-tabular-report.md)
+- [WhatsApp Summary Reports](https://developers.kaleyra.io/docs/whatsapp-summary-reports.md)
+- [WhatsApp Analytics - Logs](https://developers.kaleyra.io/docs/whatsapp-analytics-logs.md)
+- [Manage your WhatsApp Channel](https://developers.kaleyra.io/docs/manage-your-whatsapp-channel.md)
+- [WhatsApp API V1 Configuration for Callback](https://developers.kaleyra.io/docs/whatsapp-api-v1-configuration-for-callback.md)
+- [WhatsApp API V2 Configuration for Callback](https://developers.kaleyra.io/docs/whatsapp-api-v2-configuration-for-callback.md)
+- [WhatsApp Templates](https://developers.kaleyra.io/docs/whatsapp-templates.md)
+- [Create WhatsApp Marketing Template](https://developers.kaleyra.io/docs/create-whatsapp-marketing-template.md)
+- [Marketing Template - Sub-category: Default ](https://developers.kaleyra.io/docs/wa-ui-marketing-template-default.md)
+- [Marketing Template - Sub-category: Order Details](https://developers.kaleyra.io/docs/wa-ui-marketing-template-order-details.md)
+- [Marketing Template - Sub-category: Order Status](https://developers.kaleyra.io/docs/wa-ui-marketing-template-order-status.md)
+- [Marketing Template - Sub-category: Carousel](https://developers.kaleyra.io/docs/wa-ui-marketing-template-carousel.md)
+- [Marketing Template - Sub-category: Calling Permissions Request](https://developers.kaleyra.io/docs/wa-ui-marketing-template-calling-permissions-request.md)
+- [Create WhatsApp Authentication Template](https://developers.kaleyra.io/docs/create-whatsapp-authentication-template.md)
+- [Create WhatsApp Utility Template](https://developers.kaleyra.io/docs/create-whatsapp-utility-template.md)
+- [Utility Template - Sub-category: Default](https://developers.kaleyra.io/docs/wa-ui-utility-template-default.md)
+- [Utility Template - Sub-category: Order Details](https://developers.kaleyra.io/docs/wa-ui-utility-template-order-details.md)
+- [Utility Template - Sub-category: Order Status](https://developers.kaleyra.io/docs/wa-ui-utility-template-order-status.md)
+- [Utility Template - Sub-category: Calling Permissions Request](https://developers.kaleyra.io/docs/wa-ui-utility-template-calling-permissions-request.md)
+- [Edit WhatsApp Template](https://developers.kaleyra.io/docs/edit-whatsapp-template.md)
+- [Overview](https://developers.kaleyra.io/docs/email-ui-overview.md)
+- [Email 1.0](https://developers.kaleyra.io/docs/email-ui-1-overview.md)
+- [Enable Email Channel Widget](https://developers.kaleyra.io/docs/enable-email-channel-widget.md)
+- [Request an Email Report](https://developers.kaleyra.io/docs/request-an-email-report.md)
+- [Email Reports](https://developers.kaleyra.io/docs/email-reports.md)
+- [Email Logs](https://developers.kaleyra.io/docs/email-logs-copy.md)
+- [Email 2.0](https://developers.kaleyra.io/docs/email-2-ui.md)
+- [Add and Manage Domain](https://developers.kaleyra.io/docs/email-2-ui-add-and-manage-domain.md)
+- [Search and Filter Domains](https://developers.kaleyra.io/docs/email-2-ui-search-and-filter-domains.md)
+- [Configure DNS to Domain Provider](https://developers.kaleyra.io/docs/email-2-ui-configure-dns-to-domain-provider.md)
+- [Add Email Address](https://developers.kaleyra.io/docs/email-2-ui-add-address.md)
+- [Add Dedicated IPs](https://developers.kaleyra.io/docs/email-2-ui-add-dedicated-ips.md)
+- [Email Logs](https://developers.kaleyra.io/docs/email-2-ui-logs.md)
+- [Request an Email 2.0 Report](https://developers.kaleyra.io/docs/email-2-request-an-email-report.md)
+- [Email 2.0 Detailed Report](https://developers.kaleyra.io/docs/email-2-ui-detailed-report.md)
+- [Email 2.0 Summary Report](https://developers.kaleyra.io/docs/email-2-ui-summary-report.md)
+- [Overview](https://developers.kaleyra.io/docs/video-overview.md)
+- [Technical Requirements](https://developers.kaleyra.io/docs/video-technical-requirements.md)
+- [Environment Setup](https://developers.kaleyra.io/docs/video-environment-setup.md)
+- [Inbound Call](https://developers.kaleyra.io/docs/video-inbound-call.md)
+- [Accessibility Report](https://developers.kaleyra.io/docs/video-accessibility-report.md)
+- [Mobile SDK v3](https://developers.kaleyra.io/docs/video-accessibility-mobile-sdk-v3.md)
+- [Mobile SDK v4](https://developers.kaleyra.io/docs/video-accessibility-mobile-sdk-v4.md)
+- [Web & Widget](https://developers.kaleyra.io/docs/video-accessibility-web.md)
+- [Overview](https://developers.kaleyra.io/docs/voice-overview.md)
+- [Numbers](https://developers.kaleyra.io/docs/numbers.md): Purchase the number for making and receiving calls
+- [Adding Credits](https://developers.kaleyra.io/docs/adding-credit.md)
+- [Click to Call](https://developers.kaleyra.io/docs/click-to-call-ui.md)
+- [Kaleyra Flow Builder](https://developers.kaleyra.io/docs/flow-builder.md)
+- [Dynamic Variables for FlowBuilder](https://developers.kaleyra.io/docs/dynamic-variables-flowbuilder.md)
+- [Voice Manager](https://developers.kaleyra.io/docs/voice-settings.md)
+- [Sound Manager](https://developers.kaleyra.io/docs/sound-manager.md): Upload and maintain all the sound files and use them in multiple places on the application as well as the API.
+- [Logs](https://developers.kaleyra.io/docs/logs.md): Call logs contain the details of all the calls made using your account.
+- [Call Statuses](https://developers.kaleyra.io/docs/call-statuses.md): Description of all the Kaleyra call statuses.
+- [Reports](https://developers.kaleyra.io/docs/reports.md): Access the detailed and summarized reports of all the incoming and outgoing voice calls in the last for the last six months.
+- [Sticky Agents](https://developers.kaleyra.io/docs/sticky-agents.md): Connect a specific customer to a dedicated agent every time.
+- [Generate Report with Recording Details](https://developers.kaleyra.io/docs/generating-the-report-with-recording-details.md)
+- [Overview](https://developers.kaleyra.io/docs/campaigns-overview.md)
+- [SMS Campaign](https://developers.kaleyra.io/docs/sms-campaign-overview.md)
+- [Launch an SMS Campaign](https://developers.kaleyra.io/docs/launch-an-sms-campaign.md)
+- [Add Contacts by Uploading a File](https://developers.kaleyra.io/docs/sms-add-contacts-by-uploading-a-file.md)
+- [Add Contacts from Directory](https://developers.kaleyra.io/docs/sms-add-contacts-from-directory.md)
+- [Copy Paste the Contacts](https://developers.kaleyra.io/docs/copy-paste-the-contacts.md)
+- [Launch a Drafted Campaign](https://developers.kaleyra.io/docs/launch-a-drafted-sms-campaign.md)
+- [Insert Link or Upload a File](https://developers.kaleyra.io/docs/sms-insert-link-or-upload-a-file.md)
+- [Set a Default Variable](https://developers.kaleyra.io/docs/sms-set-a-default-variable.md)
+- [Schedule the Campaign](https://developers.kaleyra.io/docs/sms-schedule-the-campaign.md)
+- [Reschedule SMS Campaign](https://developers.kaleyra.io/docs/reschedule-sms-campaign.md)
+- [Add Contacts in Batch for Campaign](https://developers.kaleyra.io/docs/add-contacts-in-batch-for-sms-campaign.md)
+- [View SMS campaign details](https://developers.kaleyra.io/docs/view-sms-campaign-details.md)
+- [Search and Filter SMS Campaign](https://developers.kaleyra.io/docs/search-and-filter-sms-campaign.md)
+- [View Batch Details](https://developers.kaleyra.io/docs/view-sms-batch-details.md)
+- [Replay SMS Campaign](https://developers.kaleyra.io/docs/replay-campaign.md)
+- [Request SMS Campaign Report](https://developers.kaleyra.io/docs/request-sms-campaign-report.md): Request an SMS campaign report to view the relevant campaign details.
+- [Cancel SMS Campaign](https://developers.kaleyra.io/docs/cancel-sms-campaign.md)
+- [Delete a Campaign](https://developers.kaleyra.io/docs/sms-delete-a-campaign.md)
+- [WhatsApp Campaign for V1 WABA](https://developers.kaleyra.io/docs/whatsapp-campaign-overview.md)
+- [Launch a WhatsApp Campaign for V1 WABA ](https://developers.kaleyra.io/docs/launch-whatsapp-campaign-for-v1-waba.md)
+- [Draft WhatsApp Campaign](https://developers.kaleyra.io/docs/draft-whatsapp-campaign.md)
+- [View WhatsApp Campaign](https://developers.kaleyra.io/docs/view-whatsapp-campaign.md)
+- [Request WhatsApp Campaign Report](https://developers.kaleyra.io/docs/request-whatsapp-campaign-report.md)
+- [WhatsApp Campaign for V2 WABA](https://developers.kaleyra.io/docs/wa-campaign-for-v2-waba.md)
+- [Launch a WhatsApp Campaign for V2 WABA](https://developers.kaleyra.io/docs/wa-v2-launch-campaign.md)
+- [Add Contacts by Uploading a File](https://developers.kaleyra.io/docs/wa-add-contacts-by-uploading-a-file.md)
+- [Add Contacts from Directory](https://developers.kaleyra.io/docs/wa-add-contacts-from-directory.md)
+- [Copy Paste the Contacts](https://developers.kaleyra.io/docs/wa-copy-paste-the-contacts.md)
+- [Launch a Drafted Campaign](https://developers.kaleyra.io/docs/wa-v2-launch-a-drafted-campaign.md)
+- [Add Contacts in Batch for Campaign](https://developers.kaleyra.io/docs/wa-v2-add-contacts-in-batch-for-campaign.md)
+- [Reschedule Campaign](https://developers.kaleyra.io/docs/wa-2-reschedule-campaign.md)
+- [Search and Filter WhatsApp Campaign](https://developers.kaleyra.io/docs/wa-search-and-filter-whatsapp-campaign.md)
+- [View WhatsApp Campaign Details](https://developers.kaleyra.io/docs/wa-view-campaign-details.md)
+- [View Batch Details](https://developers.kaleyra.io/docs/wa-view-batch-details.md)
+- [Download and Regenerate Report](https://developers.kaleyra.io/docs/download-and-regenerate-report.md)
+- [Delete a Campaign](https://developers.kaleyra.io/docs/wa-v2-delete-a-campaign.md)
+- [Voice Campaign](https://developers.kaleyra.io/docs/voice-campaign.md)
+- [Launch a Voice Campaign](https://developers.kaleyra.io/docs/launch-a-voice-campaign.md)
+- [Draft Voice Campaign](https://developers.kaleyra.io/docs/draft-voice-campaign.md)
+- [RCS Campaign ](https://developers.kaleyra.io/docs/rcs-campaign.md)
+- [Campaign List](https://developers.kaleyra.io/docs/campaign-listing-page.md)
+- [Launch an RCS Campaign](https://developers.kaleyra.io/docs/rcs-launch-an-rcs-campaign.md)
+- [Add Contacts by Uploading a File](https://developers.kaleyra.io/docs/rcs-add-contacts-by-uploading-a-file.md)
+- [Add Contacts from Directory](https://developers.kaleyra.io/docs/rcs-add-contacts-from-directory.md)
+- [Copy Paste the Contacts](https://developers.kaleyra.io/docs/rcs-copy-paste-the-contacts.md)
+- [Launch Campaign in Batches](https://developers.kaleyra.io/docs/launch-campaign-in-batches.md)
+- [Draft RCS Campaign](https://developers.kaleyra.io/docs/rcs-draft-rcs-campaign.md)
+- [View RCS Campaign](https://developers.kaleyra.io/docs/rcs-view-rcs-campaign.md)
+- [View Batch Details](https://developers.kaleyra.io/docs/rcs-view-batch-details.md)
+- [Reschedule RCS Campaign](https://developers.kaleyra.io/docs/rcs-reschedule-rcs-campaign.md)
+- [Request an RCS Campaign Report](https://developers.kaleyra.io/docs/rcs-request-an-rcs-campaign-report.md)
+- [Overview](https://developers.kaleyra.io/docs/directory-overview.md)
+- [Blocklist](https://developers.kaleyra.io/docs/blocklist.md)
+- [Contacts](https://developers.kaleyra.io/docs/contacts.md)
+- [Import Tags for your Contacts in Bulk](https://developers.kaleyra.io/docs/directory-import-tags-for-your-contacts-in-bulk.md)
+- [Tags](https://developers.kaleyra.io/docs/tags.md)
+- [Overview](https://developers.kaleyra.io/docs/url-shortener-overview.md)
+- [Single URL Shortener](https://developers.kaleyra.io/docs/url-shortener-single.md)
+- [Add URL or Upload File to Short URL](https://developers.kaleyra.io/docs/url-shortener-add-url-or-upload-file-to-short.md)
+- [Search and Filter Shortened URLs](https://developers.kaleyra.io/docs/url-shortener-search-and-filter-shortened-urls.md)
+- [Request, Download, and View Shortened URL Report](https://developers.kaleyra.io/docs/url-shortener-request-download-and-view-report.md)
+- [Edit Shortened URL](https://developers.kaleyra.io/docs/url-shortener-edit-shortened_url.md)
+- [Delete Shortened URL](https://developers.kaleyra.io/docs/url-shortener-delete-shortened-url.md)
+- [Bulk URL Shortener](https://developers.kaleyra.io/docs/url-shortener-bulk-url.md)
+- [Upload Files to Short URL in Bulk](https://developers.kaleyra.io/docs/url-shortener-upload-file-to-short-url.md)
+- [Download File with Bulk Shortened URLs](https://developers.kaleyra.io/docs/download-file-with-bulk-shortened-urls.md)
+- [Search or Filter Files containing Bulk Shortened URLs](https://developers.kaleyra.io/docs/url-shortener-search-or-filter-file-containing-bulk-urls.md)
+- [Bulk Upload URL Features](https://developers.kaleyra.io/docs/url-shortener-bulk-upload-url-features.md)
+- [Delete File with Bulk Shortened URLs](https://developers.kaleyra.io/docs/delete-file-with-bulk-shortened-urls.md)
+- [Delete Files with Bulk Shortened URLs](https://developers.kaleyra.io/docs/url-shortener-delete-file-with-bulk.md)
+- [URL Shortener in SMS](https://developers.kaleyra.io/docs/url-shortener-in-sms.md)
+- [URL Shortener in WhatsApp](https://developers.kaleyra.io/docs/url-shortener-in-whatsapp.md)
+- [URL Shortener in Email](https://developers.kaleyra.io/docs/url-shortener-in-email.md)
+- [Overview](https://developers.kaleyra.io/docs/flowbuilder-overview.md): Design automated interactive voice response flows to communicate with the customers using our user-friendly Flow Builder tool.
+- [Flow Builder Templates](https://developers.kaleyra.io/docs/flowbuilder-templates.md): Build custom flows using the predefined Flow Builder templates
+- [Widget Library](https://developers.kaleyra.io/docs/flowbuilder-widget-library.md)
+- [Start](https://developers.kaleyra.io/docs/flowbuilder-widget-start.md)
+- [Play](https://developers.kaleyra.io/docs/flowbuilder-widget-play.md)
+- [Call Forward](https://developers.kaleyra.io/docs/flowbuilder-widget-call-forward.md): This widget allows forwarding an incoming call to another number for an agent to handle the call.
+- [IVR Menu](https://developers.kaleyra.io/docs/flowbuilder-widget-ivr-menu.md): Provide multiple options for an incoming call.
+- [SMS](https://developers.kaleyra.io/docs/flowbuilder-widget-sms.md)
+- [API](https://developers.kaleyra.io/docs/flowbuilder-widget-api.md)
+- [Keypress](https://developers.kaleyra.io/docs/flowbuilder-widget-keypress.md): Accept the customer inputs via keypress.
+- [Repeat](https://developers.kaleyra.io/docs/flowbuilder-widget-repeat.md): Repeat the the previous widget in the flow.
+- [Date and Time](https://developers.kaleyra.io/docs/flowbuilder-widget-date-and-time.md)
+- [Jump](https://developers.kaleyra.io/docs/flowbuilder-widget-jump.md)
+- [Voicemail](https://developers.kaleyra.io/docs/flowbuilder-widget-voicemail.md): Record a message from the caller using the Voicemail widget for later retrieval and use.
+- [Choice](https://developers.kaleyra.io/docs/flowbuilder-widget-choice.md)
+- [Hangup](https://developers.kaleyra.io/docs/flowbuilder-widget-hang-up.md)
+- [Trigger Flow using Webhook and Voice Call](https://developers.kaleyra.io/docs/flowbuilder-trigger-flow-using-webhook-and-voice-call.md)
+- [Trigger Flow using Outgoing Call](https://developers.kaleyra.io/docs/flowbuilder-trigger-flow-using-outgoing-call.md)
+- [Missed Call Flow](https://developers.kaleyra.io/docs/flowbuilder-missed-call-flow.md)
+- [Flow Builder Logs](https://developers.kaleyra.io/docs/flowbuilder-logs.md)
+- [Supported Text-to-Speech Languages](https://developers.kaleyra.io/docs/flowbuilder-supported-tts-languages.md)
+- [Overview](https://developers.kaleyra.io/docs/verify-overview.md)
+- [Create a Verify Template](https://developers.kaleyra.io/docs/creating-a-verify-template.md)
+- [Create a Verify Configuration](https://developers.kaleyra.io/docs/configure-verification-flow.md)
+- [API Collection](https://developers.kaleyra.io/docs/api-collection.md)
+- [Generate OTPs](https://developers.kaleyra.io/docs/generating-otp.md): POST Method
+- [Validate OTPs](https://developers.kaleyra.io/docs/validating-otp.md)
+- [Overview](https://developers.kaleyra.io/docs/overview-numbers.md)
+- [Subscribe Number](https://developers.kaleyra.io/docs/subscribe-number.md)
+- [Number Statuses](https://developers.kaleyra.io/docs/number-statuses.md)
+- [Number Listing Page](https://developers.kaleyra.io/docs/number-listing-page.md)
+- [Long Codes and Short Codes](https://developers.kaleyra.io/docs/numbers-long-codes-and-short-codes.md)
+- [Overview](https://developers.kaleyra.io/docs/subaccounts-overview.md)
+- [Sub-account Services](https://developers.kaleyra.io/docs/sub-account-services.md)
+- [Manage Subaccounts](https://developers.kaleyra.io/docs/manage-subaccounts.md)
+- [Add a Subaccount](https://developers.kaleyra.io/docs/add-subaccount.md)
+- [View Subaccounts](https://developers.kaleyra.io/docs/view-subaccounts.md)
+- [Recharge a Subaccount](https://developers.kaleyra.io/docs/recharge-subaccount.md)
+- [Access a Subaccount](https://developers.kaleyra.io/docs/access-subaccount.md)
+- [Edit a Subaccount](https://developers.kaleyra.io/docs/edit-subaccount.md)
+- [Suspend a Subaccount](https://developers.kaleyra.io/docs/suspend-subaccount.md)
+- [Login to Subaccount](https://developers.kaleyra.io/docs/login-to-subaccount.md)
+- [Credits History](https://developers.kaleyra.io/docs/credits-history.md)
+- [View Credits History](https://developers.kaleyra.io/docs/view-credit-history.md)
+- [Credits Usage](https://developers.kaleyra.io/docs/credits-usage.md)
+- [View Credits Usage](https://developers.kaleyra.io/docs/view-credits-usage.md)
+- [Reports](https://developers.kaleyra.io/docs/subaccount-reports.md): Generate Summary Report for sub-accounts.
+- [View Downloaded Reports](https://developers.kaleyra.io/docs/view-downloaded-reports.md): View summary reports for an active channel.
+- [Generate Summary Report](https://developers.kaleyra.io/docs/generate-summary-report.md)
+- [Download Credits History Report](https://developers.kaleyra.io/docs/download-credits-history-report.md)
+- [Download Credits Usage Report](https://developers.kaleyra.io/docs/download-credits-usage-report.md)
+- [Overview](https://developers.kaleyra.io/docs/communicate-pro-overview.md)
+- [Key Features](https://developers.kaleyra.io/docs/communicate-pro-features.md)
+- [Key Concepts](https://developers.kaleyra.io/docs/key-communicate-pro-concepts.md)
+- [Access Communicate Pro](https://developers.kaleyra.io/docs/accessing-communicate-pro.md)
+- [Unlock Accounts](https://developers.kaleyra.io/docs/api-requests-made-by-locked-accounts.md)
+- [Error Handling](https://developers.kaleyra.io/docs/communicate-pro-application-error.md)
+- [Campaigns](https://developers.kaleyra.io/docs/communicate-pro-campaigns.md)
+- [Create a Campaign](https://developers.kaleyra.io/docs/communicate-pro-creating-campaigns.md)
+- [View Campaign Details](https://developers.kaleyra.io/docs/communicate-pro-campaign-details.md)
+- [Maintain Campaigns](https://developers.kaleyra.io/docs/communicate-pro-campaign-maintenance.md)
+- [Lists](https://developers.kaleyra.io/docs/communicate-pro-lists.md)
+- [Mobile Phone Number Format](https://developers.kaleyra.io/docs/mobile-phone-number-format.md)
+- [Create a List](https://developers.kaleyra.io/docs/creating-a-list.md)
+- [Define Broadcast Eligibility for Lists](https://developers.kaleyra.io/docs/defining-lists-as-broadcast-eligible.md)
+- [Upload a List](https://developers.kaleyra.io/docs/uploading-a-list.md)
+- [Download a List](https://developers.kaleyra.io/docs/downloading-a-list.md)
+- [Remove Mobile Numbers](https://developers.kaleyra.io/docs/removing-mobile-numbers.md)
+- [Advanced Options](https://developers.kaleyra.io/docs/advanced-options.md)
+- [Manually Entering Mobile Numbers (Opt-Ins)](https://developers.kaleyra.io/docs/manually-entering-mobile-numbers-optin.md)
+- [Upload or Mark Opt-Outs](https://developers.kaleyra.io/docs/uploadingmarking-opt-outs.md)
+- [Clear a List](https://developers.kaleyra.io/docs/clearing-a-list.md)
+- [Maintain Lists](https://developers.kaleyra.io/docs/list-maintenance.md)
+- [List Assignment](https://developers.kaleyra.io/docs/list-restrictions-aka-list-assignment.md)
+- [Enable List Assignment](https://developers.kaleyra.io/docs/enabling-the-list-assignment-feature.md)
+- [Assign Lists to Campaigns](https://developers.kaleyra.io/docs/assigning-lists-to-campaigns.md)
+- [Broadcasts](https://developers.kaleyra.io/docs/communicate-pro-broadcasts.md)
+- [Create a Broadcast Message](https://developers.kaleyra.io/docs/creating-a-broadcast-message.md)
+- [Emojis in Broadcasts](https://developers.kaleyra.io/docs/emoji-support-in-broadcasts.md)
+- [Create a Quick Broadcast](https://developers.kaleyra.io/docs/creating-a-quick-broadcast.md)
+- [Create and Manage Throttled Broadcasts](https://developers.kaleyra.io/docs/create-and-manage-throttled-broadcasts.md)
+- [Use Targeting Rules](https://developers.kaleyra.io/docs/broadcast-message-targeting-rules.md)
+- [Queue Control](https://developers.kaleyra.io/docs/using-queue-control.md)
+- [Create and Manage RCS Broadcasts](https://developers.kaleyra.io/docs/rcs-broadcasts.md)
+- [Message Body Text Editor](https://developers.kaleyra.io/docs/understanding-the-message-body-text-editor.md)
+- [Multivariate Test Broadcast](https://developers.kaleyra.io/docs/communicate-pro-multivariate-test-broadcast.md)
+- [Enable the Multivariate Test Broadcast](https://developers.kaleyra.io/docs/enabling-the-multivariate-test-broadcast.md)
+- [Create Multivariate Test Broadcast](https://developers.kaleyra.io/docs/creating-multivariate-test-broadcast.md)
+- [Schedule Variable Configuration](https://developers.kaleyra.io/docs/scheduling-variable-configuration.md)
+- [Percent of List and Performance Tracking Configuration](https://developers.kaleyra.io/docs/percent-of-list-and-performance-tracking-configuration.md)
+- [Multi-Step Program Configuration](https://developers.kaleyra.io/docs/multi-step-program-configuration.md)
+- [View Multivariate Test Broadcasts](https://developers.kaleyra.io/docs/viewing-your-multivariate-test-broadcasts.md)
+- [View Broadcast Before Delivery and Performance Details](https://developers.kaleyra.io/docs/viewing-the-broadcast-before-delivery.md)
+- [Queue Control for Multivariate Test Broadcasts](https://developers.kaleyra.io/docs/queue-control-for-multivariate-test-broadcasts.md)
+- [Interactive Programs](https://developers.kaleyra.io/docs/communicate-pro-interactive-programs.md)
+- [Text Response](https://developers.kaleyra.io/docs/communicate-pro-text-response.md)
+- [Competition](https://developers.kaleyra.io/docs/communicate-pro-competition.md)
+- [Voting](https://developers.kaleyra.io/docs/communicate-pro-voting.md)
+- [Customer Care](https://developers.kaleyra.io/docs/communicate-pro-customer-care.md)
+- [Multi-Step Programs](https://developers.kaleyra.io/docs/communicate-pro-multi-step-programs.md)
+- [View and Export Messages](https://developers.kaleyra.io/docs/viewing-and-exporting-messages.md)
+- [Coupon Service](https://developers.kaleyra.io/docs/coupon-service.md)
+- [Create a Coupon](https://developers.kaleyra.io/docs/creating-a-coupon.md)
+- [Name and Response Fields](https://developers.kaleyra.io/docs/form-name-and-response.md)
+- [Coupon Codes](https://developers.kaleyra.io/docs/coupon-codes.md)
+- [Coupon Code Truncation](https://developers.kaleyra.io/docs/coupon-code-truncation.md)
+- [Design a Coupon](https://developers.kaleyra.io/docs/formating.md)
+- [Deliver Mobile Wallet Coupons](https://developers.kaleyra.io/docs/delivering-mobile-wallet-coupons-using-communicate-pro.md)
+- [List Upload or Update Results](https://developers.kaleyra.io/docs/list-uploadupdate-results.md)
+- [Overview](https://developers.kaleyra.io/docs/getting-started-with-kaleyra-cloud-apis.md)
+- [Overview](https://developers.kaleyra.io/docs/sms-api-overview.md)
+- [/message endpoint](https://developers.kaleyra.io/docs/sms-api-message-endpoint.md)
+- [Send the First SMS](https://developers.kaleyra.io/docs/send-your-first-sms.md): POST Method
+- [Send SMS using Template](https://developers.kaleyra.io/docs/sms-api-send-sms-using-template.md): POST and GET Methods
+- [Send OTP SMS](https://developers.kaleyra.io/docs/send-otp-sms.md): POST Method
+- [Send Bulk SMS](https://developers.kaleyra.io/docs/send-bulk-sms.md): POST Method
+- [Send SMS with Unicode](https://developers.kaleyra.io/docs/send-sms-with-unicode.md): POST Method
+- [Send Flash SMS](https://developers.kaleyra.io/docs/send-flash-sms.md): POST Method
+- [Schedule SMS API](https://developers.kaleyra.io/docs/send-scheduled-sms.md)
+- [SMS Status API](https://developers.kaleyra.io/docs/sms-status.md): GET Method
+- [Create Sender ID](https://developers.kaleyra.io/docs/create-sender-id.md): POST Method
+- [Delete Sender ID](https://developers.kaleyra.io/docs/delete-sender-id.md): Delete Method
+- [SMS Route Types](https://developers.kaleyra.io/docs/understand-route-types.md)
+- [SMS Length and Encoding](https://developers.kaleyra.io/docs/understand-sms-length.md)
+- [SMS URL Shortening API](https://developers.kaleyra.io/docs/sms-url-shortener-api.md): POST Method
+- [/sms endpoint](https://developers.kaleyra.io/docs/sms-api-sms-endpoint.md)
+- [Send the First SMS](https://developers.kaleyra.io/docs/sms-api-send-the-first-sms.md): POST Method
+- [Send SMS using Template](https://developers.kaleyra.io/docs/sms-api-send-using-template.md): POST Methods
+- [Send OTP SMS](https://developers.kaleyra.io/docs/sms-api-send-otp-sms.md): POST Method
+- [Send Bulk SMS](https://developers.kaleyra.io/docs/sms-api-send-bulk-sms.md): POST Method
+- [Send SMS with Unicode](https://developers.kaleyra.io/docs/sms-api-send-with-unicode.md): POST Method
+- [Send Flash SMS](https://developers.kaleyra.io/docs/sms-api-send-flash-sms.md): POST Method
+- [Schedule SMS API](https://developers.kaleyra.io/docs/sms-api-schedule-sms.md): POST Method
+- [SMS Status API](https://developers.kaleyra.io/docs/sms-api-status.md): GET Method
+- [Create Sender ID](https://developers.kaleyra.io/docs/sms-api-create-sender-id.md): POST Method
+- [Delete Sender ID](https://developers.kaleyra.io/docs/sms-api-delete-sender-id.md): DELETE Method
+- [Callback Request using Callback Profiles](https://developers.kaleyra.io/docs/sms-api-callback-request-using-callback-profiles.md): POST and GET Methods
+- [SMS URL Shortening API](https://developers.kaleyra.io/docs/sms-api-url-shortening-api.md): POST Method
+- [Send SMS (JSON/XML)](https://developers.kaleyra.io/docs/sms-api-send-sms-json-xml.md): POST Method
+- [SMS Callback](https://developers.kaleyra.io/docs/sms-callback.md)
+- [Callback Request using Callback Profiles](https://developers.kaleyra.io/docs/callback-request-using-callback-profiles.md)
+- [SMS Error Codes](https://developers.kaleyra.io/docs/sms-error-codes.md)
+- [SMS Status and Status Trace Codes](https://developers.kaleyra.io/docs/sms-status-and-status-trace-codes.md): This document provides information about the status and status trace codes you would receive when executing the SMS REST APIs.
+- [Overview](https://developers.kaleyra.io/docs/rcs-api-overview.md)
+- [RCS Messages APIs](https://developers.kaleyra.io/docs/rcs-messages-apis.md)
+- [RCS Suggestions ](https://developers.kaleyra.io/docs/suggestions.md)
+- [Send a File Message](https://developers.kaleyra.io/docs/sent-a-file-message.md)
+- [RCS Payload Specification](https://developers.kaleyra.io/docs/rcs-payload-specification.md)
+- [Send Template Message with Static Content](https://developers.kaleyra.io/docs/send-template-message-with-static-content.md): POST Method
+- [Send Template Message with Dynamic Variables](https://developers.kaleyra.io/docs/send-template-message-with-dynamic-variables.md): POST Method
+- [Send a Plain Text Message](https://developers.kaleyra.io/docs/send-a-plain-text-message.md): POST Method
+- [Send a Plain Text Message with URL](https://developers.kaleyra.io/docs/send-a-plain-text-message-with-url.md): POST Method
+- [Send a Plain Text Message with URL and ChipList](https://developers.kaleyra.io/docs/send-a-plain-text-message-with-url-and-chiplist.md): POST Method
+- [Send a Plain Text Message with ChipList](https://developers.kaleyra.io/docs/send-a-plain-text-message-with-chiplist.md): POST Method
+- [Send a Rich Text Message](https://developers.kaleyra.io/docs/send-a-rich-text-message.md): POST Method
+- [Send a Rich Text Message with Chiplist ](https://developers.kaleyra.io/docs/send-a-rich-text-message-with-chiplist.md): POST Method
+- [Send Rich Card Standalone Message](https://developers.kaleyra.io/docs/send-rich-card-standalone-message.md): POST Method
+- [Send a Rich Card Standalone Message with Chiplist ](https://developers.kaleyra.io/docs/send-a-rich-card-standalone-message-with-a-chiplist.md): POST Method
+- [Send a Rich Card Standalone Message with Suggestion ](https://developers.kaleyra.io/docs/send-a-rich-card-standalone-message-with-a-suggestion.md): POST Method
+- [Send a Rich Multimedia Text Message](https://developers.kaleyra.io/docs/send-rich-multimedia-text-message.md): POST Method
+- [Send a Rich Card Carousel Message](https://developers.kaleyra.io/docs/send-rich-card-carousel-message.md): POST Method
+- [Send a Rich Card Carousel Message with Chiplist ](https://developers.kaleyra.io/docs/send-a-rich-card-carousel-message-with-chiplist.md): POST Method
+- [Send a Rich Card Carousel Message with Suggestion ](https://developers.kaleyra.io/docs/send-a-rich-card-carousel-message-with-suggestion.md): POST Method
+- [RCS Typing Indicator (Agent to User)](https://developers.kaleyra.io/docs/rcs-typing-indicator.md): POST Method
+- [RCS Delivery Receipt (DR) Callback Events ](https://developers.kaleyra.io/docs/rcs-delivery-receipt-dr-callback-events.md)
+- [RCS Mobile Originated (MO) Callback Events ](https://developers.kaleyra.io/docs/rcs-delivery-receipt-mo-callback-events.md)
+- [RCS Number Capability Check ](https://developers.kaleyra.io/docs/rcs-number-capability-check-api.md)
+- [Single Number Capability Check ](https://developers.kaleyra.io/docs/single-number-capability-check.md)
+- [Bulk Number Capability  Check](https://developers.kaleyra.io/docs/bulk-number-capability-check.md): POST Method
+- [RCS Tester APIs](https://developers.kaleyra.io/docs/rcs-tester-apis.md)
+- [Get Tester By Agent](https://developers.kaleyra.io/docs/rcs-get-tester-by-agent.md): GET Method
+- [Register Tester](https://developers.kaleyra.io/docs/rcs-register-tester.md): POST Method
+- [RCS Management APIs](https://developers.kaleyra.io/docs/rcs-management-apis.md)
+- [Brand APIs](https://developers.kaleyra.io/docs/rcs-brand-apis.md)
+- [Create a Brand](https://developers.kaleyra.io/docs/rcs-create-a-brand.md): POST Method
+- [Get Brand Details by Brand Number](https://developers.kaleyra.io/docs/rcs-get-brand-details.md): GET Method
+- [Get all Brands Detail](https://developers.kaleyra.io/docs/rcs-get-all-brands-detail.md): GET Method
+- [Update a Brand](https://developers.kaleyra.io/docs/rcs-update-a-brand.md): PUT Method
+- [Delete a Brand](https://developers.kaleyra.io/docs/rcs-delete-brand.md): Delete Method
+- [Agent APIs](https://developers.kaleyra.io/docs/rcs-agents-apis.md)
+- [Create an Agent](https://developers.kaleyra.io/docs/rcs-create-an-agent.md): POST Method
+- [Get Agent by Agent Number](https://developers.kaleyra.io/docs/rcs-get-agent-by-agent-number.md): GET Method
+- [Get all Agents Detail](https://developers.kaleyra.io/docs/rcs-get-all-agents-detail.md): GET Method
+- [Update an Agent](https://developers.kaleyra.io/docs/rcs-update-an-agent.md): PUT Method
+- [Delete an Agent](https://developers.kaleyra.io/docs/rcs-delete-an-agent.md): DELETE Method
+- [Submit an Agent Verification](https://developers.kaleyra.io/docs/rcs-submit-an-agent-verification.md): POST Method
+- [Get an Agent Verification Status](https://developers.kaleyra.io/docs/rcs-get-an-agent-verification-status.md): GET Method
+- [Launch an Agent](https://developers.kaleyra.io/docs/rcs-launch-an-agent.md): POST Method
+- [Launch Carrier](https://developers.kaleyra.io/docs/rcs-launch-carrier.md): POST Method
+- [Get Launch Status](https://developers.kaleyra.io/docs/rcs-get-launch-status.md): GET Method
+- [Master APIs](https://developers.kaleyra.io/docs/rcs-master-apis.md)
+- [Get an Agent's Regions](https://developers.kaleyra.io/docs/rcs-get-an-agent-regions.md): GET Method
+- [Get Masters ](https://developers.kaleyra.io/docs/rcs-get-masters.md): GET Method
+- [Get Master List](https://developers.kaleyra.io/docs/rcs-get-master-list.md): GET Method
+- [Device Lookup APIs](https://developers.kaleyra.io/docs/device-lookup-apis.md)
+- [Single Device Lookup](https://developers.kaleyra.io/docs/rcs-single-device-lookup.md): GET Method
+- [Bulk Device Lookup ](https://developers.kaleyra.io/docs/rcs-bulk-device-lookup.md): POST Method
+- [RCS Template APIs](https://developers.kaleyra.io/docs/rcs-api-template.md)
+- [RCS Create Template](https://developers.kaleyra.io/docs/rcs-api-create-template.md): POST Method
+- [RCS Update Template](https://developers.kaleyra.io/docs/rcs-api-update-template.md): PUT Method
+- [RCS Get Template](https://developers.kaleyra.io/docs/rcs-api-get-template.md): GET Method
+- [RCS Delete Template](https://developers.kaleyra.io/docs/rcs-api-delete-template.md): DELETE Method
+- [RCS Error Codes](https://developers.kaleyra.io/docs/rcs-api-error-codes.md)
+- [Messages API – Error Responses](https://developers.kaleyra.io/docs/rcs-api-messages-api-error-responses.md)
+- [Brand ](https://developers.kaleyra.io/docs/rcs-api-brand-error-codes.md)
+- [Agent](https://developers.kaleyra.io/docs/rcs-api-agent-error-codes.md)
+- [Agent Launch](https://developers.kaleyra.io/docs/rcs-agent-launch-error-codes.md)
+- [Master](https://developers.kaleyra.io/docs/rcs-api-master-error-codes.md)
+- [Device Lookup](https://developers.kaleyra.io/docs/rcs-api-lookup-error-codes.md)
+- [Overview](https://developers.kaleyra.io/docs/whatsapp-api.md)
+- [WhatsApp API V1](https://developers.kaleyra.io/docs/whatsapp-api-v1.md)
+- [WhatsApp Templates API V1](https://developers.kaleyra.io/docs/whatsapp-api-whatsapp-templates.md)
+- [WhatsApp Template Category](https://developers.kaleyra.io/docs/whatsapp-template-category.md)
+- [Create a WhatsApp Template with Text](https://developers.kaleyra.io/docs/whatsapp-api-create-whatsapp-template-with-text.md): POST Method
+- [Create a WhatsApp Template with Sample Media](https://developers.kaleyra.io/docs/whatsapp-api-create-whatsapp-template-with-sample-media.md): POST Method
+- [Create WhatsApp template with enabled Tracked URL](https://developers.kaleyra.io/docs/whatsapp-api-create-whatsapp-template-with-enabled-tracked-url.md): POST Method
+- [Get a WhatsApp Template Status](https://developers.kaleyra.io/docs/whatsapp-api-get-whatsapp-template-status.md): GET Method
+- [Create an Authentication Template Message](https://developers.kaleyra.io/docs/create-an-authentication-template-message.md): POST Method
+- [Create a Coupon Code Template](https://developers.kaleyra.io/docs/create-a-coupon-code-template.md)
+- [Create a Limited Time Offer (LTO) Code Template](https://developers.kaleyra.io/docs/create-a-limited-time-offer-lto-code-template.md)
+- [Create a Multi-Product Message Template](https://developers.kaleyra.io/docs/create-a-multi-product-message-template.md): POST Method
+- [Create WhatsApp Catalog Message Template](https://developers.kaleyra.io/docs/whatsapp-apis-create-catalog-template.md): POST Method
+- [Create a WhatsApp Template with Quick-Reply Button](https://developers.kaleyra.io/docs/whatsapp-api-create-a-template-with-dynamic-payload.md): POST Method
+- [WhatsApp Message API V1](https://developers.kaleyra.io/docs/whatsapp-message-api-v1.md)
+- [Send a Text Template Message through WhatsApp](https://developers.kaleyra.io/docs/send-a-text-template-message-through-whatsapp.md): POST and GET Method
+- [Send a Media Template Message through WhatsApp](https://developers.kaleyra.io/docs/send-a-media-template-message-through-whatsapp.md): POST Method
+- [Send a Text Message through WhatsApp](https://developers.kaleyra.io/docs/send-a-text-message-through-whatsapp.md): POST and GET Method
+- [Send an Interactive WhatsApp Address Message](https://developers.kaleyra.io/docs/send-an-interactive-whatsapp-address-message-using-api.md)
+- [Send a Catalog Message through WhatsApp Template](https://developers.kaleyra.io/docs/whatsapp-apis-send-a-catalog-message.md): POST Method
+- [Send an Authentication Template Message](https://developers.kaleyra.io/docs/send-an-authentication-template-message.md): POST Method
+- [Send a Coupon Code Template Message](https://developers.kaleyra.io/docs/send-a-coupon-code-template-message.md)
+- [Send a Limited Time Offer (LTO) Code Template Message](https://developers.kaleyra.io/docs/send-a-limited-time-offer-code-template-message.md)
+- [Send a Multi-Product Message Template](https://developers.kaleyra.io/docs/send-multi-product-message-template.md): POST Method
+- [Share Location Information](https://developers.kaleyra.io/docs/post-send-whatsapp-location.md): POST and GET Methods
+- [Send a Media Message through WhatsApp](https://developers.kaleyra.io/docs/send-a-media-message-through-whatsapp.md): POST Method
+- [Send WhatsApp Pay Messages](https://developers.kaleyra.io/docs/send-whatsapp-pay-messages-1.md)
+- [Preview of the URL](https://developers.kaleyra.io/docs/preview-url.md): POST Method
+- [Share Contact Information](https://developers.kaleyra.io/docs/whatsapp-apis-share-contact-information.md): POST Method
+- [Send Interactive Message and Media Template](https://developers.kaleyra.io/docs/send-interactive-message-and-media-template.md): POST Method
+- [Send a Quick-reply Template with Dynamic Button Payload](https://developers.kaleyra.io/docs/whatsapp-apis-send-a-message-with-dynamic-payload-in-quick-reply-button.md): POST Method
+- [Monitoring Stats](https://developers.kaleyra.io/docs/monitoring-stats.md): GET Method
+- [List Message API](https://developers.kaleyra.io/docs/list-message-api.md): POST Method
+- [Reply Button API](https://developers.kaleyra.io/docs/reply-button-api.md)
+- [Product Catalog Message APIs](https://developers.kaleyra.io/docs/whatsapp-product-catalog-message-apis.md)
+- [Receive an incoming message and reply](https://developers.kaleyra.io/docs/receive-an-incoming-message-and-reply.md)
+- [Automate Kaleyra WhatsApp Flow](https://developers.kaleyra.io/docs/automating-your-whatsapp-flow-to-isvs.md)
+- [Add a WhatsApp Number](https://developers.kaleyra.io/docs/add-whatsapp-number.md): POST Method
+- [Update a WhatsApp Number Details](https://developers.kaleyra.io/docs/update-whatsapp-number-details.md): PUT Method
+- [Add a WhatsApp Template](https://developers.kaleyra.io/docs/add-whatsapp-temp.md): POST Method
+- [Configure WhatsApp Callback URL](https://developers.kaleyra.io/docs/whatsapp-callback-url.md)
+- [Get Payment Status API](https://developers.kaleyra.io/docs/whatsapp-api-get-payment-status.md): GET Method
+- [WhatsApp Status](https://developers.kaleyra.io/docs/whatsapp-status.md): This document provides information about the Status you would receive when executing the WhatsApp REST APIs.
+- [WhatsApp Error Codes API V1](https://developers.kaleyra.io/docs/whatsapp-error-codes.md)
+- [Cloud API Error Codes](https://developers.kaleyra.io/docs/cloud-api-error-codes.md)
+- [On-premise API Error Codes](https://developers.kaleyra.io/docs/on-premise-api-error-codes.md)
+- [WhatsApp API V2](https://developers.kaleyra.io/docs/whatsapp-api-v2-overview.md)
+- [WhatsApp Template API V2](https://developers.kaleyra.io/docs/whatsapp-template-api-v2-overview.md)
+- [Create Template](https://developers.kaleyra.io/docs/whatsapp-template-api-v2-create-template.md): POST Method
+- [Edit Template](https://developers.kaleyra.io/docs/whatsapp-template-api-v2-edit-template.md): PUT Method
+- [Get Templates](https://developers.kaleyra.io/docs/whatsapp-template-api-v2-get-templates.md): GET Method
+- [Delete Template](https://developers.kaleyra.io/docs/whatsapp-template-api-v2-delete-template.md): Delete Method
+- [Delete Message Templates in Bulk](https://developers.kaleyra.io/docs/whatsapp-template-api-v2-delete-message-templates-in-bulk.md): DELETE Method
+- [Template Analytics](https://developers.kaleyra.io/docs/whatsapp-v2-api-template-analytics.md): GET Method
+- [WhatsApp Message API V2](https://developers.kaleyra.io/docs/whatsapp-messages-api-v2-overview.md)
+- [Send Text Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-text-messages.md): POST Method
+- [Send Reaction Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-reaction-messages.md): POST Method
+- [Send Media Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-media-messages.md): POST Method
+- [Send Location Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-location-messages.md): POST Method
+- [Send a Single-Product Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-a-single-product-messages.md): POST Method
+- [Send Multi-Product Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-multi-product-messages.md): POST Method
+- [Send Catalog Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-catalog-messages.md): POST Method
+- [Send Flow Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-flow-messages.md): POST Method
+- [Send Interactive List Messages](https://developers.kaleyra.io/docs/whatsapp_api_v2_send-interactive-list-messages.md)
+- [Send an Interactive Reply Button Message](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-an-interactive-reply-button-message.md): POST Method
+- [Send Location Request Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-location-request-messages.md): POST Method
+- [Send Contacts Message](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-contacts-message.md): POST Method
+- [Send Template Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-template-messages.md): POST Method
+- [Send Reply to Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-reply-to-messages.md): POST Method
+- [Send Audio Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-audio-messages.md): POST Method
+- [Send Document Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-document-messages.md): POST Method
+- [Send Image Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-image-messages.md): POST Method
+- [Send Interactive Call-to-Action URL Button Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-interactive-call-to-action-url-button-messages.md): POST Method
+- [Send Sticker Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-sticker-messages.md): POST Method
+- [Send Authentication Template Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-authentication-template-messages.md): POST Method
+- [Send Catalogue Link Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-catalogue-link-messages.md): POST Method
+- [Send Carousel Template Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-carousel-template-messages.md): POST Method
+- [Send Coupon Code Template Messages](https://developers.kaleyra.io/docs/whatsapp_api_v2_send-coupon-code-template-messages.md)
+- [Send Limited Time Offer Template Messages](https://developers.kaleyra.io/docs/whatsapp_api_v2_send-limited-time-offer-template-messages.md)
+- [Send Multi-Product Template Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-multi-product-template-messages.md): POST Method
+- [Send Flow Template Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-flow-template-messages.md)
+- [Send Catalog Template Messages](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-catalog-template-messages.md): POST Method
+- [Send Video Messages](https://developers.kaleyra.io/docs/whatsapp_api_v2_send-video-messages.md)
+- [Send Read Receipt Messages](https://developers.kaleyra.io/docs/whatsapp_api_v2_send-read-receipt-messages.md)
+- [Send Address Messages](https://developers.kaleyra.io/docs/whatsapp_api_v2_send-address-messages.md)
+- [Upload Media Files](https://developers.kaleyra.io/docs/whatsapp-api-v2-upload-media-files.md): POST Method
+- [Send Order Details Template Message](https://developers.kaleyra.io/docs/whatsapp_api_v2_send-order-details-template-messages.md)
+- [Send Order Status Template Message](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-order-status-template-message.md): POST Method
+- [Send Interactive Order Status Message](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-interactive-order-status-message.md): POST Method
+- [Send Call Permission Template Message](https://developers.kaleyra.io/docs/whatsapp-api-v2-send-call-permission-template-message.md): POST Method
+- [Single Product Template Message](https://developers.kaleyra.io/docs/whatsapp-api-v2-single-product-template-message.md): POST Method
+- [Product Card Carousel Template Message](https://developers.kaleyra.io/docs/whatsapp-api-v2-product-card-carousel-template-message.md): POST Method
+- [WhatsApp Resumable Media API V2](https://developers.kaleyra.io/docs/whatsapp-resumable-media-api-v2.md)
+- [Get Resumable Media](https://developers.kaleyra.io/docs/whatsapp-resumable-media-api-v2-get-resumable-media.md): GET Method
+- [Upload Resumable Media ](https://developers.kaleyra.io/docs/whatsapp-resumable-media-api-v2-upload-resumable-media.md): POST Method
+- [WhatsApp Flow API V2](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-overview.md)
+- [Create Flow](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-create-flow.md): POST Method
+- [Update Flow Metadata](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-update-flow-metadata.md): POST Method
+- [Update Flow JSON](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-update-flow-json.md): POST Method
+- [Delete Flow](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-delete-flow.md): DELETE Method
+- [Publish Flow](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-publish-flow.md): POST Method
+- [Deprecate Flow](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-deprecate-flow.md): POST Method
+- [Set Encryption Public Key](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-set-encryption-public-key.md): POST Method
+- [Get Encryption Public Key](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-get-encryption-public-key.md): POST Method
+- [Migrate Flow](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-migrate-flow.md): POST Method
+- [Get Flow Details by Flow ID](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-get-flow-details-by-flow-id.md): GET Method
+- [Get Flows by WABA ID](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-get-flows-by-waba-id.md): GET Method
+- [Get Flow Assets by Flow ID](https://developers.kaleyra.io/docs/whatsapp-flow-api-v2-get-flow-assets-by-flow-id.md): GET Method
+- [WhatsApp Incoming Messages Webhook Payload V2](https://developers.kaleyra.io/docs/whatsapp-incoming-messages-webhooks-payloads-v2.md)
+- [Text Message ](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-v2-text-message.md)
+- [Image Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-v2-image-message.md)
+- [Audio Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-audio-message.md)
+- [Video and GIF Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-video-and-gif-message.md)
+- [Document Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-document-message.md)
+- [Sticker Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-sticker-message.md)
+- [Reply - Text Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-reply-text-message.md)
+- [Reply - Media Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-reply-media-message.md)
+- [Reaction Message (Reacted to some message)](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-reaction-message-reacted-to-some-message.md)
+- [Media Message with Caption](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-media-message-with-caption.md)
+- [Current Location Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-current-location-message.md)
+- [Address Location Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-address-location-message.md)
+- [Contact Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-contact-message.md)
+- [Imagine Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-imagine-message.md)
+- [Avatar Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-avatar-message.md)
+- [Interactive- Button Reply Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-interactive-button-reply-message.md)
+- [Interactive- Button Reply Image Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payload-interactive-button-reply-image-message.md)
+- [Interactive- Button Reply Video Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payloads-interactive-button-reply-video-message.md)
+- [Interactive- Button Reply Document Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payloads-interactive-button-reply-document-message.md)
+- [Interactive- List Reply Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payloads-interactive-list-reply-message.md)
+- [Interactive- Address Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payloads-interactive-address-message.md)
+- [Interactive- Template Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payloads-interactive-template-message.md)
+- [Interactive- Catalogue Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payloads-interactive-catalogue-message.md)
+- [Interactive- Location Request Message](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payloads-interactive-location-request-message.md)
+- [Carousel](https://developers.kaleyra.io/docs/whatsapp-incoming-message-webhook-payloads-carousel.md)
+- [WhatsApp Status Update Webhook Payload V2](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2.md)
+- [Sent](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-sent.md)
+- [Delivered](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-delivered.md)
+- [Read](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-read.md)
+- [Failed](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-failed.md)
+- [Not Sent - Number Opted Out](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-number-opted-out.md)
+- [Not Sent - Daily Limit Reached](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-daily-limit-reached.md)
+- [Not Sent - To Number or Type Missing](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-to-number-or-type-missing.md)
+- [Not Sent - Template details Not found](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-template-details-not-found.md)
+- [Not Sent - Country traffic blocked](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-country-traffic-blocked.md)
+- [Not Sent - Missing slug value for URL tracking](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-missing-slug-value-for-url-tracking.md)
+- [Submit - Success](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-submit-success.md)
+- [Submit - Success (for typing indicator and read receipts)](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-success-for-typing-indicator-and-read-receipts.md)
+- [Submit - Failure](https://developers.kaleyra.io/docs/wa-status-update-webhooks-payload-v2-submit-failure.md)
+- [WhatsApp Payment API V2](https://developers.kaleyra.io/docs/whatsapp-payment-api-v2.md)
+- [WhatsApp Payments Webhook](https://developers.kaleyra.io/docs/whatsapp-payments-webhook.md)
+- [WhatsApp Voice Call Permission API V2](https://developers.kaleyra.io/docs/whatsapp-voice-call-permission-api.md)
+- [Get Call Consent Status](https://developers.kaleyra.io/docs/whatsapp-voice-calling-get-call-consent-status.md): Get Method
+- [WhatsApp Phone Number API](https://developers.kaleyra.io/docs/whatsapp-v2-phone-number-api.md)
+- [Add Phone Number](https://developers.kaleyra.io/docs/wa-v2-add-phone-number.md): POST Method
+- [Verify Phone Number](https://developers.kaleyra.io/docs/wa-v2-verify-phone-number.md): POST Method
+- [Retry OTP for Phone Number](https://developers.kaleyra.io/docs/wa-v2-retry-otp-for-phone-number.md): POST Method
+- [Get Phone Number Details](https://developers.kaleyra.io/docs/wa-v2-get-phone-number-details.md): GET Method
+- [Update Phone Number Details](https://developers.kaleyra.io/docs/wa-v2-update-phone-number-details.md): PUT Method
+- [WhatsApp Group Management API](https://developers.kaleyra.io/docs/whatsapp-group-management-apis.md)
+- [WhatsApp Error Codes API V2](https://developers.kaleyra.io/docs/whatsapp-message-api-v2-error-codes.md)
+- [WhatsApp V2 Error Codes for Send Message APIs](https://developers.kaleyra.io/docs/whatsapp-api-v2-error-codes-for-send-message.md)
+- [WhatsApp V2 Error Codes for Template APIs](https://developers.kaleyra.io/docs/whatsapp-api-v2-error-codes-for-template.md)
+- [WhatsApp Block Users API](https://developers.kaleyra.io/docs/whatsapp-block-users-api.md)
+- [Block WhatsApp User Numbers ](https://developers.kaleyra.io/docs/whatsapp-block-user-numbers.md): POST Method
+- [Unblock WhatsApp User Numbers](https://developers.kaleyra.io/docs/whatsapp-unblock-user-numbers.md): DELETE Method
+- [Get List of Blocked WhatsApp User Numbers](https://developers.kaleyra.io/docs/get-list-of-blocked-whatsapp-user-numbers.md): GET Method
+- [Fetch Phone Number Details API](https://developers.kaleyra.io/docs/fetch-phone-number-details-api.md): GET Method
+- [Overview](https://developers.kaleyra.io/docs/voice-api.md)
+- [Click to Call API](https://developers.kaleyra.io/docs/click-to-call-api.md): API to perform Click to Call using the POST Method.
+- [Outbound Calling API](https://developers.kaleyra.io/docs/outbound-calling-api.md): API to perform outbound calls.
+- [Call Recording Extraction API](https://developers.kaleyra.io/docs/call-recording-extraction-api.md): GET Method
+- [Call Log Pull API](https://developers.kaleyra.io/docs/call-log-pull-api.md): GET Method
+- [Dynamic Variables for DLRURL](https://developers.kaleyra.io/docs/dynamic-variable-for-drlurl.md)
+- [Callback Profiles in Voice APIs](https://developers.kaleyra.io/docs/callback-profiles-in-voice-apis.md): This document provides the details of how to use Callback Profiles in Outbound Calling API and Click to Call API.
+- [Voice Error Codes](https://developers.kaleyra.io/docs/voice-error-codes.md): This document provides information about the error codes you would receive when executing the Voice REST APIs.
+- [Overview](https://developers.kaleyra.io/docs/email-apis-v1-overview.md): Instructions for onboarding and enabling Email service for your account.  Ensure security measures are followed for the best chance to land on your recipient's inbox.
+- [Send Single Email](https://developers.kaleyra.io/docs/send-single-email.md): Send a single email to a recipient with attachments.
+- [Short URL in Email API Request for a single contact](https://developers.kaleyra.io/docs/short-url-in-email-api-request-for-a-single-contact.md)
+- [Send Batch and Bulk Emails](https://developers.kaleyra.io/docs/send-batch-and-bulk-emails.md): Send batch and bulk emails with attachments.
+- [Add Dynamic Values in Email API Using Params field](https://developers.kaleyra.io/docs/add-metadata-in-email.md): Add params field in email API to send real-time values in the email body.
+- [Use Templates in Email API](https://developers.kaleyra.io/docs/email-templates.md): Create, update, delete, and fetch email templates. Use an email template in email APIs.
+- [Get stats and Get logs in Email API](https://developers.kaleyra.io/docs/get-stats-and-logs-in-email-api.md): View status of emails and the logs of the emails sent for a date range.
+- [Use Webhook in Email API](https://developers.kaleyra.io/docs/subscribe-to-webhook.md): Use a webhook for web callback for an email.
+- [Email Error Codes](https://developers.kaleyra.io/docs/email-error-codes.md): Email error codes and messages for email APIs.
+- [Overview](https://developers.kaleyra.io/docs/email-apis-v2-overview.md)
+- [Overview](https://developers.kaleyra.io/docs/platform-apis-overview.md)
+- [Subaccounts](https://developers.kaleyra.io/docs/platform-apis-subaccounts.md)
+- [Create a Subaccount](https://developers.kaleyra.io/docs/platform-apis-create-subaccount.md): POST Method
+- [Get All Subaccounts Detail](https://developers.kaleyra.io/docs/platform-apis-get-all-subaccounts-detail.md): GET Method
+- [Get Subaccount Details](https://developers.kaleyra.io/docs/platform-apis-get-subaccount-details.md): GET Method
+- [Edit and Update Subaccount Details](https://developers.kaleyra.io/docs/platform-apis-edit-and-update-subaccount-details.md): PATCH Method
+- [Recharge a Subaccount](https://developers.kaleyra.io/docs/platform-apis-recharge-subaccount.md): POST Method
+- [Delete a Subaccount](https://developers.kaleyra.io/docs/platform-apis-delete-subaccount.md): DELETE Method
+- [Response Codes and Statuses](https://developers.kaleyra.io/docs/platform-apis-response-codes-and-statuses.md)
+- [Billing](https://developers.kaleyra.io/docs/platform-apis-billing.md)
+- [Get Account Billing or Usage Details](https://developers.kaleyra.io/docs/platform-apis-get-account-billing-usage-details.md): GET Method
+- [Response Codes and Statuses](https://developers.kaleyra.io/docs/platform-apis-billing-response-codes-and-statuses.md)
+- [Callback Profiles](https://developers.kaleyra.io/docs/platform-apis-callback-profiles.md)
+- [Create Callback Profiles](https://developers.kaleyra.io/docs/platform-apis-create-callback-profiles.md): POST Method
+- [Get Callback Profiles Detail](https://developers.kaleyra.io/docs/platform-apis-get-callback-profiles-detail.md): GET Method
+- [Get a Callback Profile by ID](https://developers.kaleyra.io/docs/platform-apis-get-callback-profile-by-id.md): GET Method
+- [Update a Callback Profile by ID](https://developers.kaleyra.io/docs/platform-apis-update-callback-profile-by-id.md): PATCH Method
+- [Delete a Callback Profile by ID](https://developers.kaleyra.io/docs/platform-apis-delete-callback-profile-by-id.md): DELETE Method
+- [Response Codes and Statuses](https://developers.kaleyra.io/docs/platform-api-callback-response-codes-and-statuses.md)
+- [Overview](https://developers.kaleyra.io/docs/number-apis-overview.md)
+- [List the Available Numbers for Subscriptions](https://developers.kaleyra.io/docs/number-apis-list-the-available-numbers-for-subscriptions.md): GET Method
+- [Subscribe a Number](https://developers.kaleyra.io/docs/number-apis-subscribe-a-number.md): POST Method
+- [List the Subscribed Numbers](https://developers.kaleyra.io/docs/number-apis-list-the-subscribed-numbers.md): GET Method
+- [Unsubscribe a Number](https://developers.kaleyra.io/docs/number-apis-unsubscribe.md): DELETE Method
+- [Resubscribe a Number](https://developers.kaleyra.io/docs/number-apis-resubscribe.md): POST Method
+- [Documents ID and Description for Numbers](https://developers.kaleyra.io/docs/number-apis-documents-id-and-description.md)
+- [Overview](https://developers.kaleyra.io/docs/blocklist-apis-overview.md)
+- [Get Blocklist](https://developers.kaleyra.io/docs/blocklist-apis-get-blocklist.md): GET Method
+- [Change Blocklist Status for Number](https://developers.kaleyra.io/docs/blocklist-apis-change-blocklist-status-for-number.md): POST Method
+- [Blocklist Error Codes](https://developers.kaleyra.io/docs/blocklist-apis-blocklist-error-codes.md)
+- [Overview](https://developers.kaleyra.io/docs/url-shortener-apis.md)
+- [Create a URL Shortener](https://developers.kaleyra.io/docs/url-shortener-apis-create.md): POST Method
+- [Get All URL List](https://developers.kaleyra.io/docs/url-shortener-apis-get-all-list.md): GET Method
+- [Get an Individual URL](https://developers.kaleyra.io/docs/url-shortener-apis-get-individual-url.md): GET Method
+- [Get URL Analytics Data](https://developers.kaleyra.io/docs/url-shortener-apis-get-url-analytics-data.md): GET Method
+- [Delete a Shortened URL](https://developers.kaleyra.io/docs/url-shortener-apis-delete.md): DELETE Method
+- [URL Shortener Callback](https://developers.kaleyra.io/docs/url-shortener-apis-callback.md)
+- [Overview](https://developers.kaleyra.io/docs/consent-management-apis-overview.md)
+- [Overview](https://developers.kaleyra.io/docs/overview-integration.md)
+- [LeadSquared SMS](https://developers.kaleyra.io/docs/leadsquared-kaleyra-integration.md): SMS Plugin
+- [Kaleyra SMS with LeadSquared](https://developers.kaleyra.io/docs/kaleyra-sms-leadsquared.md)
+- [Generate a Webhook URL](https://developers.kaleyra.io/docs/generate-a-web-hook-url.md)
+- [LeadSquared Automation](https://developers.kaleyra.io/docs/leadsquared-automation.md)
+- [LeadSquared WhatsApp](https://developers.kaleyra.io/docs/leadsquared-whatsapp.md): WhatsApp Plugin
+- [Kaleyra WhatsApp with LeadSquared](https://developers.kaleyra.io/docs/kaleyra-whatsapp-with-leadsquared.md)
+- [WebEngage SMS](https://developers.kaleyra.io/docs/webengage-sms.md): SMS Plugin
+- [Configure Kaleyra SMS on WebEngage](https://developers.kaleyra.io/docs/configure-kaleyra-sms-on-webengage.md): Step-by-step instructions to configure Kaleyra as your SMS Service Provider (SSP).
+- [Create SMS Campaign on WebEngage](https://developers.kaleyra.io/docs/create-sms-campaign-on-webengage.md)
+- [WebEngage WhatsApp](https://developers.kaleyra.io/docs/webengage.md): WhatsApp Plugin
+- [Configure Kaleyra.io WhatsApp on WebEngage](https://developers.kaleyra.io/docs/configure-kaleyra-on-webengage.md)
+- [Add WhatsApp Templates](https://developers.kaleyra.io/docs/add-whatsapp-template.md)
+- [Enable WhatsApp Delivery Callback URLs in Kaleyra](https://developers.kaleyra.io/docs/webengage-enable-whatsapp-delivery-callback-urls-in-kaleyra.md)
+- [Create WhatsApp Campaign on WebEngage](https://developers.kaleyra.io/docs/create-whatsapp-campaign.md)
+- [ORACLE Eloqua SMS](https://developers.kaleyra.io/docs/oracle-eloqua.md): SMS Plugin
+- [Configure Kaleyra on ORACLE Eloqua](https://developers.kaleyra.io/docs/configure-kaleyra-on-oracle-eloqua.md)
+- [View Kaleyra.io Configuration on ORACLE Eloqua](https://developers.kaleyra.io/docs/eloqua-view-kaleyraio-configuration-on-oracle-eloqua.md)
+- [Send SMS through Campaign Canvas](https://developers.kaleyra.io/docs/send-sms-through-campaign-canvas.md)
+- [Send SMS through Contact Program Canvas](https://developers.kaleyra.io/docs/send-sms-through-contact-program-canvas.md)
+- [Send SMS through Custom Object Program Canvas](https://developers.kaleyra.io/docs/send-sms-through-custom-object-program-canvas.md)
+- [Sent SMS Custom Data Object on Eloqua](https://developers.kaleyra.io/docs/sent-sms-custom-object-on-eloqua.md): The Sent SMS Custom Data Object (CDO) captures the SMS log of the campaigns triggered via Campaign Canvas and Program Canvas.
+- [Received SMS Custom Data Object on Eloqua](https://developers.kaleyra.io/docs/received-sms-custom-data-object-on-eloqua.md): The Received SMS Custom Data Object (CDO) captures the log of the user numbers that have opted out of the campaign triggered via Campaign Canvas and Program Canvas.
+- [ORACLE Eloqua WhatsApp](https://developers.kaleyra.io/docs/oracle-eloqua-whatsapp.md): WhatsApp Plugin
+- [View Kaleyra.io Configuration on ORACLE Eloqua](https://developers.kaleyra.io/docs/view-kaleyraio-configuration-on-oracle-eloqua.md)
+- [Send WhatsApp Messages](https://developers.kaleyra.io/docs/eloqua-send-whatsapp-messages.md)
+- [CleverTap SMS](https://developers.kaleyra.io/docs/clevertap.md): SMS Plugin
+- [Configure Provider for SMS](https://developers.kaleyra.io/docs/clevertap-sms-configure-provider.md)
+- [Launch an SMS Campaign](https://developers.kaleyra.io/docs/clevertap-sms-launch-an-sms-campaign.md)
+- [CleverTap WhatsApp](https://developers.kaleyra.io/docs/clevertap-whatsapp.md)
+- [Configure Provider for WhatsApp](https://developers.kaleyra.io/docs/clevertap-whatsapp-configure-provider.md)
+- [Enable WhatsApp Delivery Callback URLs in Kaleyra](https://developers.kaleyra.io/docs/clevertap-whatsapp-enable-delivery-callback-urls-in-kaleyra.md)
+- [Enable Incoming Message URL in Kaleyra](https://developers.kaleyra.io/docs/clevertap-whatsapp-enable-incoming-message-url-in-kaleyra.md)
+- [Add WhatsApp Template to CleverTap](https://developers.kaleyra.io/docs/clevertap-whatsapp-add-template-to-clevertap.md)
+- [Launch WhatsApp Campaign](https://developers.kaleyra.io/docs/clevertap-whatsapp-launch-campaign.md)
+- [View WhatsApp Campaign Report](https://developers.kaleyra.io/docs/clevertap-whatsapp-view-campaign-report.md)
+- [WhatsApp Conversations](https://developers.kaleyra.io/docs/clevertap-whatsapp-conversations.md)
+- [Zoho CRM SMS](https://developers.kaleyra.io/docs/zoho-sms.md): SMS Plugin
+- [Kaleyra SMS with Zoho CRM](https://developers.kaleyra.io/docs/kaleyra-sms-with-zoho-crm.md)
+- [Configure Kaleyra SMS Settings with Zoho CRM](https://developers.kaleyra.io/docs/kaleyra-sms-settings-and-configuration.md)
+- [Send SMS to Leads, Contacts, or Accounts](https://developers.kaleyra.io/docs/send-sms-to-leads-contacts-or-accounts.md)
+- [Send SMS using Workflow Rules](https://developers.kaleyra.io/docs/integration-zoho-crm-send-sms-using-workflow-rules.md)
+- [Send SMS Campaign to Leads or Contacts](https://developers.kaleyra.io/docs/integration-partners-zoho-crm-send-sms-campaign-to-leads-or-contacts.md)
+- [Zoho Desk SMS](https://developers.kaleyra.io/docs/integration-partners-zoho-desk-sms.md)
+- [Install the Kaleyra Plugin in Zoho Desk for SMS](https://developers.kaleyra.io/docs/integration-partners-install-kaleyra-plugin-in-zoho-desk-for-sms.md)
+- [Configure Kaleyra SMS Settings with Zoho Desk](https://developers.kaleyra.io/docs/integration-partners-zoho-desk-configure-kaleyra-sms-settings.md)
+- [Configure Workflow and Trigger SMS](https://developers.kaleyra.io/docs/integration-partners-zoho-desk-configure-workflow-and-trigger-sms.md)
+- [Zoho SMS Campaigns](https://developers.kaleyra.io/docs/zoho-sms-campaigns.md)
+- [Zoho WhatsApp](https://developers.kaleyra.io/docs/integration-partners-zoho-whatsapp.md)
+- [Zoho CRM: Send WhatsApp messages with Workflow Rules](https://developers.kaleyra.io/docs/integration-partners-zoho-crm-send-whatsapp-messages-with-workflow-rules.md)
+- [Configure Workflow Rules and Send WhatsApp](https://developers.kaleyra.io/docs/integration-partners-zoho-crm-configure-workflow-rules-and-send-whatsapp.md)
+- [View Workflow Rules Usage](https://developers.kaleyra.io/docs/integrations-partners-zoho-crm-view-workflow-rules-usage.md)
+- [MoEngage SMS](https://developers.kaleyra.io/docs/integration-with-moengage.md): SMS Plugin
+- [Kaleyra SMS Integration with MoEngage](https://developers.kaleyra.io/docs/kaleyra-sms-integration-with-moengage.md): POST Method
+- [Create SMS Callback](https://developers.kaleyra.io/docs/integration-partners-moengage-sms-create-callback.md)
+- [MoEngage WhatsApp](https://developers.kaleyra.io/docs/moengage-whatsapp.md): WhatsApp Plugin
+- [Kaleyra WhatsApp Integration with MoEngage](https://developers.kaleyra.io/docs/kaleyra-whatsapp-integration-with-moengage.md): GET Method
+- [Create WhatsApp Provider](https://developers.kaleyra.io/docs/integration-partners-moengage-create-whatsapp-provider.md)
+- [Create WhatsApp Template](https://developers.kaleyra.io/docs/integration-partners-moengage-create-whatsapp-template.md)
+- [Enable WhatsApp Delivery Callback URLs in Kaleyra](https://developers.kaleyra.io/docs/moengage-enable-whatsapp-delivery-callback-urls-in-kaleyra.md)
+- [Launch a WhatsApp Campaign](https://developers.kaleyra.io/docs/integration-partners-moengage-launch-whatsapp-campaign.md)
+- [Braze SMS](https://developers.kaleyra.io/docs/braze-plugin.md): SMS Plugin
+- [Kaleyra SMS Integration with Braze](https://developers.kaleyra.io/docs/sms-integration-with-braze.md): SMS Plugin
+- [Zapier](https://developers.kaleyra.io/docs/zapier.md): This section gives a brief introduction about Kaleyra integration with Zapier and its benefits.
+- [Integrate Kaleyra SMS with Zapier](https://developers.kaleyra.io/docs/integrate-kaleyra-account-with-zapier.md)
+- [Create a Zap to send an SMS](https://developers.kaleyra.io/docs/create-a-zap-to-send-an-sms.md): This section describes the steps to create a zap using a trigger app and an action app (Kaleyra) on Zapier platform.
+- [Create a Zap to send WhatsApp Messages](https://developers.kaleyra.io/docs/create-a-zap-to-send-whatsapp-messages.md): Use a trigger application and an action application  (Kaleyra) on the Zapier platform to create a zap to send WhatsApp messages.
+- [Shopify SMS](https://developers.kaleyra.io/docs/shopify.md): SMS Plugin
+- [Kaleyra SMS with Shopify](https://developers.kaleyra.io/docs/kaleyra-sms-with-shopify.md)
+- [Configure Kaleyra Settings with Shopify](https://developers.kaleyra.io/docs/configure-kaleyra-settings-with-shopify.md)
+- [Send SMS and Launch Campaign](https://developers.kaleyra.io/docs/send-sms-and-launch-campaign.md)
+- [Send SMS in Shopify Flow Automation](https://developers.kaleyra.io/docs/send-sms-in-shopify-flow-automation.md)
+- [Send Automated SMS](https://developers.kaleyra.io/docs/send-automated-sms.md)
+- [Automation use case: Add Customers](https://developers.kaleyra.io/docs/integration-partners-shopify-automation-use-case-add-customers.md)
+- [Automation use case: Orders Workflow](https://developers.kaleyra.io/docs/integration-partners-shopify-automation-use-case-orders-workflow.md)
+- [Shopify Marketing Automations](https://developers.kaleyra.io/docs/integration-partners-shopify-marketing-automations.md)
+- [Shopify WhatsApp](https://developers.kaleyra.io/docs/integration-partners-shopify-whatsapp.md)
+- [Integrate Kaleyra plugin with Shopify](https://developers.kaleyra.io/docs/integrate-partners-shopify-whatsapp-kaleyra-plugin.md)
+- [Configure Kaleyra Setting in Shopify](https://developers.kaleyra.io/docs/integration-partners-shopify-whatsapp-configure-kaleyra-setting.md)
+- [Send WhatsApp messages to Customer or group of Customers](https://developers.kaleyra.io/docs/integration-partners-shopify-whatsapp-messages-to-customer-or-group-of-customers.md)
+- [HubSpot SMS](https://developers.kaleyra.io/docs/hubspot.md): SMS Plugin
+- [Kaleyra SMS with HubSpot CRM](https://developers.kaleyra.io/docs/kaleyra-sms-with-hubspot-crm.md)
+- [Configure Kaleyra Settings with HubSpot](https://developers.kaleyra.io/docs/configure-kaleyra-settings-with-hubspot.md)
+- [Send SMS](https://developers.kaleyra.io/docs/hubspot-send-sms.md)
+- [HubSpot Automation](https://developers.kaleyra.io/docs/hubspot-automation.md)
+- [HubSpot WhatsApp](https://developers.kaleyra.io/docs/integration-partners-hubspot-whatsapp.md)
+- [Install Kaleyra Plugin in HubSpot CRM for WhatsApp Messaging](https://developers.kaleyra.io/docs/integration-partners-install-kaleyra-plugin-in-hubspot-crm-for-whatsapp-messaging.md)
+- [Configure Settings for WhatsApp within HubSpot](https://developers.kaleyra.io/docs/integration-partners-configure-settings-for-whatsapp-within-hubspot.md)
+- [Send WhatsApp Message](https://developers.kaleyra.io/docs/integration-partners-hubspot-send-whatsapp-message.md)
+- [Oracle Responsys MMS](https://developers.kaleyra.io/docs/oracle-responsys.md): MMS Plugin
+- [Integrate Kaleyra with Oracle Responsys](https://developers.kaleyra.io/docs/integrate-kaleyra-with-oracle-responsys.md)
+- [Send MMS using Oracle Responsys Programs](https://developers.kaleyra.io/docs/send-mms-using-oracle-responsys-programs.md)
+- [Enable MMS Delivery Reports](https://developers.kaleyra.io/docs/enable-mms-delivery-reports.md)
+- [Freshchat WhatsApp Connector](https://developers.kaleyra.io/docs/freshchat-whatsapp-generic-connector.md)
+- [Integrate Freshchat with Kaleyra WhatsApp](https://developers.kaleyra.io/docs/integrate-freshchat-with-kaleyra-whatsapp.md)
+- [Send WhatsApp Messages to Freshchat](https://developers.kaleyra.io/docs/send-whatsapp-message-to-freshchat.md)
+- [Genesys SMS](https://developers.kaleyra.io/docs/integration-partners-genesys-sms.md)
+- [Sample Trigger URL Data for Genesys](https://developers.kaleyra.io/docs/integration-partners-sample-trigger-url-data.md)
+- [Finalizing Onboarding](https://developers.kaleyra.io/docs/integration-partners-genesys-onboarding.md)
+- [View Integrated Setup in Genesys Cloud](https://developers.kaleyra.io/docs/integration-partners-view-integrated-setup-in-genesys-cloud.md)
+- [Launch Two-way MO Messaging](https://developers.kaleyra.io/docs/integration-partners-genesys-launch-two-way-mo-messaging.md)
+- [Data Actions Integration for Non-conversational or One-way conversation](https://developers.kaleyra.io/docs/integration-partners-genesys-data-actions-integration.md)
+- [View Conversation History](https://developers.kaleyra.io/docs/integration-partners-genesys-view-conversation-history.md)
+- [FAQs](https://developers.kaleyra.io/docs/kaleyra-faqs.md)
+- [Video API FAQs](https://developers.kaleyra.io/docs/video-api-faqs.md)
+- [Release Notes](https://developers.kaleyra.io/docs/release-notes-summary.md)
+- [Core Services](https://developers.kaleyra.io/docs/release-notes-kaleyra-io-core.md)
+- [Campaigns](https://developers.kaleyra.io/docs/release-notes-kaleyra-io-campaigner.md)
+- [SMS](https://developers.kaleyra.io/docs/release-notes-kaleyra-io-sms.md)
+- [WhatsApp](https://developers.kaleyra.io/docs/release-notes-kaleyra-io-whatsapp.md)
+- [Integrations](https://developers.kaleyra.io/docs/release-notes-kaleyra-io-integrations.md)
+- [Email (API and GW)](https://developers.kaleyra.io/docs/release-notes-kaleyra-io-email-api-and-gw.md)
+- [Messaging Solutions](https://developers.kaleyra.io/docs/release-notes-messaging-solutions.md)
+- [Chatbots](https://developers.kaleyra.io/docs/release-notes-kaleyra-io-chatbots.md)
+- [BFSI Solutions](https://developers.kaleyra.io/docs/release-notes-kaleyra-io-bfsi-solutions.md)
+- [Communicate Pro](https://developers.kaleyra.io/docs/release-notes-communicate-pro.md)
+- [Customer Plane](https://developers.kaleyra.io/docs/release-notes-customer-plane.md)
+- [GFTP](https://developers.kaleyra.io/docs/release-notes-gftp.md)
+
+## API Reference
+- [Overview](https://developers.kaleyra.io/reference/api-reference-sms-overview.md)
+- [Kaleyra SMS API Reference Testing Procedure](https://developers.kaleyra.io/reference/api-reference-sms-testing-procedure.md)
+- [Single SMS API](https://developers.kaleyra.io/reference/api-reference-single-sms-api.md)
+- [Send SMS Using a Template](https://developers.kaleyra.io/reference/api-reference-send-sms-using-a-template.md): SMS is a simple and cost-effective way to communicate with customers. Before starting to send the SMS APIs, make sure that you have configured the SMS channel in kaleyra.io. This section details how to send your outbound SMS using an API request. To send marketing messages use "type" value as "MKT".  To send transactional messages use "type" value as "TXN".  To send otp messages use "type" value as "OTP". **Note**: Select the base URL by clicking the arrow next to the Base URL (right pane).
+- [Bulk SMS APIs](https://developers.kaleyra.io/reference/api-reference-bulk-sms-apis.md)
+- [Send MKT/TXN/OTP SMS to Multiple Numbers using GET](https://developers.kaleyra.io/reference/api-reference-send-sms-to-multiple-numbers-using-get.md): You can send bulk message using GET method. To send marketing messages use "type" value as "MKT". To send transactional messages use "type" value as "TXN". To send op messages use "type" value as "OTP".To send SMS to multiple numbers use Comma separated values in "to". **Note**: Select the base URL by clicking the arrow next to the Base URL (right pane).
+- [Send MKT/TXN/OTP SMS to Multiple Numbers using POST](https://developers.kaleyra.io/reference/api-reference-send-sms-to-multiple-numbers-using-post.md): You can send bulk message using POST method. To send marketing messages use "type" value as "MKT". To send transactional messages use "type" value as "TXN". To send otp messages use "type" value as "OTP". To send SMS to multiple numbers use Comma separated values in "to". **Note**: Select the base URL by clicking the arrow next to the Base URL (right pane).
+- [Send SMS using JSON](https://developers.kaleyra.io/reference/api-reference-send-sms-using-json.md): You can send bulk message using JSON file. To send marketing messages use "type" value as "MKT". To send transactional messages use "type" value as "TXN". To send otp messages use "type" value as "OTP". To send SMS to multiple numbers use Comma separated values in "to". **Note**: Select the base URL by clicking the arrow next to the Base URL (right pane).
+- [Send SMS using XML](https://developers.kaleyra.io/reference/api-reference-send-sms-using-xml.md): You can send bulk message using XML. To send marketing messages use "type" value as "MKT". To send transactional messages use "type" value as "TXN".To send otp messages use "type" value as "OTP". To send SMS to multiple numbers use Comma separated values in "to". **Note**: Select the base URL by clicking the arrow next to the Base URL (right pane).
+- [SMS Status and Logs APIs](https://developers.kaleyra.io/reference/api-reference-sms-status-and-logs-apis.md)
+- [Get SMS Status of Message ID](https://developers.kaleyra.io/reference/api-reference-get-sms-status-of-message-id.md): You can get the SMS status using this API. **Note:** Select the base URL by clicking the arrow next to the Base URL (right pane).
+- [Get Logs API](https://developers.kaleyra.io/reference/api-reference-get-logs-api.md): You can get the SMS logs using this API. **Note:** Select the base URL by clicking the arrow next to the Base URL (right pane).
+- [Sender ID APIs](https://developers.kaleyra.io/reference/api-reference-sender-id-apis.md)
+- [Create a New Sender ID](https://developers.kaleyra.io/reference/api-reference-create-a-new-sender-id.md): You can create a new sender Id using this API. In the data sender, description and `iso_code` are mandatory. In India `entity_id` is mandatory too. But if `entity_id` is not given no error will appear. **Note:** Select the base URL by clicking the arrow next to the Base URL (right pane).
+- [List Sender IDs API](https://developers.kaleyra.io/reference/api-reference-list-sender-ids-api.md): You can list the seder IDs associated with your kaleyra.io account using this API. **Note:** Select the base URL by clicking the arrow next to the Base URL (right pane).
+- [Templates APIs](https://developers.kaleyra.io/reference/api-reference-templates-apis.md)
+- [Create a Template API](https://developers.kaleyra.io/reference/api-reference-create-a-template-api.md): You can create a template using this API. In the data sender, description and `iso_code` are mandatory. In India `entity_id` is mandatory too. But if `entity_id` is not given no error will appear. **Note:** Select the base URL by clicking the arrow next to the Base URL (right pane).
+- [List Template APIs](https://developers.kaleyra.io/reference/api-reference-list-templates-apis.md): You can list the templates create in your kaleyra.io account using this API. **Note:** Select the base URL by clicking the arrow next to the Base URL (right pane).
+- [Overview](https://developers.kaleyra.io/reference/consent-api.md)
+- [Kaleyra Consent API Reference Testing Procedure](https://developers.kaleyra.io/reference/consent-api-reference-testing-procedure.md)
+- [Consent Update](https://developers.kaleyra.io/reference/consent-api-update.md)
+- [Consent Update API](https://developers.kaleyra.io/reference/consent-api-reference-update.md)
+- [Consent Validate](https://developers.kaleyra.io/reference/consent-api-validate.md)
+- [Consent Validate API](https://developers.kaleyra.io/reference/consent-api-reference-validate.md)
+- [List Records](https://developers.kaleyra.io/reference/consent-api-list-records.md)
+- [List Records API](https://developers.kaleyra.io/reference/consent-api-reference-list-records.md)
+- [Overview](https://developers.kaleyra.io/reference/video-api-overview.md)
+- [Key Concepts](https://developers.kaleyra.io/reference/video-important-concepts.md)
+- [Environments](https://developers.kaleyra.io/reference/video-environments.md)
+- [Personally Identifiable Information (PII)](https://developers.kaleyra.io/reference/video-pii.md)
+- [Integration](https://developers.kaleyra.io/reference/video-integration-options.md)
+- [Authentication](https://developers.kaleyra.io/reference/video-authentication.md)
+- [User Management](https://developers.kaleyra.io/reference/video-user-management.md)
+- [REST API Integration](https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api.md)
+- [Web SDK Integration](https://developers.kaleyra.io/reference/video-make-a-video-call-with-web-sdk.md)
+- [Android SDK Integration](https://developers.kaleyra.io/reference/video-make-a-video-call-with-android-sdk.md)
+- [iOS SDK Integration](https://developers.kaleyra.io/reference/video-make-a-video-call-with-ios-sdk.md)
+- [Chat](https://developers.kaleyra.io/reference/video-chat.md)
+- [File Sharing](https://developers.kaleyra.io/reference/video-file-share.md)
+- [Recording and Transcription](https://developers.kaleyra.io/reference/video-recording.md)
+- [Electronic Signature](https://developers.kaleyra.io/reference/electronic-signature.md)
+- [Customization](https://developers.kaleyra.io/reference/video-customization.md)
+- [Query Strings](https://developers.kaleyra.io/reference/video-query-strings.md)
+- [Server Side User Details Provider](https://developers.kaleyra.io/reference/video-server-side-user-details-provider.md)
+- [Color Theme and Logo](https://developers.kaleyra.io/reference/video-theme-customization.md)
+- [IFrame Integration](https://developers.kaleyra.io/reference/video-iframe-integration.md)
+- [Mobile SDK Color Customization](https://developers.kaleyra.io/reference/video-customization-sdk-colors.md): Test color appearance and generate code accordingly, with an interactive tool.
+- [REST API v2 Migration guide](https://developers.kaleyra.io/reference/api-v1-to-api-v2-migration-guide.md)
+- [Get company details](https://developers.kaleyra.io/reference/video-v2-company-get.md): Retrieve information about this company. A company represents your Kaleyra Video instance and includes global configurations. See <a href="https://developers.kaleyra.io/reference/video-important-concepts#company">this page</a> for more information.
+- [Update company](https://developers.kaleyra.io/reference/video-v2-company-put.md): Update details of a company. A company represents your Kaleyra Video instance and includes global configurations. See <a href="https://developers.kaleyra.io/reference/video-important-concepts#company">this page</a> for more information.
+- [Get company theme](https://developers.kaleyra.io/reference/video-v2-companytheme-get.md): Get theme of a company.
+- [Update company theme](https://developers.kaleyra.io/reference/video-v2-companytheme-put.md): Update theme of a company.
+- [Update company theme logo](https://developers.kaleyra.io/reference/video-v2-companythemelogo-put.md): Update theme logo of a company.
+- [List all virtual backgrounds](https://developers.kaleyra.io/reference/video-v2-companybackgrounds-get.md): Virtual backgrounds paths of a company
+- [Create virtual background](https://developers.kaleyra.io/reference/video-v2-companybackground-post.md): Create a new virtual background for a company.
+- [Delete virtual background](https://developers.kaleyra.io/reference/video-v2-companybackground-delete.md): Delete virtual background of a company.
+- [Get all company translations](https://developers.kaleyra.io/reference/video-v2-companytranslations-get.md): Get all translations of a company.
+- [Update company translations](https://developers.kaleyra.io/reference/video-v2-companytranslations-put.md): Update translations of a company.
+- [Delete company translations](https://developers.kaleyra.io/reference/video-v2-companytranslations-delete.md): Delete translations of a company.
+- [Get recording settings](https://developers.kaleyra.io/reference/video-v2-recording-get.md): Get recording settings of a company.
+- [Update recording setting](https://developers.kaleyra.io/reference/video-v2-recording-put.md): Update recording settings of a company.
+- [Get all encryption keys](https://developers.kaleyra.io/reference/video-v2-encryptionkeys-get.md): Get a list of encryption keys of a company.
+- [Create encryption key](https://developers.kaleyra.io/reference/video-v2-encryptionkey-post.md): Create a new encryption key for a company.
+- [Get encryption key by Id](https://developers.kaleyra.io/reference/video-v2-encryptionkey-get.md): Get a encryption keys of a company by key Id.
+- [Get users](https://developers.kaleyra.io/reference/video-v2-users-get.md): Get a list of users.
+- [Create user](https://developers.kaleyra.io/reference/video-v2-user-post.md): Create a new user.
+- [Get user](https://developers.kaleyra.io/reference/video-v2-user-get.md): Get a user by its Id.
+- [Update user](https://developers.kaleyra.io/reference/video-v2-user-put.md): Update a user by its Id.
+- [Delete user](https://developers.kaleyra.io/reference/video-v2-user-delete.md): Delete a user by its Id.
+- [Update user avatar](https://developers.kaleyra.io/reference/video-v2-useravatar-put.md): Update a user avatar by its Id.
+- [Delete user avatar](https://developers.kaleyra.io/reference/video-v2-useravatar-delete.md): Delete a user avatar by its Id.
+- [Get all rooms](https://developers.kaleyra.io/reference/video-v2-rooms-get.md): Get a list of rooms.
+- [Create room](https://developers.kaleyra.io/reference/video-v2-room-post.md): Create a room  The duration parameter indicates the maximum duration of the call. It is expressed in seconds. If the parameter is not specified, the call has **unlimited** duration. The **minimum duration** is 60 seconds.  The response returns the URLs that each user can use to join the call.  **NOTE:** Within the sandbox server, the calls won’t be recorded even if indicated in the REST parameters. *If you would like to try the recording option in sandbox, please contact support.*  **NOTE:** 30 seconds before the time is up all clients get notifications of the short time left. When the duration expires the call ends. Available time runs only when clients are in the videocall. If they are experiencing problems and the connection drops, the timer will stop.  **NOTE:** If you have enabled WebHooks (described in Web Hooks section), the room_id returned in the response, could be saved in your database for further hook events that might be received.  **NOTE:** if **Offline transcription** is not currently enabled for your Company. *Please contact support to activate this feature.*
+- [Get room](https://developers.kaleyra.io/reference/video-v2-room-get.md): Get a room by its Id.
+- [Delete room](https://developers.kaleyra.io/reference/video-v2-room-delete.md): Delete a room by its Id.
+- [Disable room](https://developers.kaleyra.io/reference/video-v2-room-put.md): Disable a room by its Id.
+- [Start room recording](https://developers.kaleyra.io/reference/video-v2-roomrecordingstart-post.md): Start room recoding by room Id.
+- [Stop room recording](https://developers.kaleyra.io/reference/video-v2-roomrecordingstop-post.md): Stop room recoding by room Id.
+- [Room call action](https://developers.kaleyra.io/reference/video-v2-roomcall-postl.md): Trigger the ringing on a specific room
+- [Get all participants of a room](https://developers.kaleyra.io/reference/video-v2-roomparticipants-get.md): Get a list of participants of a room by its Id.
+- [Add participant to a room](https://developers.kaleyra.io/reference/video-v2-roomparticipant-post.md): Add participant to a room by its Id.
+- [Get room participant](https://developers.kaleyra.io/reference/video-v2-roomparticipant-get.md): Get a participant of a room by user Id and room Id.
+- [Update room participant](https://developers.kaleyra.io/reference/video-v2-roomparticipant-put.md): Update a participant of a room by user Id and room Id.
+- [Delete room participant](https://developers.kaleyra.io/reference/video-v2-roomparticipant-delete.md): Delete a participant of a room by user Id and room Id.
+- [Get all sessions](https://developers.kaleyra.io/reference/video-v2-sessions-get.md): Get a list of sessions.  **Note**: All date’s fields follow the ISO8601 standard.
+- [Get session](https://developers.kaleyra.io/reference/video-v2-session-get.md): Get a session by its Id.
+- [Get session recording](https://developers.kaleyra.io/reference/video-v2-sessionrecording-get.md): Get recording details of a session by its Id.
+- [Delete session recording](https://developers.kaleyra.io/reference/video-v2-sessionrecording-delete.md): Delete recording details of a session by its Id.
+- [Get all session user connections](https://developers.kaleyra.io/reference/video-v2-sessionuserconnections-get.md): Get details list of a session user connections by its Id.
+- [Get session transcription](https://developers.kaleyra.io/reference/video-v2-sessiontranscription-get.md): Get transcription file of a session by its Id.  **NOTE:** if Offline transcription is not currently enabled for your Company. *Please contact support to activate this feature.*
+- [Delete session transcription](https://developers.kaleyra.io/reference/video-v2-sessiontranscription-delete.md): Delete transcription file of a session by its Id.  **NOTE:** if Offline transcription is not currently enabled for your Company. *Please contact support to activate this feature.*
+- [Get session summarization](https://developers.kaleyra.io/reference/video-v2-sessionsummarization-get.md): Get summarization file of a session by its Id.  **NOTE:** if summarization is not currently enabled for your Company. *Please contact support to activate this feature.*
+- [Delete session summarization](https://developers.kaleyra.io/reference/video-v2-sessionsummarization-delete.md): Delete summarization file of a session by its Id.  **NOTE:** if summarization is not currently enabled for your Company. *Please contact support to activate this feature.*
+- [Get all channels](https://developers.kaleyra.io/reference/video-v2-channel-getall.md): Get a list of channels.
+- [Create channel](https://developers.kaleyra.io/reference/video-v2-channel-post.md): Create a chat channel between two users.
+- [Get channel](https://developers.kaleyra.io/reference/video-v2-channel-get.md): Get a specific channel by id
+- [Delete channel](https://developers.kaleyra.io/reference/video-v2-channel-delete.md): Delete a specific channel
+- [Create chat message](https://developers.kaleyra.io/reference/video-v2-message-post.md): Send a new message in a specific channel
+- [Get chat messages](https://developers.kaleyra.io/reference/video-v2-message-get.md): Retrieve all the messages of a given channel
+- [Get all uploaded files](https://developers.kaleyra.io/reference/video-v2-uploads-get.md): Get a list of uploaded files.
+- [Get uploaded file](https://developers.kaleyra.io/reference/video-v2-upload-get.md): Get an uploaded file by key.
+- [Delete uploaded file](https://developers.kaleyra.io/reference/video-v2-upload-delete.md): Delete an uploaded file by key.
+- [Get all tags](https://developers.kaleyra.io/reference/video-v2-tags-get.md): Get a list of tags.
+- [Create tag](https://developers.kaleyra.io/reference/video-v2-tag-post.md): Create a new tag.
+- [Delete tag](https://developers.kaleyra.io/reference/video-v2-tag-delete.md): Delete a tag by name.
+- [Create access token](https://developers.kaleyra.io/reference/video-v2-sdk-post.md): Create user access token that can be user in the sdks.
+- [Get all envelopes](https://developers.kaleyra.io/reference/video-v2-envelopes-get.md): Get a list of sign envelopes.
+- [Get envelope](https://developers.kaleyra.io/reference/video-v2-envelope-get.md): Get a specific sign envelope details by its Id.
+- [Get all webhooks](https://developers.kaleyra.io/reference/video-v2-webhooks-get.md): Get a list of webhooks.
+- [Create webhook](https://developers.kaleyra.io/reference/video-v2-webhook-post.md): Video's programmable Webhooks are event callbacks that can be listened to enable the monitoring and interception of specific events happening on Kaleyra Video through a backend service. When a callback is specified, Kaleyra Video will make an HTTP request to the designated webhook URL. This request contains various relevant data that can be used, for example to collect statistics on usage, or to execute operations triggered by the usage of the platform.    The event type of Video's webhooks is “Post-Event”, which means that the event is notified after it happened on Kaleyra Video systems. These events are notified through http requests fired from Kaleyra Video system to the url specified during the configuration.     Kaleyra Video system requires a 200 OK response to signal back that the webhooks have been correctly processed by the endpoint, otherwise a retry logic will be executed.    All the non 200 responses are logged as errors just for information purposes.     The event payload includes a set of relevant data depending on the event type that can be used in various ways to develop logics on the integrating system.     **Note**: All date fields follow the ISO8601 standard.
+- [Get webhook](https://developers.kaleyra.io/reference/video-v2-webhook-get.md): Get a webhook by its Id.
+- [Update webhook](https://developers.kaleyra.io/reference/video-v2-webhook-put.md): Update a webhook by its Id.
+- [Delete webhook](https://developers.kaleyra.io/reference/video-v2-webhook-delete.md): Delete a webhook by its Id.
+- [Verify webhook signature](https://developers.kaleyra.io/reference/webhook-signature.md)
+- [Get all signature templates](https://developers.kaleyra.io/reference/video-v2-signaturetemplates-get.md): Get a list of signature templates.
+- [Create signature template](https://developers.kaleyra.io/reference/video-v2-signaturetemplate-post.md): Create a signature template (the placeholder in the document in which signatures will be printed).
+- [Get signature template](https://developers.kaleyra.io/reference/video-v2-signaturetemplate-get.md): Get a signature template by its Id.
+- [Update signature template](https://developers.kaleyra.io/reference/video-v2-signaturetemplate-put.md): Update a signature template by its Id.
+- [Delete a signature template](https://developers.kaleyra.io/reference/video-v2-signaturetemplate-delete.md): Delete a signature template by its Id.
+- [Create an automatic signature](https://developers.kaleyra.io/reference/video-v2-signature-post.md): In an active call, an operator can create a signature document using this endpoint that will fill the information and send a notification to the client to sign the document. After that, the operator can download the signed document. A webhook event `on_signature_enveloped_inserted` is sent after a signature is created.
+- [Batch Email API](https://developers.kaleyra.io/reference/post_v1-sid-email-batch.md): In a Batch email request, you can send an email to one or more recipients. The email recipients can see all the other recipient names to whom the email is sent. Also, you can send different emails(different email body) to recipients in the same email request.
+- [LOGS API](https://developers.kaleyra.io/reference/get_v1-sid-email-logs.md): The email APIs in this section shows the logs for all the emails sent within the specified date range.
+- [Get Stats by MSGID](https://developers.kaleyra.io/reference/get_v1-sid-email-stats.md): The email APIs in this section shows the different statuses of the emails sent within the specified date range.  The follwoing are the different statuses of the emails sent:  - **Accepted status** - A request is marked as ‘accepted’ once it gets validated successfully by Kaleyra.      - **Bounce status** - The email get bounce if the email account that you tried to send an email does not exist.      - **Delivered status** - When the email is delivered to the recipient’s mailbox through the service provider.      - **Blocked status** - When an email is being sent from an invalid sender domain (not registered).      - **Get summary stats** - To get a summary of the statuses of all the emails that are sent. You can specify a date range as a query parameter to obtain the statuses of the emails sent within the specified date range. You can also use 'pagination' for the result.
+- [Post New Template API](https://developers.kaleyra.io/reference/post_v1-sid-email-templates.md): You can use templates in email APIs to send standard/uniform email messages to customers. By default, the email APIs must be sent only with an approved template.  In order to get a new email template approved, contact your Kaleyra account manager or reach out to the Kaleyra [support](https://developers.kaleyra.io/docs/support) team. A template is approved based on its relevance to the brand details of the product.  You cannot send an email without a template by default. To enable the email service without a template, contact your Kaleyra account manager or reach out to the Kaleyra [support](https://developers.kaleyra.io/docs/support) team.  In the email templates, you can specify the values for the parameters, 'from', 'subject', html_body, text_body, and template_name. The parameter values that you provide in the email API call take precedence(override) over the corresponding parameters in the email template.  While using a template in the email API, you must provide the template_id. Make sure to note down the template_id to be able to use in an email API.
+- [Get Template API with Pagination](https://developers.kaleyra.io/reference/get_v1-sid-email-templates.md)
+- [Get Template API using templateID](https://developers.kaleyra.io/reference/get_v1-sid-email-templates-templateid.md): You can fetch(search) a template by specifying the template_id with 'GET' method.
+- [Update Template API using templateID](https://developers.kaleyra.io/reference/put_v1-sid-email-templates-templateid.md): StartFragment  You can update the parameter values of an existing template.  To update an existing template details, use the endpoint with 'PUT' method.  EndFragment
+- [Delete Template API using templateID](https://developers.kaleyra.io/reference/delete_v1-sid-email-templates-templateid.md): StartFragment  You can delete a template that you do not need.  To delete existing template details, use the endpoint with 'DELETE' method.  EndFragment
+- [Overview](https://developers.kaleyra.io/reference/email-api-v2-overview.md)
+- [Send a Single Email](https://developers.kaleyra.io/reference/email-api-v2-send-a-single-email.md): Send one email payload to one or more recipients (To/CC/BCC). Attachments supported; total payload ≤ 20 MB.
+- [Overview](https://developers.kaleyra.io/reference/api-reference-blocklist-overview.md)
+- [kaleyra.io Blocklist API Reference Testing Procedure](https://developers.kaleyra.io/reference/kaleyraio-blocklist-api-reference-testing-procedure.md)
+- [Get Blocklist](https://developers.kaleyra.io/reference/api-reference-get-blocklist.md)
+- [Change Blocklist Status for Number](https://developers.kaleyra.io/reference/api-reference-change-blocklist-status-for-number.md)
+- [Overview](https://developers.kaleyra.io/reference/api-reference-documents-overview.md)
+- [Steps to Test the Documents API Reference Pages](https://developers.kaleyra.io/reference/steps-to-test-the-documents-api-reference-pages.md): The following page describes the steps to test Documents API Reference.
+- [Upload-Documents](https://developers.kaleyra.io/reference/post_api-v1-sid-documents-upload.md): This API request allows you to upload documents into the repository.
+- [List-Documents](https://developers.kaleyra.io/reference/get_api-v1-sid-documents.md): This API request lists all the documents present in the repository.
+- [Delete-Document](https://developers.kaleyra.io/reference/post_api-v1-sid-documents-delete.md): This API request allows you to delete a document from the repository. Specify the document ID that you want to delete.
+- [Rename-Documents](https://developers.kaleyra.io/reference/post_api-v1-sid-documents-rename.md): This API request allows you to rename a document. Specify the document ID and the new doument title.
+- [Overview](https://developers.kaleyra.io/reference/whatsapp-block-user-api-overview.md)
+- [Kaleyra Block User API Reference Testing Procedure](https://developers.kaleyra.io/reference/kaleyra-block-user-api-reference-testing-procedure.md)
+- [Block WhatsApp User Numbers](https://developers.kaleyra.io/reference/block-whatsapp-user-numbers.md): The **Block WhatsApp User Numbers** API allows you to programmatically block one or more WhatsApp user mobile numbers, preventing them from sending incoming messages and stopping you from sending outgoing messages to these numbers.
+- [Get List of Blocked WhatsApp User Numbers](https://developers.kaleyra.io/reference/get-list-of-blocked-whatsapp-user-numbers.md): The **Get List of Blocked WhatsApp User Numbers** API allows you to get the list of blocked WhatsApp user numbers that have been blocked for a particular business number.
+- [Unblock WhatsApp User Numbers](https://developers.kaleyra.io/reference/unblock-whatsapp-user-numbers.md): The **Unblock WhatsApp User Numbers** API allows you to programmatically unblock one or more WhatsApp user mobile numbers, allowing them to send again incoming messages. Also, after you unblock the user numbers, you can send them again outgoing messages.
+- [Overview](https://developers.kaleyra.io/reference/resumable-media-overview.md)
+- [Kaleyra Resumable Media API Reference Testing Prodecure](https://developers.kaleyra.io/reference/kaleyra-resumable-media-api-refernce-testing-prodecure.md)
+- [Get Resumable Media](https://developers.kaleyra.io/reference/get_v2-sid-whatsapp-waba-id-resumable-media.md): The **Get Resumable Media** API allows you to get the details related to resumable media ID stored in the database.
+- [Upload Resumable Media](https://developers.kaleyra.io/reference/post_v2-sid-whatsapp-waba-id-resumable-media.md): The Kaleyra platform's **Upload Resumable Media** API enables you to asynchronously upload (and resume interrupted upload sessions without restarting) media files of up to 100 MB, generating a unique media ID. This uploaded media file will be available for 24 hours after creation and the uploaded media will be available for three days after it has been created. You can receive real time update about your uploaded Resumable Media through the Kaleyra callback service. For more information about the callback profile for WhatsApp resumable media status update, see [Callback Profile for WhatsApp Resumable Media Status Update](https://developers.kaleyra.io/docs/callback-profile-for-whatsapp-resumable-media-status-update).
+- [Overview](https://developers.kaleyra.io/reference/v2sidwhatsappcall_permissions.md)
+- [Get Call Consent Status](https://developers.kaleyra.io/reference/getcallconsentstatus.md): The Get Call Consent Status API allows you to get the consent details of end user mobile numbers for outbound voice calling for WhatsApp Business Numbers.
+- [Overview](https://developers.kaleyra.io/reference/whatsapp-payment-api-overview.md)
+- [Get Payment Status](https://developers.kaleyra.io/reference/whatsapp-payment-api-get-payment-status.md): The Get Payment Status API allows you to retrieve the status of a previously initiated transaction and returns all relevant transaction details.
+- [Process Refund](https://developers.kaleyra.io/reference/whatsapp-payment-api-v2-process-refund.md): The Process Refund API allows you to initiate a refund for a successfully completed payment.
+- [Overview](https://developers.kaleyra.io/reference/phone-number-management-1.md)
+- [Overview](https://developers.kaleyra.io/reference/whatsapp-group-management-api-overview.md)
+- [Create Group](https://developers.kaleyra.io/reference/whatsapp-group-management-api-create-group.md): The Create Group API allows you to create WhatsApp groups under a given WhatsApp Business number. The API supports both `auto_approval` and `approval_required modes` for adding participants to the created WhatsApp group.
+- [Get Group Information](https://developers.kaleyra.io/reference/whatsapp-group-management-api-get-group-information.md): The Get Group Information API retrieves information about WhatsApp groups created under a specified WhatsApp Business number.
+- [Reset Group Invite Link](https://developers.kaleyra.io/reference/whatsapp-group-management-api-reset-group-invite-link.md): The Reset Group Invite Link API enables businesses to reset the invite link of a specified WhatsApp group.
+- [Remove Participants](https://developers.kaleyra.io/reference/whatsapp-group-management-api-remove-participants.md): The Remove Participants API enables the removal of participants from a specified WhatsApp group.
+- [Delete Group](https://developers.kaleyra.io/reference/whatsapp-group-management-api-delete-group.md): The Delete Group API allows you to delete a specified WhatsApp group.
+- [Get Join Requests](https://developers.kaleyra.io/reference/whatsapp-group-management-api-get-join-requests.md): The Get Join Requests API allows you to retrieve the list of participants who have requested to join a specified WhatsApp group, along with their corresponding join request IDs.
+- [Accept Join Requests](https://developers.kaleyra.io/reference/whatsapp-group-management-api-accept-join-requests.md): The Accept Join Requests API allows you to approve pending join requests for a specific WhatsApp group.
+- [Reject Join Requests](https://developers.kaleyra.io/reference/whatsapp-group-management-api-reject-join-requests.md)

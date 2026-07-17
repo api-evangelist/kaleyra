@@ -1,0 +1,27 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.kaleyra.io/ + npm @kaleyra scope
+notes: >-
+  Kaleyra Video ships embeddable client-side video-calling components/SDKs for
+  Web, Android, iOS, React Native, and Cordova (prebuilt call UI + programmable
+  primitives). These are client-side, embeddable surfaces distinct from the
+  server-side REST helper library in packages/. The messaging channels (SMS,
+  WhatsApp, RCS, Email, Verify) are server-to-server REST and ship no embeddable
+  UI components.
+families:
+- name: Kaleyra Video
+  kind: embeddable video-calling SDK / prebuilt call UI
+  surfaces:
+  - platform: Web
+    loader: "@kaleyra Video Web SDK"
+    docs: https://developers.kaleyra.io/docs/video-web-sdk
+  - platform: React Native
+    loader: "@kaleyra/video-react-native-module"
+    docs: https://www.npmjs.com/package/@kaleyra/video-react-native-module
+  - platform: Cordova
+    loader: "@kaleyra/video-cordova-plugin"
+    docs: https://www.npmjs.com/package/@kaleyra/video-cordova-plugin
+  - platform: Android
+    docs: https://developers.kaleyra.io/docs/video-android-sdk
+  - platform: iOS
+    docs: https://developers.kaleyra.io/docs/video-ios-sdk

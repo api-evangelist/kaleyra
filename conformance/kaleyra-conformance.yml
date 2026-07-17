@@ -1,0 +1,36 @@
+generated: '2026-07-17'
+method: derived
+source: openapi/kaleyra-openapi.yml + https://www.kaleyra.com/security/
+notes: >-
+  Standards posture derived from the modeled OpenAPI and Kaleyra's published
+  security/compliance program. Kaleyra uses static api-key header auth (no
+  OAuth2/OIDC), REST over HTTPS, form-urlencoded and JSON payloads. Its
+  compliance program (ISO 27001, SOC 2, GDPR, HIPAA, PCI DSS) is captured in
+  security/kaleyra-trust-center.yml.
+standards:
+- id: oauth2
+  conforms: false
+  evidence: API uses api-key header auth; no oauth2 securityScheme.
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Error schema is a simple {error, message} object, not application/problem+json.
+- id: rest-https
+  conforms: true
+  evidence: All operations are REST over HTTPS on regional hosts.
+- id: iso-27001
+  conforms: true
+  evidence: Published on https://www.kaleyra.com/security/
+- id: soc-2
+  conforms: true
+  evidence: Published on https://www.kaleyra.com/security/
+- id: pci-dss
+  conforms: true
+  evidence: Published on https://www.kaleyra.com/security/
+- id: hipaa
+  conforms: true
+  evidence: Published on https://www.kaleyra.com/security/
+- id: gdpr
+  conforms: true
+  evidence: Published on https://www.kaleyra.com/security/ + EU data-residency host.

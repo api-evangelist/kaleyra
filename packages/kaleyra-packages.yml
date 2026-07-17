@@ -1,0 +1,53 @@
+generated: '2026-07-17'
+method: searched
+source: https://github.com/kaleyra + npm registry (@kaleyra scope)
+notes: >-
+  Kaleyra ships an official Java helper library for the REST messaging/voice/verify
+  APIs (github.com/kaleyra/kaleyra-java) and official Kaleyra Video client packages
+  under the npm @kaleyra scope (React Native / Cordova), alongside native Android
+  and iOS Video SDKs documented on the developer hub. There is no first-party
+  Python, PHP, Ruby, Go, or .NET package published on the public registries in
+  this pass. kaleyra-java is distributed as source on GitHub (not published to
+  Maven Central).
+packages:
+- language: java
+  registry: github
+  name: kaleyra/kaleyra-java
+  url: https://github.com/kaleyra/kaleyra-java
+  install: git clone https://github.com/kaleyra/kaleyra-java
+  official: true
+  notes: JAVA library for consuming Kaleyra REST APIs (14 API families). Java 8+.
+- language: javascript
+  registry: npm
+  name: "@kaleyra/video-react-native-module"
+  url: https://www.npmjs.com/package/@kaleyra/video-react-native-module
+  install: npm install @kaleyra/video-react-native-module
+  official: true
+  notes: Official Kaleyra Video SDK for React Native.
+- language: javascript
+  registry: npm
+  name: "@kaleyra/video-cordova-plugin"
+  url: https://www.npmjs.com/package/@kaleyra/video-cordova-plugin
+  install: npm install @kaleyra/video-cordova-plugin
+  official: true
+  notes: Official Kaleyra Video SDK plugin for Apache Cordova.
+- language: javascript
+  registry: npm
+  name: "@kaleyra/video-cordova-broadcast-extension-plugin"
+  url: https://www.npmjs.com/package/@kaleyra/video-cordova-broadcast-extension-plugin
+  install: npm install @kaleyra/video-cordova-broadcast-extension-plugin
+  official: true
+  notes: Kaleyra Video screen-broadcast extension plugin for Cordova.
+native_sdks:
+- platform: Android
+  product: Kaleyra Video
+  docs: https://developers.kaleyra.io/docs/video-android-sdk
+  official: true
+- platform: iOS
+  product: Kaleyra Video
+  docs: https://developers.kaleyra.io/docs/video-ios-sdk
+  official: true
+- platform: Web
+  product: Kaleyra Video
+  docs: https://developers.kaleyra.io/docs/video-web-sdk
+  official: true
