@@ -1,0 +1,102 @@
+openapi: 3.0.3
+info:
+  title: Kaleyra CPaaS Messages Voice API
+  description: Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.
+  termsOfService: https://www.kaleyra.com/terms-conditions/
+  contact:
+    name: Kaleyra Support
+    url: https://support.kaleyra.com/
+  version: '2.0'
+servers:
+- url: https://api.kaleyra.io
+  description: Default / global host
+- url: https://api.in.kaleyra.io
+  description: India region (data residency)
+- url: https://api.ap.kaleyra.io
+  description: APAC / South East Asia region
+- url: https://api.eu.kaleyra.io
+  description: Europe region
+security:
+- apiKeyAuth: []
+tags:
+- name: Voice
+  description: Click-to-call and outbound voice.
+paths:
+  /v1/{sid}/voice/click-to-call:
+    post:
+      operationId: clickToCall
+      tags:
+      - Voice
+      summary: Initiate a click-to-call bridged voice call
+      description: Places an outbound call to `from`, then dials `to` and bridges the two legs over the caller ID / bridge number.
+      parameters:
+      - $ref: '#/components/parameters/Sid'
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ClickToCallRequest'
+      responses:
+        '200':
+          description: Call initiated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VoiceResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+components:
+  schemas:
+    VoiceResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+    ClickToCallRequest:
+      type: object
+      required:
+      - from
+      - to
+      properties:
+        from:
+          type: string
+          description: First leg number (called first).
+        to:
+          type: string
+          description: Second leg number, bridged after the first answers.
+        caller_id:
+          type: string
+        callback_url:
+          type: string
+          format: uri
+  parameters:
+    Sid:
+      name: sid
+      in: path
+      required: true
+      description: Account SID (Security Identifier) issued by kaleyra.io.
+      schema:
+        type: string
+  responses:
+    Unauthorized:
+      description: Missing or invalid api-key header.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: api-key
+      description: API key generated in the kaleyra.io console (e.g. "Ac4XXXXX21f").

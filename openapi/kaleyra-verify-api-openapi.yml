@@ -1,0 +1,128 @@
+openapi: 3.0.3
+info:
+  title: Kaleyra CPaaS Messages Verify API
+  description: Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.
+  termsOfService: https://www.kaleyra.com/terms-conditions/
+  contact:
+    name: Kaleyra Support
+    url: https://support.kaleyra.com/
+  version: '2.0'
+servers:
+- url: https://api.kaleyra.io
+  description: Default / global host
+- url: https://api.in.kaleyra.io
+  description: India region (data residency)
+- url: https://api.ap.kaleyra.io
+  description: APAC / South East Asia region
+- url: https://api.eu.kaleyra.io
+  description: Europe region
+security:
+- apiKeyAuth: []
+tags:
+- name: Verify
+  description: Generate and validate one-time passwords (OTP).
+paths:
+  /v1/{sid}/verify:
+    post:
+      operationId: generateOtp
+      tags:
+      - Verify
+      summary: Generate and send an OTP
+      description: Generates a one-time password and delivers it to the recipient over the configured Verify flow (SMS, WhatsApp, or Voice). Returns a `verify_id` used to validate the code.
+      parameters:
+      - $ref: '#/components/parameters/Sid'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerateOtpRequest'
+      responses:
+        '200':
+          description: OTP generated and dispatched.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerifyResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  /v1/{sid}/verify/validate:
+    get:
+      operationId: validateOtp
+      tags:
+      - Verify
+      summary: Validate a submitted OTP
+      description: Validates the OTP entered by the end user against the `verify_id` returned by the generate call.
+      parameters:
+      - $ref: '#/components/parameters/Sid'
+      - name: verify_id
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: otp
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Validation result.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerifyResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+    VerifyResponse:
+      type: object
+      properties:
+        verify_id:
+          type: string
+        status:
+          type: string
+        valid:
+          type: boolean
+    GenerateOtpRequest:
+      type: object
+      required:
+      - to
+      properties:
+        to:
+          type: string
+          description: Recipient MSISDN.
+        flow_id:
+          type: string
+          description: Configured Verify flow / template ID.
+        sender:
+          type: string
+  parameters:
+    Sid:
+      name: sid
+      in: path
+      required: true
+      description: Account SID (Security Identifier) issued by kaleyra.io.
+      schema:
+        type: string
+  responses:
+    Unauthorized:
+      description: Missing or invalid api-key header.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: api-key
+      description: API key generated in the kaleyra.io console (e.g. "Ac4XXXXX21f").

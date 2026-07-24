@@ -1,0 +1,99 @@
+openapi: 3.0.3
+info:
+  title: Kaleyra CPaaS Messages Video API
+  description: Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.
+  termsOfService: https://www.kaleyra.com/terms-conditions/
+  contact:
+    name: Kaleyra Support
+    url: https://support.kaleyra.com/
+  version: '2.0'
+servers:
+- url: https://api.kaleyra.io
+  description: Default / global host
+- url: https://api.in.kaleyra.io
+  description: India region (data residency)
+- url: https://api.ap.kaleyra.io
+  description: APAC / South East Asia region
+- url: https://api.eu.kaleyra.io
+  description: Europe region
+security:
+- apiKeyAuth: []
+tags:
+- name: Video
+  description: Kaleyra Video (WebRTC) room orchestration via REST.
+paths:
+  /v2/rooms:
+    post:
+      operationId: createVideoRoom
+      tags:
+      - Video
+      summary: Create a Kaleyra Video room
+      description: Creates a Kaleyra Video (WebRTC) room and returns join details for the listed participants. V1 accounts use POST /room/create.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateRoomRequest'
+      responses:
+        '201':
+          description: Room created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RoomResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+components:
+  schemas:
+    RoomResponse:
+      type: object
+      properties:
+        room_id:
+          type: string
+        room_url:
+          type: string
+          format: uri
+        participants:
+          type: array
+          items:
+            type: string
+    CreateRoomRequest:
+      type: object
+      required:
+      - participants
+      properties:
+        participants:
+          type: array
+          items:
+            type: string
+        recording:
+          type: string
+          enum:
+          - none
+          - automatic
+          - manual
+        tools:
+          type: array
+          items:
+            type: string
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+  responses:
+    Unauthorized:
+      description: Missing or invalid api-key header.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: api-key
+      description: API key generated in the kaleyra.io console (e.g. "Ac4XXXXX21f").

@@ -1,0 +1,201 @@
+openapi: 3.0.3
+info:
+  title: Kaleyra CPaaS Messages API
+  description: Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.
+  termsOfService: https://www.kaleyra.com/terms-conditions/
+  contact:
+    name: Kaleyra Support
+    url: https://support.kaleyra.com/
+  version: '2.0'
+servers:
+- url: https://api.kaleyra.io
+  description: Default / global host
+- url: https://api.in.kaleyra.io
+  description: India region (data residency)
+- url: https://api.ap.kaleyra.io
+  description: APAC / South East Asia region
+- url: https://api.eu.kaleyra.io
+  description: Europe region
+security:
+- apiKeyAuth: []
+tags:
+- name: Messages
+  description: Send SMS, WhatsApp, and RCS messages and read their status.
+paths:
+  /v2/{sid}/messages:
+    post:
+      operationId: sendMessage
+      tags:
+      - Messages
+      summary: Send an SMS, WhatsApp, or RCS message
+      description: Sends an outbound message on the selected channel. Use the `channel` field to select `sms`, `whatsapp`, or `rcs`. For SMS, `type` selects MKT (marketing), TXN (transactional), or OTP. Multiple recipients are comma-separated in `to`.
+      parameters:
+      - $ref: '#/components/parameters/Sid'
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SendMessageRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendMessageRequest'
+      responses:
+        '200':
+          description: Message accepted for delivery.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+    get:
+      operationId: listMessages
+      tags:
+      - Messages
+      summary: Get message logs / delivery status
+      description: Retrieves message logs and delivery status for the account.
+      parameters:
+      - $ref: '#/components/parameters/Sid'
+      - name: type
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - MKT
+          - TXN
+          - OTP
+      - name: from_date
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: to_date
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A list of messages with delivery status.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageLogResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  /v2/{sid}/messages/{message_id}:
+    get:
+      operationId: getMessageStatus
+      tags:
+      - Messages
+      summary: Get the delivery status of a single message
+      parameters:
+      - $ref: '#/components/parameters/Sid'
+      - name: message_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Status of the requested message.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+    MessageLogResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/MessageResponse'
+    MessageResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+        channel:
+          type: string
+        recipient:
+          type: string
+    SendMessageRequest:
+      type: object
+      required:
+      - to
+      - sender
+      properties:
+        to:
+          type: string
+          description: Recipient MSISDN(s), comma-separated for multiple numbers.
+          example: 919XXXXXXXXX
+        sender:
+          type: string
+          description: Registered sender ID.
+        body:
+          type: string
+          description: Message text (SMS/RCS) or template body.
+        channel:
+          type: string
+          enum:
+          - sms
+          - whatsapp
+          - rcs
+          default: sms
+        type:
+          type: string
+          enum:
+          - MKT
+          - TXN
+          - OTP
+          description: SMS category (India DLT-aware).
+        template_id:
+          type: string
+          description: Approved template ID (required for some channels/regions).
+        callback_url:
+          type: string
+          format: uri
+  parameters:
+    Sid:
+      name: sid
+      in: path
+      required: true
+      description: Account SID (Security Identifier) issued by kaleyra.io.
+      schema:
+        type: string
+  responses:
+    Unauthorized:
+      description: Missing or invalid api-key header.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    BadRequest:
+      description: The request was malformed or missing required fields.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: api-key
+      description: API key generated in the kaleyra.io console (e.g. "Ac4XXXXX21f").
