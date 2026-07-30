@@ -7,7 +7,20 @@ description: Kaleyra is a global omnichannel CPaaS provider (a Tata Communicatio
   and Video communication APIs. Its REST APIs authenticate with an api-key header,
   address accounts by SID in the path, and are served from region-specific hosts for
   India, APAC, and EU data residency.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kaleyra.png
 tags:
 - CPaaS
 - Messaging
@@ -20,95 +33,6 @@ created: '2026-07-17'
 modified: '2026-07-17'
 specificationVersion: '0.19'
 apis:
-- aid: kaleyra:kaleyra-sms-api
-  name: Kaleyra SMS API
-  tags:
-  - SMS
-  - Messaging
-  - OTP
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://developers.kaleyra.io/docs/sms-api
-  baseURL: https://api.kaleyra.io
-  properties:
-  - url: https://developers.kaleyra.io/docs/sms-api
-    type: Documentation
-  - url: https://developers.kaleyra.io/reference/single-sms-api
-    type: APIReference
-  - url: openapi/kaleyra-openapi.yml
-    type: OpenAPI
-  description: Send single and bulk SMS (MKT/TXN/OTP) via POST /v2/{sid}/messages,
-    manage sender IDs and templates, and pull delivery status and logs. India DLT
-    entity/template fields are supported.
-- aid: kaleyra:kaleyra-whatsapp-api
-  name: Kaleyra WhatsApp API
-  tags:
-  - WhatsApp
-  - Messaging
-  - Templates
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://developers.kaleyra.io/docs/whatsapp-api-v2-overview
-  baseURL: https://api.kaleyra.io
-  properties:
-  - url: https://developers.kaleyra.io/docs/whatsapp-api-v2-overview
-    type: Documentation
-  - url: https://developers.kaleyra.io/reference/whatsapp-messages-api-v2-overview
-    type: APIReference
-  - url: openapi/kaleyra-openapi.yml
-    type: OpenAPI
-  description: Send WhatsApp Business messages (text, media, interactive, template)
-    over the WhatsApp API V2, with number registration, template management, group
-    management, and WhatsApp Payment support.
-- aid: kaleyra:kaleyra-rcs-api
-  name: Kaleyra RCS API
-  tags:
-  - RCS
-  - Messaging
-  - Rich Messaging
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://developers.kaleyra.io/docs/rcs-overview
-  baseURL: https://api.kaleyra.io
-  properties:
-  - url: https://developers.kaleyra.io/docs/rcs-overview
-    type: Documentation
-  - url: openapi/kaleyra-openapi.yml
-    type: OpenAPI
-  description: Send Rich Communication Services (RCS) messages, manage brands and
-    agents, handle templates, and perform device capability lookups.
-- aid: kaleyra:kaleyra-voice-api
-  name: Kaleyra Voice API
-  tags:
-  - Voice
-  - Click to Call
-  - IVR
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://developers.kaleyra.io/docs/voice-api
-  baseURL: https://api.kaleyra.io
-  properties:
-  - url: https://developers.kaleyra.io/docs/voice-api
-    type: Documentation
-  - url: https://developers.kaleyra.io/docs/click-to-call-api
-    type: APIReference
-  - url: openapi/kaleyra-openapi.yml
-    type: OpenAPI
-  description: Click-to-call bridging via POST /v1/{sid}/voice/click-to-call, outbound
-    calling campaigns, call log pull, and call recording extraction.
-- aid: kaleyra:kaleyra-verify-api
-  name: Kaleyra Verify (OTP) API
-  tags:
-  - OTP
-  - Verify
-  - Two Factor
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://developers.kaleyra.io/docs/generating-otp
-  baseURL: https://api.kaleyra.io
-  properties:
-  - url: https://developers.kaleyra.io/docs/generating-otp
-    type: Documentation
-  - url: openapi/kaleyra-openapi.yml
-    type: OpenAPI
-  description: Generate and validate one-time passwords via POST /v1/{sid}/verify,
-    with configurable multichannel verification flows (SMS, WhatsApp, Voice) and
-    Verify templates.
 - aid: kaleyra:kaleyra-email-api
   name: Kaleyra Email API
   tags:
@@ -122,27 +46,9 @@ apis:
     type: Documentation
   - url: https://developers.kaleyra.io/reference/email-api-v2-send-a-single-email
     type: APIReference
-  description: Send single and batch transactional email (Email API v2) with domain
-    management, templates, webhooks, and delivery statistics.
-- aid: kaleyra:kaleyra-video-api
-  name: Kaleyra Video API
-  tags:
-  - Video
-  - WebRTC
-  - Conferencing
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api
-  baseURL: https://api.kaleyra.io
-  properties:
-  - url: https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api
-    type: Documentation
-  - url: https://developers.kaleyra.io/reference/video-v2-roomcall-postl
-    type: APIReference
-  - url: openapi/kaleyra-openapi.yml
-    type: OpenAPI
-  description: Create and orchestrate WebRTC video rooms via the Kaleyra Video REST
-    API (POST /v2/rooms), plus recording, transcription, e-signature, and Web/Android/iOS
-    SDK integration.
+  description: >-
+    Send single and batch transactional email (Email API v2) with domain management, templates, webhooks,
+    and delivery statistics.
 - aid: kaleyra:kaleyra-platform-api
   name: Kaleyra Platform API
   tags:
@@ -155,9 +61,132 @@ apis:
   properties:
   - url: https://developers.kaleyra.io/reference/api-reference-overview
     type: Documentation
-  description: Account-level platform operations - subaccount management, billing,
-    numbers provisioning, callback profiles, consent, and blocklist management.
+  description: >-
+    Account-level platform operations - subaccount management, billing, numbers provisioning, callback
+    profiles, consent, and blocklist management.
+- aid: kaleyra:kaleyra-messages-api
+  name: Kaleyra Messages API
+  description: Send SMS, WhatsApp, and RCS messages and read their status.
+  humanURL: https://developers.kaleyra.io/docs/sms-api
+  baseURL: https://api.kaleyra.io
+  tags:
+  - Messages
+  properties:
+  - type: OpenAPI
+    url: openapi/kaleyra-messages-api-openapi.yml
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/sms-api
+  - type: APIReference
+    url: https://developers.kaleyra.io/reference/single-sms-api
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/whatsapp-api-v2-overview
+  - type: APIReference
+    url: https://developers.kaleyra.io/reference/whatsapp-messages-api-v2-overview
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/rcs-overview
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/voice-api
+  - type: APIReference
+    url: https://developers.kaleyra.io/docs/click-to-call-api
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/generating-otp
+  - type: Documentation
+    url: https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api
+  - type: APIReference
+    url: https://developers.kaleyra.io/reference/video-v2-roomcall-postl
+- aid: kaleyra:kaleyra-verify-api
+  name: Kaleyra Verify API
+  description: Generate and validate one-time passwords (OTP).
+  humanURL: https://developers.kaleyra.io/docs/sms-api
+  baseURL: https://api.kaleyra.io
+  tags:
+  - Verify
+  properties:
+  - type: OpenAPI
+    url: openapi/kaleyra-verify-api-openapi.yml
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/sms-api
+  - type: APIReference
+    url: https://developers.kaleyra.io/reference/single-sms-api
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/whatsapp-api-v2-overview
+  - type: APIReference
+    url: https://developers.kaleyra.io/reference/whatsapp-messages-api-v2-overview
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/rcs-overview
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/voice-api
+  - type: APIReference
+    url: https://developers.kaleyra.io/docs/click-to-call-api
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/generating-otp
+  - type: Documentation
+    url: https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api
+  - type: APIReference
+    url: https://developers.kaleyra.io/reference/video-v2-roomcall-postl
+- aid: kaleyra:kaleyra-video-api
+  name: Kaleyra Video API
+  description: Kaleyra Video (WebRTC) room orchestration via REST.
+  humanURL: https://developers.kaleyra.io/docs/sms-api
+  baseURL: https://api.kaleyra.io
+  tags:
+  - Video
+  properties:
+  - type: OpenAPI
+    url: openapi/kaleyra-video-api-openapi.yml
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/sms-api
+  - type: APIReference
+    url: https://developers.kaleyra.io/reference/single-sms-api
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/whatsapp-api-v2-overview
+  - type: APIReference
+    url: https://developers.kaleyra.io/reference/whatsapp-messages-api-v2-overview
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/rcs-overview
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/voice-api
+  - type: APIReference
+    url: https://developers.kaleyra.io/docs/click-to-call-api
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/generating-otp
+  - type: Documentation
+    url: https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api
+  - type: APIReference
+    url: https://developers.kaleyra.io/reference/video-v2-roomcall-postl
+- aid: kaleyra:kaleyra-voice-api
+  name: Kaleyra Voice API
+  description: Click-to-call and outbound voice.
+  humanURL: https://developers.kaleyra.io/docs/sms-api
+  baseURL: https://api.kaleyra.io
+  tags:
+  - Voice
+  properties:
+  - type: OpenAPI
+    url: openapi/kaleyra-voice-api-openapi.yml
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/sms-api
+  - type: APIReference
+    url: https://developers.kaleyra.io/reference/single-sms-api
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/whatsapp-api-v2-overview
+  - type: APIReference
+    url: https://developers.kaleyra.io/reference/whatsapp-messages-api-v2-overview
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/rcs-overview
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/voice-api
+  - type: APIReference
+    url: https://developers.kaleyra.io/docs/click-to-call-api
+  - type: Documentation
+    url: https://developers.kaleyra.io/docs/generating-otp
+  - type: Documentation
+    url: https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api
+  - type: APIReference
+    url: https://developers.kaleyra.io/reference/video-v2-roomcall-postl
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/kaleyra/overview
 - type: AgenticAccess
   url: agentic-access/kaleyra-agentic-access.yml
 - type: TrustCenter
