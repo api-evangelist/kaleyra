@@ -1,0 +1,435 @@
+{
+  "info": {
+    "_postman_id": "b7a1df1a-31b0-46ed-955b-b5dc9b2d8cbb",
+    "name": "Kaleyra CPaaS Messages Verify API",
+    "description": "Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.\n\nContact Support:\n Name: Kaleyra Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:59:48.000Z",
+    "updatedAt": "2026-07-28T01:59:48.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-b7a1df1a-31b0-46ed-955b-b5dc9b2d8cbb"
+  },
+  "item": [
+    {
+      "name": "v1",
+      "item": [
+        {
+          "name": "{sid}",
+          "item": [
+            {
+              "name": "verify",
+              "item": [
+                {
+                  "name": "validate",
+                  "item": [
+                    {
+                      "name": "Validate a submitted OTP",
+                      "id": "684a2fff-1e17-4b49-8356-302f5a36371c",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/v1/:sid/verify/validate?verify_id=<string>&otp=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v1",
+                            ":sid",
+                            "verify",
+                            "validate"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "verify_id",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "(Required) ",
+                              "key": "otp",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "id": "34d8f1ac-b722-4614-9a43-1dcd0881f2c7",
+                              "key": "sid",
+                              "value": "<string>",
+                              "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                            }
+                          ]
+                        },
+                        "description": "Validates the OTP entered by the end user against the `verify_id` returned by the generate call."
+                      },
+                      "response": [
+                        {
+                          "id": "c3389bd8-6a1f-4f54-9632-8a2aa3222f86",
+                          "name": "Validation result.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "api-key",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/v1/:sid/verify/validate?verify_id=<string>&otp=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "v1",
+                                ":sid",
+                                "verify",
+                                "validate"
+                              ],
+                              "query": [
+                                {
+                                  "description": "(Required) ",
+                                  "key": "verify_id",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "description": "(Required) ",
+                                  "key": "otp",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "sid"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"verify_id\": \"<string>\",\n  \"status\": \"<string>\",\n  \"valid\": \"<boolean>\"\n}",
+                          "createdAt": "2026-07-28T01:59:48.000Z",
+                          "updatedAt": "2026-07-28T01:59:48.000Z",
+                          "uid": "35240-c3389bd8-6a1f-4f54-9632-8a2aa3222f86"
+                        },
+                        {
+                          "id": "6d309ba3-8025-4372-ac69-196651fba320",
+                          "name": "Missing or invalid api-key header.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "api-key",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/v1/:sid/verify/validate?verify_id=<string>&otp=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "v1",
+                                ":sid",
+                                "verify",
+                                "validate"
+                              ],
+                              "query": [
+                                {
+                                  "description": "(Required) ",
+                                  "key": "verify_id",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "description": "(Required) ",
+                                  "key": "otp",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "sid"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                          "createdAt": "2026-07-28T01:59:48.000Z",
+                          "updatedAt": "2026-07-28T01:59:48.000Z",
+                          "uid": "35240-6d309ba3-8025-4372-ac69-196651fba320"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T01:59:48.000Z",
+                      "updatedAt": "2026-07-28T01:59:48.000Z",
+                      "uid": "35240-684a2fff-1e17-4b49-8356-302f5a36371c"
+                    }
+                  ],
+                  "id": "132f88d0-e3e4-41bd-95ba-e900ebdf6877",
+                  "createdAt": "2026-07-28T01:59:48.000Z",
+                  "updatedAt": "2026-07-28T01:59:48.000Z",
+                  "uid": "35240-132f88d0-e3e4-41bd-95ba-e900ebdf6877"
+                },
+                {
+                  "name": "Generate and send an OTP",
+                  "id": "4483d49f-f3d4-45ba-84c3-c19e0c376b49",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"to\": \"<string>\",\n  \"flow_id\": \"<string>\",\n  \"sender\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/v1/:sid/verify",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v1",
+                        ":sid",
+                        "verify"
+                      ],
+                      "variable": [
+                        {
+                          "id": "75790919-1ae2-43ce-b5c9-d61caf2d4e22",
+                          "key": "sid",
+                          "value": "<string>",
+                          "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                        }
+                      ]
+                    },
+                    "description": "Generates a one-time password and delivers it to the recipient over the configured Verify flow (SMS, WhatsApp, or Voice). Returns a `verify_id` used to validate the code."
+                  },
+                  "response": [
+                    {
+                      "id": "bb1713cf-aa0f-4b47-9238-095cf3252006",
+                      "name": "OTP generated and dispatched.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "api-key",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"to\": \"<string>\",\n  \"flow_id\": \"<string>\",\n  \"sender\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/v1/:sid/verify",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v1",
+                            ":sid",
+                            "verify"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sid"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"verify_id\": \"<string>\",\n  \"status\": \"<string>\",\n  \"valid\": \"<boolean>\"\n}",
+                      "createdAt": "2026-07-28T01:59:48.000Z",
+                      "updatedAt": "2026-07-28T01:59:48.000Z",
+                      "uid": "35240-bb1713cf-aa0f-4b47-9238-095cf3252006"
+                    },
+                    {
+                      "id": "d88dc47f-1550-47bb-a32f-64130c69ee24",
+                      "name": "Missing or invalid api-key header.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "api-key",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"to\": \"<string>\",\n  \"flow_id\": \"<string>\",\n  \"sender\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/v1/:sid/verify",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v1",
+                            ":sid",
+                            "verify"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sid"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                      "createdAt": "2026-07-28T01:59:48.000Z",
+                      "updatedAt": "2026-07-28T01:59:48.000Z",
+                      "uid": "35240-d88dc47f-1550-47bb-a32f-64130c69ee24"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:59:48.000Z",
+                  "updatedAt": "2026-07-28T01:59:48.000Z",
+                  "uid": "35240-4483d49f-f3d4-45ba-84c3-c19e0c376b49"
+                }
+              ],
+              "id": "2f149e92-0e16-48b4-bd49-4722c552b6fb",
+              "createdAt": "2026-07-28T01:59:48.000Z",
+              "updatedAt": "2026-07-28T01:59:48.000Z",
+              "uid": "35240-2f149e92-0e16-48b4-bd49-4722c552b6fb"
+            }
+          ],
+          "id": "f63644ab-1e3c-49c5-8309-b5715b477300",
+          "createdAt": "2026-07-28T01:59:48.000Z",
+          "updatedAt": "2026-07-28T01:59:48.000Z",
+          "uid": "35240-f63644ab-1e3c-49c5-8309-b5715b477300"
+        }
+      ],
+      "id": "95b15a96-fc4f-4737-892a-0d855706aaf7",
+      "createdAt": "2026-07-28T01:59:48.000Z",
+      "updatedAt": "2026-07-28T01:59:48.000Z",
+      "uid": "35240-95b15a96-fc4f-4737-892a-0d855706aaf7"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.kaleyra.io"
+    }
+  ]
+}

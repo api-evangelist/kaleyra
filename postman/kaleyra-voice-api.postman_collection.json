@@ -1,0 +1,299 @@
+{
+  "info": {
+    "_postman_id": "36e63334-940c-446c-aed9-cae4135ed996",
+    "name": "Kaleyra CPaaS Messages Voice API",
+    "description": "Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.\n\nContact Support:\n Name: Kaleyra Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:59:50.000Z",
+    "updatedAt": "2026-07-28T01:59:50.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-36e63334-940c-446c-aed9-cae4135ed996"
+  },
+  "item": [
+    {
+      "name": "v1",
+      "item": [
+        {
+          "name": "{sid}",
+          "item": [
+            {
+              "name": "voice",
+              "item": [
+                {
+                  "name": "click-to-call",
+                  "item": [
+                    {
+                      "name": "Initiate a click-to-call bridged voice call",
+                      "id": "9e2c8870-aaf3-4a75-a1a7-766bd1c9521f",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/x-www-form-urlencoded"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "urlencoded",
+                          "urlencoded": [
+                            {
+                              "description": "(Required) First leg number (called first).",
+                              "key": "from",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "(Required) Second leg number, bridged after the first answers.",
+                              "key": "to",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "caller_id",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "callback_url",
+                              "value": "<uri>"
+                            }
+                          ]
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/v1/:sid/voice/click-to-call",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v1",
+                            ":sid",
+                            "voice",
+                            "click-to-call"
+                          ],
+                          "variable": [
+                            {
+                              "id": "c55012c4-a6e6-4074-828b-d3970c0d9eba",
+                              "key": "sid",
+                              "value": "<string>",
+                              "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                            }
+                          ]
+                        },
+                        "description": "Places an outbound call to `from`, then dials `to` and bridges the two legs over the caller ID / bridge number."
+                      },
+                      "response": [
+                        {
+                          "id": "c128a9fb-ffbc-4f74-947f-1d0ffee86e6e",
+                          "name": "Call initiated.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "api-key",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "urlencoded",
+                              "urlencoded": [
+                                {
+                                  "description": "(Required) First leg number (called first).",
+                                  "key": "from",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "description": "(Required) Second leg number, bridged after the first answers.",
+                                  "key": "to",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "key": "caller_id",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "key": "callback_url",
+                                  "value": "<uri>"
+                                }
+                              ]
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/v1/:sid/voice/click-to-call",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "v1",
+                                ":sid",
+                                "voice",
+                                "click-to-call"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "sid"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"id\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+                          "createdAt": "2026-07-28T01:59:50.000Z",
+                          "updatedAt": "2026-07-28T01:59:50.000Z",
+                          "uid": "35240-c128a9fb-ffbc-4f74-947f-1d0ffee86e6e"
+                        },
+                        {
+                          "id": "d9da09ed-4d0c-4267-88a8-6cd742442b04",
+                          "name": "Missing or invalid api-key header.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "api-key",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "urlencoded",
+                              "urlencoded": [
+                                {
+                                  "description": "(Required) First leg number (called first).",
+                                  "key": "from",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "description": "(Required) Second leg number, bridged after the first answers.",
+                                  "key": "to",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "key": "caller_id",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "key": "callback_url",
+                                  "value": "<uri>"
+                                }
+                              ]
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/v1/:sid/voice/click-to-call",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "v1",
+                                ":sid",
+                                "voice",
+                                "click-to-call"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "sid"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                          "createdAt": "2026-07-28T01:59:50.000Z",
+                          "updatedAt": "2026-07-28T01:59:50.000Z",
+                          "uid": "35240-d9da09ed-4d0c-4267-88a8-6cd742442b04"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T01:59:50.000Z",
+                      "updatedAt": "2026-07-28T01:59:50.000Z",
+                      "uid": "35240-9e2c8870-aaf3-4a75-a1a7-766bd1c9521f"
+                    }
+                  ],
+                  "id": "a85aef96-0c63-4c4f-bcfb-fb36fae6768e",
+                  "createdAt": "2026-07-28T01:59:50.000Z",
+                  "updatedAt": "2026-07-28T01:59:50.000Z",
+                  "uid": "35240-a85aef96-0c63-4c4f-bcfb-fb36fae6768e"
+                }
+              ],
+              "id": "67f74415-3b4b-4e89-9790-7ff4371c705e",
+              "createdAt": "2026-07-28T01:59:50.000Z",
+              "updatedAt": "2026-07-28T01:59:50.000Z",
+              "uid": "35240-67f74415-3b4b-4e89-9790-7ff4371c705e"
+            }
+          ],
+          "id": "8011b925-4ce7-47c9-b674-d41064a5c50b",
+          "createdAt": "2026-07-28T01:59:50.000Z",
+          "updatedAt": "2026-07-28T01:59:50.000Z",
+          "uid": "35240-8011b925-4ce7-47c9-b674-d41064a5c50b"
+        }
+      ],
+      "id": "4fb4887d-0645-412f-b905-785cec348d10",
+      "createdAt": "2026-07-28T01:59:50.000Z",
+      "updatedAt": "2026-07-28T01:59:50.000Z",
+      "uid": "35240-4fb4887d-0645-412f-b905-785cec348d10"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.kaleyra.io"
+    }
+  ]
+}

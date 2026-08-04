@@ -1,0 +1,218 @@
+{
+  "info": {
+    "_postman_id": "d9ec947e-1919-46a8-9a7b-5c4ba09993d9",
+    "name": "Kaleyra CPaaS Messages Video API",
+    "description": "Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.\n\nContact Support:\n Name: Kaleyra Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:59:48.000Z",
+    "updatedAt": "2026-07-28T01:59:49.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-d9ec947e-1919-46a8-9a7b-5c4ba09993d9"
+  },
+  "item": [
+    {
+      "name": "v2",
+      "item": [
+        {
+          "name": "rooms",
+          "item": [
+            {
+              "name": "Create a Kaleyra Video room",
+              "id": "c50df4eb-bade-4b18-92ef-661b2ff09535",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"participants\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"recording\": \"none\",\n  \"tools\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/v2/rooms",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v2",
+                    "rooms"
+                  ]
+                },
+                "description": "Creates a Kaleyra Video (WebRTC) room and returns join details for the listed participants. V1 accounts use POST /room/create."
+              },
+              "response": [
+                {
+                  "id": "d10a8a21-08ee-4d17-a204-55ba272ad8e9",
+                  "name": "Room created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "api-key",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"participants\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"recording\": \"none\",\n  \"tools\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/v2/rooms",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v2",
+                        "rooms"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"room_id\": \"<string>\",\n  \"room_url\": \"<uri>\",\n  \"participants\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "createdAt": "2026-07-28T01:59:49.000Z",
+                  "updatedAt": "2026-07-28T01:59:49.000Z",
+                  "uid": "35240-d10a8a21-08ee-4d17-a204-55ba272ad8e9"
+                },
+                {
+                  "id": "ef23c7d4-e7c8-4b3e-8ad8-353f950ce7d5",
+                  "name": "Missing or invalid api-key header.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "api-key",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"participants\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"recording\": \"none\",\n  \"tools\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/v2/rooms",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v2",
+                        "rooms"
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                  "createdAt": "2026-07-28T01:59:49.000Z",
+                  "updatedAt": "2026-07-28T01:59:49.000Z",
+                  "uid": "35240-ef23c7d4-e7c8-4b3e-8ad8-353f950ce7d5"
+                }
+              ],
+              "createdAt": "2026-07-28T01:59:49.000Z",
+              "updatedAt": "2026-07-28T01:59:49.000Z",
+              "uid": "35240-c50df4eb-bade-4b18-92ef-661b2ff09535"
+            }
+          ],
+          "id": "aece61fc-59db-49e7-97f9-e05b5f512d49",
+          "createdAt": "2026-07-28T01:59:49.000Z",
+          "updatedAt": "2026-07-28T01:59:49.000Z",
+          "uid": "35240-aece61fc-59db-49e7-97f9-e05b5f512d49"
+        }
+      ],
+      "id": "4e130e2f-ad77-4176-a332-b7c76e0fd3dc",
+      "createdAt": "2026-07-28T01:59:49.000Z",
+      "updatedAt": "2026-07-28T01:59:49.000Z",
+      "uid": "35240-4e130e2f-ad77-4176-a332-b7c76e0fd3dc"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.kaleyra.io"
+    }
+  ]
+}

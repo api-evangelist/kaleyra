@@ -1,0 +1,766 @@
+{
+  "info": {
+    "_postman_id": "4f216075-e992-4ee5-a983-15feea66e589",
+    "name": "Kaleyra CPaaS Messages API",
+    "description": "Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.\n\nContact Support:\n Name: Kaleyra Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:59:47.000Z",
+    "updatedAt": "2026-07-28T01:59:47.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-4f216075-e992-4ee5-a983-15feea66e589"
+  },
+  "item": [
+    {
+      "name": "v2",
+      "item": [
+        {
+          "name": "{sid}",
+          "item": [
+            {
+              "name": "messages",
+              "item": [
+                {
+                  "name": "{message_id}",
+                  "item": [
+                    {
+                      "name": "Get the delivery status of a single message",
+                      "id": "743f8227-a609-4f96-a609-b8c49117a5cb",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/v2/:sid/messages/:message_id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v2",
+                            ":sid",
+                            "messages",
+                            ":message_id"
+                          ],
+                          "variable": [
+                            {
+                              "id": "5becea4a-6b80-46f2-9adf-384e575b54e5",
+                              "key": "sid",
+                              "value": "<string>",
+                              "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                            },
+                            {
+                              "id": "09d12660-bac3-45d1-8fec-8f00accac76f",
+                              "key": "message_id",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "c61b782c-5f09-4763-bfdd-9a53d3a337fd",
+                          "name": "Status of the requested message.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "api-key",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/v2/:sid/messages/:message_id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "v2",
+                                ":sid",
+                                "messages",
+                                ":message_id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "sid"
+                                },
+                                {
+                                  "key": "message_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"id\": \"<string>\",\n  \"status\": \"<string>\",\n  \"channel\": \"<string>\",\n  \"recipient\": \"<string>\"\n}",
+                          "createdAt": "2026-07-28T01:59:47.000Z",
+                          "updatedAt": "2026-07-28T01:59:47.000Z",
+                          "uid": "35240-c61b782c-5f09-4763-bfdd-9a53d3a337fd"
+                        },
+                        {
+                          "id": "512be23a-ee9e-47a3-8a05-6cd99b690b91",
+                          "name": "Missing or invalid api-key header.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "api-key",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/v2/:sid/messages/:message_id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "v2",
+                                ":sid",
+                                "messages",
+                                ":message_id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "sid"
+                                },
+                                {
+                                  "key": "message_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                          "createdAt": "2026-07-28T01:59:47.000Z",
+                          "updatedAt": "2026-07-28T01:59:47.000Z",
+                          "uid": "35240-512be23a-ee9e-47a3-8a05-6cd99b690b91"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T01:59:47.000Z",
+                      "updatedAt": "2026-07-28T01:59:47.000Z",
+                      "uid": "35240-743f8227-a609-4f96-a609-b8c49117a5cb"
+                    }
+                  ],
+                  "id": "75363854-64dc-4fbe-b4ac-d047122f2abc",
+                  "createdAt": "2026-07-28T01:59:47.000Z",
+                  "updatedAt": "2026-07-28T01:59:47.000Z",
+                  "uid": "35240-75363854-64dc-4fbe-b4ac-d047122f2abc"
+                },
+                {
+                  "name": "Send an SMS, WhatsApp, or RCS message",
+                  "id": "47c47b7a-49c7-4c7d-9412-12c867bb937d",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/x-www-form-urlencoded"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "urlencoded",
+                      "urlencoded": [
+                        {
+                          "description": "(Required) Recipient MSISDN(s), comma-separated for multiple numbers.",
+                          "key": "to",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "(Required) Registered sender ID.",
+                          "key": "sender",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "Message text (SMS/RCS) or template body.",
+                          "key": "body",
+                          "value": "<string>"
+                        },
+                        {
+                          "key": "channel",
+                          "value": "sms"
+                        },
+                        {
+                          "description": "SMS category (India DLT-aware).",
+                          "key": "type",
+                          "value": "TXN"
+                        },
+                        {
+                          "description": "Approved template ID (required for some channels/regions).",
+                          "key": "template_id",
+                          "value": "<string>"
+                        },
+                        {
+                          "key": "callback_url",
+                          "value": "<uri>"
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/v2/:sid/messages",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v2",
+                        ":sid",
+                        "messages"
+                      ],
+                      "variable": [
+                        {
+                          "id": "a8dd57b1-c02f-44e7-b89b-6b024e8fe3b5",
+                          "key": "sid",
+                          "value": "<string>",
+                          "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                        }
+                      ]
+                    },
+                    "description": "Sends an outbound message on the selected channel. Use the `channel` field to select `sms`, `whatsapp`, or `rcs`. For SMS, `type` selects MKT (marketing), TXN (transactional), or OTP. Multiple recipients are comma-separated in `to`."
+                  },
+                  "response": [
+                    {
+                      "id": "8d013f4d-9919-49f8-966b-3cc932936a67",
+                      "name": "Message accepted for delivery.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/x-www-form-urlencoded"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "api-key",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "urlencoded",
+                          "urlencoded": [
+                            {
+                              "description": "(Required) Recipient MSISDN(s), comma-separated for multiple numbers.",
+                              "key": "to",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "(Required) Registered sender ID.",
+                              "key": "sender",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "Message text (SMS/RCS) or template body.",
+                              "key": "body",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "channel",
+                              "value": "sms"
+                            },
+                            {
+                              "description": "SMS category (India DLT-aware).",
+                              "key": "type",
+                              "value": "TXN"
+                            },
+                            {
+                              "description": "Approved template ID (required for some channels/regions).",
+                              "key": "template_id",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "callback_url",
+                              "value": "<uri>"
+                            }
+                          ]
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/v2/:sid/messages",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v2",
+                            ":sid",
+                            "messages"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sid"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"id\": \"<string>\",\n  \"status\": \"<string>\",\n  \"channel\": \"<string>\",\n  \"recipient\": \"<string>\"\n}",
+                      "createdAt": "2026-07-28T01:59:47.000Z",
+                      "updatedAt": "2026-07-28T01:59:47.000Z",
+                      "uid": "35240-8d013f4d-9919-49f8-966b-3cc932936a67"
+                    },
+                    {
+                      "id": "7ac30ed3-14b9-4cb5-a6bd-ada114e4480c",
+                      "name": "The request was malformed or missing required fields.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/x-www-form-urlencoded"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "api-key",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "urlencoded",
+                          "urlencoded": [
+                            {
+                              "description": "(Required) Recipient MSISDN(s), comma-separated for multiple numbers.",
+                              "key": "to",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "(Required) Registered sender ID.",
+                              "key": "sender",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "Message text (SMS/RCS) or template body.",
+                              "key": "body",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "channel",
+                              "value": "sms"
+                            },
+                            {
+                              "description": "SMS category (India DLT-aware).",
+                              "key": "type",
+                              "value": "TXN"
+                            },
+                            {
+                              "description": "Approved template ID (required for some channels/regions).",
+                              "key": "template_id",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "callback_url",
+                              "value": "<uri>"
+                            }
+                          ]
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/v2/:sid/messages",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v2",
+                            ":sid",
+                            "messages"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sid"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Bad Request",
+                      "code": 400,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                      "createdAt": "2026-07-28T01:59:47.000Z",
+                      "updatedAt": "2026-07-28T01:59:47.000Z",
+                      "uid": "35240-7ac30ed3-14b9-4cb5-a6bd-ada114e4480c"
+                    },
+                    {
+                      "id": "7eaa63e5-f0b6-4ee8-9fa5-266a7e9a1a42",
+                      "name": "Missing or invalid api-key header.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/x-www-form-urlencoded"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "api-key",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "urlencoded",
+                          "urlencoded": [
+                            {
+                              "description": "(Required) Recipient MSISDN(s), comma-separated for multiple numbers.",
+                              "key": "to",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "(Required) Registered sender ID.",
+                              "key": "sender",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "Message text (SMS/RCS) or template body.",
+                              "key": "body",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "channel",
+                              "value": "sms"
+                            },
+                            {
+                              "description": "SMS category (India DLT-aware).",
+                              "key": "type",
+                              "value": "TXN"
+                            },
+                            {
+                              "description": "Approved template ID (required for some channels/regions).",
+                              "key": "template_id",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "callback_url",
+                              "value": "<uri>"
+                            }
+                          ]
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/v2/:sid/messages",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v2",
+                            ":sid",
+                            "messages"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sid"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                      "createdAt": "2026-07-28T01:59:47.000Z",
+                      "updatedAt": "2026-07-28T01:59:47.000Z",
+                      "uid": "35240-7eaa63e5-f0b6-4ee8-9fa5-266a7e9a1a42"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:59:47.000Z",
+                  "updatedAt": "2026-07-28T01:59:47.000Z",
+                  "uid": "35240-47c47b7a-49c7-4c7d-9412-12c867bb937d"
+                },
+                {
+                  "name": "Get message logs / delivery status",
+                  "id": "20c10b0c-26ea-4b4c-8123-8c95386fb160",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/v2/:sid/messages?type=OTP&from_date=<string>&to_date=<string>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v2",
+                        ":sid",
+                        "messages"
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "OTP"
+                        },
+                        {
+                          "key": "from_date",
+                          "value": "<string>"
+                        },
+                        {
+                          "key": "to_date",
+                          "value": "<string>"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "id": "32a2f195-e601-4ade-80ea-a876d4f4cbe2",
+                          "key": "sid",
+                          "value": "<string>",
+                          "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                        }
+                      ]
+                    },
+                    "description": "Retrieves message logs and delivery status for the account."
+                  },
+                  "response": [
+                    {
+                      "id": "13bf492e-c9d4-420d-8293-af70bbe376e5",
+                      "name": "A list of messages with delivery status.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "api-key",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/v2/:sid/messages?type=OTP&from_date=<string>&to_date=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v2",
+                            ":sid",
+                            "messages"
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "OTP"
+                            },
+                            {
+                              "key": "from_date",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "to_date",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "sid"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"data\": [\n    {\n      \"id\": \"<string>\",\n      \"status\": \"<string>\",\n      \"channel\": \"<string>\",\n      \"recipient\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"status\": \"<string>\",\n      \"channel\": \"<string>\",\n      \"recipient\": \"<string>\"\n    }\n  ]\n}",
+                      "createdAt": "2026-07-28T01:59:47.000Z",
+                      "updatedAt": "2026-07-28T01:59:47.000Z",
+                      "uid": "35240-13bf492e-c9d4-420d-8293-af70bbe376e5"
+                    },
+                    {
+                      "id": "77936685-db4d-4d64-997c-86e4af03421d",
+                      "name": "Missing or invalid api-key header.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "api-key",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/v2/:sid/messages?type=OTP&from_date=<string>&to_date=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v2",
+                            ":sid",
+                            "messages"
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "OTP"
+                            },
+                            {
+                              "key": "from_date",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "to_date",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "sid"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                      "createdAt": "2026-07-28T01:59:47.000Z",
+                      "updatedAt": "2026-07-28T01:59:47.000Z",
+                      "uid": "35240-77936685-db4d-4d64-997c-86e4af03421d"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:59:47.000Z",
+                  "updatedAt": "2026-07-28T01:59:47.000Z",
+                  "uid": "35240-20c10b0c-26ea-4b4c-8123-8c95386fb160"
+                }
+              ],
+              "id": "c8ec501f-5c40-4a41-9d6a-242982ee1608",
+              "createdAt": "2026-07-28T01:59:47.000Z",
+              "updatedAt": "2026-07-28T01:59:47.000Z",
+              "uid": "35240-c8ec501f-5c40-4a41-9d6a-242982ee1608"
+            }
+          ],
+          "id": "56cf8586-969a-411d-9282-5ef2b1019e27",
+          "createdAt": "2026-07-28T01:59:47.000Z",
+          "updatedAt": "2026-07-28T01:59:47.000Z",
+          "uid": "35240-56cf8586-969a-411d-9282-5ef2b1019e27"
+        }
+      ],
+      "id": "8e7c241b-5f60-4f27-9e42-d55e40b4d95e",
+      "createdAt": "2026-07-28T01:59:47.000Z",
+      "updatedAt": "2026-07-28T01:59:47.000Z",
+      "uid": "35240-8e7c241b-5f60-4f27-9e42-d55e40b4d95e"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.kaleyra.io"
+    }
+  ]
+}

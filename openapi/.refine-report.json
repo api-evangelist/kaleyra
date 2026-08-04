@@ -1,0 +1,20 @@
+{
+  "provider": "kaleyra",
+  "sources": [
+    "kaleyra-messages-api-openapi.yml",
+    "kaleyra-verify-api-openapi.yml",
+    "kaleyra-video-api-openapi.yml",
+    "kaleyra-voice-api-openapi.yml"
+  ],
+  "outputs": [
+    "kaleyra-messages-api-openapi.yml",
+    "kaleyra-verify-api-openapi.yml",
+    "kaleyra-video-api-openapi.yml",
+    "kaleyra-voice-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
