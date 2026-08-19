@@ -1,0 +1,202 @@
+{
+  "item": [
+    {
+      "id": "23149394-b322-44aa-9954-d017b57e85c2",
+      "name": "Video",
+      "description": {
+        "content": "Kaleyra Video (WebRTC) room orchestration via REST.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "284641f0-249a-4efd-8d31-9401523ae77b",
+          "name": "Create a Kaleyra Video room",
+          "request": {
+            "name": "Create a Kaleyra Video room",
+            "description": {
+              "content": "Creates a Kaleyra Video (WebRTC) room and returns join details for the listed participants. V1 accounts use POST /room/create.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "rooms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"participants\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"recording\": \"<string>\",\n  \"tools\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c2d079b6-1af3-40f5-b46b-c69eec7399c7",
+              "name": "Room created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "rooms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"participants\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"recording\": \"<string>\",\n  \"tools\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"room_id\": \"string\",\n  \"room_url\": \"https://MJYoupMzepQt.rvywGqeqSMa5rzlJy3jGi30OIjLUPeB1Ti5G\",\n  \"participants\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "96b4a39b-9b99-4590-8431-33e3d71fbd52",
+              "name": "Missing or invalid api-key header.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "rooms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"participants\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"recording\": \"<string>\",\n  \"tools\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.kaleyra.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1528f6d7-cf83-41dd-a878-3fc5653a9de6",
+    "name": "Kaleyra CPaaS Messages Video API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.\n\nContact Support:\n Name: Kaleyra Support",
+      "type": "text/plain"
+    }
+  }
+}

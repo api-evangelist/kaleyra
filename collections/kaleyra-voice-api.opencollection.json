@@ -1,0 +1,49 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Kaleyra CPaaS Messages Voice API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api-key",
+      "value": "{{api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Voice",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Initiate a click-to-call bridged voice call",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.kaleyra.io/v1/:sid/voice/click-to-call",
+            "params": [
+              {
+                "name": "sid",
+                "value": "",
+                "type": "path",
+                "description": "Account SID (Security Identifier) issued by kaleyra.io."
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": []
+            }
+          },
+          "docs": "Places an outbound call to `from`, then dials `to` and bridges the two legs over the caller ID / bridge number."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

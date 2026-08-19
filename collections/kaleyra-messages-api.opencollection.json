@@ -1,0 +1,107 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Kaleyra CPaaS Messages API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api-key",
+      "value": "{{api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Messages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get message logs / delivery status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.kaleyra.io/v2/:sid/messages",
+            "params": [
+              {
+                "name": "sid",
+                "value": "",
+                "type": "path",
+                "description": "Account SID (Security Identifier) issued by kaleyra.io."
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "from_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "to_date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieves message logs and delivery status for the account."
+        },
+        {
+          "info": {
+            "name": "Send an SMS, WhatsApp, or RCS message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.kaleyra.io/v2/:sid/messages",
+            "params": [
+              {
+                "name": "sid",
+                "value": "",
+                "type": "path",
+                "description": "Account SID (Security Identifier) issued by kaleyra.io."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Sends an outbound message on the selected channel. Use the `channel` field to select `sms`, `whatsapp`, or `rcs`. For SMS, `type` selects MKT (marketing), TXN (transactional), or OTP. Multiple recipients are comma-separated in `to`."
+        },
+        {
+          "info": {
+            "name": "Get the delivery status of a single message",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.kaleyra.io/v2/:sid/messages/:message_id",
+            "params": [
+              {
+                "name": "sid",
+                "value": "",
+                "type": "path",
+                "description": "Account SID (Security Identifier) issued by kaleyra.io."
+              },
+              {
+                "name": "message_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the delivery status of a single message"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

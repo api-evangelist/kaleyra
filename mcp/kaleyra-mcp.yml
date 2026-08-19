@@ -2,12 +2,10 @@ generated: '2026-07-17'
 method: derived
 status: candidate
 source: openapi/kaleyra-openapi.yml
-notes: >-
-  No official hosted/remote Kaleyra MCP server was found in this pass (no entry
-  on the developer hub, npm @modelcontextprotocol, or public MCP registries).
-  This is a CANDIDATE tool surface derived one-tool-per-operation from the
-  modeled OpenAPI, to seed an MCP wrapper. api-key header auth maps to a single
-  server credential; the account SID is a required tool argument.
+notes: No official hosted/remote Kaleyra MCP server was found in this pass (no entry on the developer
+  hub, npm @modelcontextprotocol, or public MCP registries). This is a CANDIDATE tool surface derived
+  one-tool-per-operation from the modeled OpenAPI, to seed an MCP wrapper. api-key header auth maps to
+  a single server credential; the account SID is a required tool argument.
 server:
   name: kaleyra
   transport: http
@@ -34,3 +32,9 @@ tools:
 - name: create_video_room
   description: Create a Kaleyra Video (WebRTC) room.
   source_operation: openapi/kaleyra-openapi.yml#createVideoRoom
+deployment:
+  mode: none
+  verified: derived
+  tools: 7
+  checked: '2026-08-12'
+  source: catalog MCP census

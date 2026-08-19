@@ -1,0 +1,414 @@
+{
+  "item": [
+    {
+      "id": "e8cc81e0-0448-468d-abb7-ce398f555db7",
+      "name": "Verify",
+      "description": {
+        "content": "Generate and validate one-time passwords (OTP).",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "31ed318f-d735-4e42-8ad9-fe4fd61eb044",
+          "name": "Generate and send an OTP",
+          "request": {
+            "name": "Generate and send an OTP",
+            "description": {
+              "content": "Generates a one-time password and delivers it to the recipient over the configured Verify flow (SMS, WhatsApp, or Voice). Returns a `verify_id` used to validate the code.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                ":sid",
+                "verify"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sid",
+                  "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"to\": \"<string>\",\n  \"flow_id\": \"<string>\",\n  \"sender\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "95c05463-d9c0-4fd1-bcb1-8e090fdf508b",
+              "name": "OTP generated and dispatched.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    ":sid",
+                    "verify"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"to\": \"<string>\",\n  \"flow_id\": \"<string>\",\n  \"sender\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"verify_id\": \"string\",\n  \"status\": \"string\",\n  \"valid\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9767ffe6-7c41-4a68-9a71-7c345fe784df",
+              "name": "Missing or invalid api-key header.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    ":sid",
+                    "verify"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"to\": \"<string>\",\n  \"flow_id\": \"<string>\",\n  \"sender\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "17f0acf6-67c4-4c0c-a768-a543d13ed940",
+          "name": "Validate a submitted OTP",
+          "request": {
+            "name": "Validate a submitted OTP",
+            "description": {
+              "content": "Validates the OTP entered by the end user against the `verify_id` returned by the generate call.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                ":sid",
+                "verify",
+                "validate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "verify_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "otp",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sid",
+                  "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "545f195f-621b-4b1f-abba-0fdc7a70eec5",
+              "name": "Validation result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    ":sid",
+                    "verify",
+                    "validate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "verify_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "otp",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"verify_id\": \"string\",\n  \"status\": \"string\",\n  \"valid\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fcc8666b-b5e9-4013-bd6b-da0240cb8011",
+              "name": "Missing or invalid api-key header.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    ":sid",
+                    "verify",
+                    "validate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "verify_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "otp",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.kaleyra.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e4b604db-7894-40a6-a1fc-1b4f9b96785d",
+    "name": "Kaleyra CPaaS Messages Verify API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.\n\nContact Support:\n Name: Kaleyra Support",
+      "type": "text/plain"
+    }
+  }
+}

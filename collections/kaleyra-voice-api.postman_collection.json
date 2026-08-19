@@ -1,0 +1,298 @@
+{
+  "item": [
+    {
+      "id": "0ae319d0-9d84-41b7-b97e-6db472070e1e",
+      "name": "Voice",
+      "description": {
+        "content": "Click-to-call and outbound voice.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "39c1801c-55a9-40bf-827c-01320c15a00d",
+          "name": "Initiate a click-to-call bridged voice call",
+          "request": {
+            "name": "Initiate a click-to-call bridged voice call",
+            "description": {
+              "content": "Places an outbound call to `from`, then dials `to` and bridges the two legs over the caller ID / bridge number.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                ":sid",
+                "voice",
+                "click-to-call"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sid",
+                  "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "from",
+                  "value": "<string>",
+                  "description": "(Required) First leg number (called first)."
+                },
+                {
+                  "disabled": false,
+                  "key": "to",
+                  "value": "<string>",
+                  "description": "(Required) Second leg number, bridged after the first answers."
+                },
+                {
+                  "disabled": false,
+                  "key": "caller_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "callback_url",
+                  "value": "<uri>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "9cfb9d8f-f866-409c-a27e-15f97894f977",
+              "name": "Call initiated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    ":sid",
+                    "voice",
+                    "click-to-call"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) First leg number (called first).",
+                        "type": "text/plain"
+                      },
+                      "key": "from",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) Second leg number, bridged after the first answers.",
+                        "type": "text/plain"
+                      },
+                      "key": "to",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "caller_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "callback_url",
+                      "value": "<uri>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"status\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2da6edbe-d1e1-4d28-88ef-69fdb6666667",
+              "name": "Missing or invalid api-key header.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    ":sid",
+                    "voice",
+                    "click-to-call"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) First leg number (called first).",
+                        "type": "text/plain"
+                      },
+                      "key": "from",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) Second leg number, bridged after the first answers.",
+                        "type": "text/plain"
+                      },
+                      "key": "to",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "caller_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "callback_url",
+                      "value": "<uri>"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.kaleyra.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "59d42e6a-b6b2-4425-81bd-ddc0677c3987",
+    "name": "Kaleyra CPaaS Messages Voice API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.\n\nContact Support:\n Name: Kaleyra Support",
+      "type": "text/plain"
+    }
+  }
+}

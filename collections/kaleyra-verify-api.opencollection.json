@@ -1,0 +1,78 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Kaleyra CPaaS Messages Verify API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api-key",
+      "value": "{{api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Verify",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Generate and send an OTP",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.kaleyra.io/v1/:sid/verify",
+            "params": [
+              {
+                "name": "sid",
+                "value": "",
+                "type": "path",
+                "description": "Account SID (Security Identifier) issued by kaleyra.io."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Generates a one-time password and delivers it to the recipient over the configured Verify flow (SMS, WhatsApp, or Voice). Returns a `verify_id` used to validate the code."
+        },
+        {
+          "info": {
+            "name": "Validate a submitted OTP",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.kaleyra.io/v1/:sid/verify/validate",
+            "params": [
+              {
+                "name": "sid",
+                "value": "",
+                "type": "path",
+                "description": "Account SID (Security Identifier) issued by kaleyra.io."
+              },
+              {
+                "name": "verify_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "otp",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Validates the OTP entered by the end user against the `verify_id` returned by the generate call."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

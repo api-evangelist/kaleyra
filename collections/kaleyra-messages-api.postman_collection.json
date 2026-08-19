@@ -1,0 +1,844 @@
+{
+  "item": [
+    {
+      "id": "d19f5bac-8154-4b8e-9b72-e5edb7b5a1e3",
+      "name": "Messages",
+      "description": {
+        "content": "Send SMS, WhatsApp, and RCS messages and read their status.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3d90d23e-2e92-49ae-9ac3-8f16df1cade3",
+          "name": "Send an SMS, WhatsApp, or RCS message",
+          "request": {
+            "name": "Send an SMS, WhatsApp, or RCS message",
+            "description": {
+              "content": "Sends an outbound message on the selected channel. Use the `channel` field to select `sms`, `whatsapp`, or `rcs`. For SMS, `type` selects MKT (marketing), TXN (transactional), or OTP. Multiple recipients are comma-separated in `to`.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                ":sid",
+                "messages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sid",
+                  "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "to",
+                  "value": "<string>",
+                  "description": "(Required) Recipient MSISDN(s), comma-separated for multiple numbers."
+                },
+                {
+                  "disabled": false,
+                  "key": "sender",
+                  "value": "<string>",
+                  "description": "(Required) Registered sender ID."
+                },
+                {
+                  "disabled": false,
+                  "key": "body",
+                  "value": "<string>",
+                  "description": "Message text (SMS/RCS) or template body."
+                },
+                {
+                  "disabled": false,
+                  "key": "channel",
+                  "value": "sms"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "SMS category (India DLT-aware)."
+                },
+                {
+                  "disabled": false,
+                  "key": "template_id",
+                  "value": "<string>",
+                  "description": "Approved template ID (required for some channels/regions)."
+                },
+                {
+                  "disabled": false,
+                  "key": "callback_url",
+                  "value": "<uri>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bf7bcf67-3f3c-4365-9f16-c7221537e6d7",
+              "name": "Message accepted for delivery.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":sid",
+                    "messages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) Recipient MSISDN(s), comma-separated for multiple numbers.",
+                        "type": "text/plain"
+                      },
+                      "key": "to",
+                      "value": "919XXXXXXXXX"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) Registered sender ID.",
+                        "type": "text/plain"
+                      },
+                      "key": "sender",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Message text (SMS/RCS) or template body.",
+                        "type": "text/plain"
+                      },
+                      "key": "body",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel",
+                      "value": "sms"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "SMS category (India DLT-aware).",
+                        "type": "text/plain"
+                      },
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Approved template ID (required for some channels/regions).",
+                        "type": "text/plain"
+                      },
+                      "key": "template_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "callback_url",
+                      "value": "<uri>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"status\": \"string\",\n  \"channel\": \"string\",\n  \"recipient\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c17a4f72-17d4-4a23-8491-e9d5367ba2c7",
+              "name": "The request was malformed or missing required fields.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":sid",
+                    "messages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) Recipient MSISDN(s), comma-separated for multiple numbers.",
+                        "type": "text/plain"
+                      },
+                      "key": "to",
+                      "value": "919XXXXXXXXX"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) Registered sender ID.",
+                        "type": "text/plain"
+                      },
+                      "key": "sender",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Message text (SMS/RCS) or template body.",
+                        "type": "text/plain"
+                      },
+                      "key": "body",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel",
+                      "value": "sms"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "SMS category (India DLT-aware).",
+                        "type": "text/plain"
+                      },
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Approved template ID (required for some channels/regions).",
+                        "type": "text/plain"
+                      },
+                      "key": "template_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "callback_url",
+                      "value": "<uri>"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "292459cd-dfc7-4bda-bd68-79ba36368731",
+              "name": "Missing or invalid api-key header.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":sid",
+                    "messages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) Recipient MSISDN(s), comma-separated for multiple numbers.",
+                        "type": "text/plain"
+                      },
+                      "key": "to",
+                      "value": "919XXXXXXXXX"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) Registered sender ID.",
+                        "type": "text/plain"
+                      },
+                      "key": "sender",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Message text (SMS/RCS) or template body.",
+                        "type": "text/plain"
+                      },
+                      "key": "body",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel",
+                      "value": "sms"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "SMS category (India DLT-aware).",
+                        "type": "text/plain"
+                      },
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Approved template ID (required for some channels/regions).",
+                        "type": "text/plain"
+                      },
+                      "key": "template_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "callback_url",
+                      "value": "<uri>"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "224c4293-2728-4b1b-97fa-8f4ca6487506",
+          "name": "Get message logs / delivery status",
+          "request": {
+            "name": "Get message logs / delivery status",
+            "description": {
+              "content": "Retrieves message logs and delivery status for the account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                ":sid",
+                "messages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "from_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "to_date",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sid",
+                  "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ae7aa97e-b4ca-4b50-97fb-ac0047acfdd0",
+              "name": "A list of messages with delivery status.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":sid",
+                    "messages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_date",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"status\": \"string\",\n      \"channel\": \"string\",\n      \"recipient\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"status\": \"string\",\n      \"channel\": \"string\",\n      \"recipient\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a5c78ae6-2ce6-4460-badf-887563f8f383",
+              "name": "Missing or invalid api-key header.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":sid",
+                    "messages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_date",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "73e8361e-8478-4a00-8761-b3468098511e",
+          "name": "Get the delivery status of a single message",
+          "request": {
+            "name": "Get the delivery status of a single message",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                ":sid",
+                "messages",
+                ":message_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sid",
+                  "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "message_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "60ef8f27-d148-42fb-a1f2-f156addb503f",
+              "name": "Status of the requested message.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":sid",
+                    "messages",
+                    ":message_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "message_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"status\": \"string\",\n  \"channel\": \"string\",\n  \"recipient\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "391e950b-f98a-414b-8771-c30ca359deac",
+              "name": "Missing or invalid api-key header.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":sid",
+                    "messages",
+                    ":message_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sid",
+                      "description": "(Required) Account SID (Security Identifier) issued by kaleyra.io."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "message_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.kaleyra.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "66675666-028f-4d2a-8ef1-7561fb9a7b44",
+    "name": "Kaleyra CPaaS Messages API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.\n\nContact Support:\n Name: Kaleyra Support",
+      "type": "text/plain"
+    }
+  }
+}
