@@ -70,6 +70,8 @@ apis:
   humanURL: https://developers.kaleyra.io/docs/sms-api
   baseURL: https://api.kaleyra.io
   tags:
+  - Message
+  tags_raw:
   - Messages
   properties:
   - type: OpenAPI
