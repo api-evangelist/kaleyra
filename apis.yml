@@ -7,6 +7,18 @@ description: Kaleyra is a global omnichannel CPaaS provider (a Tata Communicatio
   and Video communication APIs. Its REST APIs authenticate with an api-key header,
   address accounts by SID in the path, and are served from region-specific hosts for
   India, APAC, and EU data residency.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: self-serve
