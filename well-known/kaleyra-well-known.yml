@@ -1,26 +1,28 @@
 generated: '2026-07-17'
 method: searched
 source: live probes of /.well-known/* on Kaleyra API + developer hosts
-notes: >-
-  No /.well-known discovery documents were served by the Kaleyra API hosts in
-  this pass. The API uses static api-key header auth (no OAuth/OIDC), so no
-  openid-configuration or oauth-authorization-server is expected. The corporate
-  www.kaleyra.com/.well-known/security.txt redirects (301) to the Tata
-  Communications site rather than serving an RFC 9116 policy.
+notes: No /.well-known discovery documents were served by the Kaleyra API hosts in this pass. The API
+  uses static api-key header auth (no OAuth/OIDC), so no openid-configuration or oauth-authorization-server
+  is expected. The corporate www.kaleyra.com/.well-known/security.txt redirects (301) to the Tata Communications
+  site rather than serving an RFC 9116 policy.
 host: https://api.kaleyra.io
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/security.txt
-  host: https://developers.kaleyra.io
-  status: 404
-- path: /.well-known/security.txt
-  host: https://www.kaleyra.com
-  status: 301
-  redirect: https://www.tatacommunications.com/kaleyra
+hosts:
+- host: https://api.kaleyra.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/security.txt
+    status: 301
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.

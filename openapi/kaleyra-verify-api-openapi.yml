@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Kaleyra CPaaS Messages Verify API
+  title: Kaleyra CPaaS Verify API
   description: Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.
   termsOfService: https://www.kaleyra.com/terms-conditions/
   contact:
@@ -75,6 +75,14 @@ paths:
         '401':
           $ref: '#/components/responses/Unauthorized'
 components:
+  parameters:
+    Sid:
+      name: sid
+      in: path
+      required: true
+      description: Account SID (Security Identifier) issued by kaleyra.io.
+      schema:
+        type: string
   schemas:
     Error:
       type: object
@@ -105,14 +113,6 @@ components:
           description: Configured Verify flow / template ID.
         sender:
           type: string
-  parameters:
-    Sid:
-      name: sid
-      in: path
-      required: true
-      description: Account SID (Security Identifier) issued by kaleyra.io.
-      schema:
-        type: string
   responses:
     Unauthorized:
       description: Missing or invalid api-key header.

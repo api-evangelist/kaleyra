@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Kaleyra CPaaS Messages Video API
+  title: Kaleyra CPaaS Video API
   description: Kaleyra (a Tata Communications company) omnichannel CPaaS REST API for SMS, WhatsApp, RCS, Voice, and Verify (OTP), plus the Kaleyra Video REST API. Requests authenticate with the `api-key` header and address an account by its SID in the URL path. Regional hosts serve India, APAC/SEA, and EU data residency.
   termsOfService: https://www.kaleyra.com/terms-conditions/
   contact:
@@ -46,18 +46,6 @@ paths:
           $ref: '#/components/responses/Unauthorized'
 components:
   schemas:
-    RoomResponse:
-      type: object
-      properties:
-        room_id:
-          type: string
-        room_url:
-          type: string
-          format: uri
-        participants:
-          type: array
-          items:
-            type: string
     CreateRoomRequest:
       type: object
       required:
@@ -84,6 +72,18 @@ components:
           type: string
         message:
           type: string
+    RoomResponse:
+      type: object
+      properties:
+        room_id:
+          type: string
+        room_url:
+          type: string
+          format: uri
+        participants:
+          type: array
+          items:
+            type: string
   responses:
     Unauthorized:
       description: Missing or invalid api-key header.
