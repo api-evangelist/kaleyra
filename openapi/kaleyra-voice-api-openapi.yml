@@ -47,14 +47,6 @@ paths:
         '401':
           $ref: '#/components/responses/Unauthorized'
 components:
-  parameters:
-    Sid:
-      name: sid
-      in: path
-      required: true
-      description: Account SID (Security Identifier) issued by kaleyra.io.
-      schema:
-        type: string
   schemas:
     ClickToCallRequest:
       type: object
@@ -87,6 +79,14 @@ components:
           type: string
         status:
           type: string
+  parameters:
+    Sid:
+      name: sid
+      in: path
+      required: true
+      description: Account SID (Security Identifier) issued by kaleyra.io.
+      schema:
+        type: string
   responses:
     Unauthorized:
       description: Missing or invalid api-key header.
