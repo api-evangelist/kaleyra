@@ -45,13 +45,6 @@ paths:
         '401':
           $ref: '#/components/responses/Unauthorized'
 components:
-  responses:
-    Unauthorized:
-      description: Missing or invalid api-key header.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   schemas:
     Error:
       type: object
@@ -60,18 +53,6 @@ components:
           type: string
         message:
           type: string
-    RoomResponse:
-      type: object
-      properties:
-        room_id:
-          type: string
-        room_url:
-          type: string
-          format: uri
-        participants:
-          type: array
-          items:
-            type: string
     CreateRoomRequest:
       type: object
       required:
@@ -91,6 +72,25 @@ components:
           type: array
           items:
             type: string
+    RoomResponse:
+      type: object
+      properties:
+        room_id:
+          type: string
+        room_url:
+          type: string
+          format: uri
+        participants:
+          type: array
+          items:
+            type: string
+  responses:
+    Unauthorized:
+      description: Missing or invalid api-key header.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     apiKeyAuth:
       type: apiKey
