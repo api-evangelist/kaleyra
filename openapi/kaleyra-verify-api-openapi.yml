@@ -75,6 +75,21 @@ paths:
         '401':
           $ref: '#/components/responses/Unauthorized'
 components:
+  parameters:
+    Sid:
+      name: sid
+      in: path
+      required: true
+      description: Account SID (Security Identifier) issued by kaleyra.io.
+      schema:
+        type: string
+  responses:
+    Unauthorized:
+      description: Missing or invalid api-key header.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   schemas:
     GenerateOtpRequest:
       type: object
@@ -89,6 +104,13 @@ components:
           description: Configured Verify flow / template ID.
         sender:
           type: string
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
     VerifyResponse:
       type: object
       properties:
@@ -98,28 +120,6 @@ components:
           type: string
         valid:
           type: boolean
-    Error:
-      type: object
-      properties:
-        error:
-          type: string
-        message:
-          type: string
-  responses:
-    Unauthorized:
-      description: Missing or invalid api-key header.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-  parameters:
-    Sid:
-      name: sid
-      in: path
-      required: true
-      description: Account SID (Security Identifier) issued by kaleyra.io.
-      schema:
-        type: string
   securitySchemes:
     apiKeyAuth:
       type: apiKey
