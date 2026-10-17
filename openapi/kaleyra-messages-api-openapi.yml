@@ -110,27 +110,6 @@ paths:
         '401':
           $ref: '#/components/responses/Unauthorized'
 components:
-  responses:
-    BadRequest:
-      description: The request was malformed or missing required fields.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-    Unauthorized:
-      description: Missing or invalid api-key header.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-  parameters:
-    Sid:
-      name: sid
-      in: path
-      required: true
-      description: Account SID (Security Identifier) issued by kaleyra.io.
-      schema:
-        type: string
   schemas:
     MessageLogResponse:
       type: object
@@ -145,17 +124,6 @@ components:
         error:
           type: string
         message:
-          type: string
-    MessageResponse:
-      type: object
-      properties:
-        id:
-          type: string
-        status:
-          type: string
-        channel:
-          type: string
-        recipient:
           type: string
     SendMessageRequest:
       type: object
@@ -193,6 +161,38 @@ components:
         callback_url:
           type: string
           format: uri
+    MessageResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+        channel:
+          type: string
+        recipient:
+          type: string
+  parameters:
+    Sid:
+      name: sid
+      in: path
+      required: true
+      description: Account SID (Security Identifier) issued by kaleyra.io.
+      schema:
+        type: string
+  responses:
+    Unauthorized:
+      description: Missing or invalid api-key header.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    BadRequest:
+      description: The request was malformed or missing required fields.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     apiKeyAuth:
       type: apiKey
