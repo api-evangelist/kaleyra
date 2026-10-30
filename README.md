@@ -1,4 +1,4 @@
-# Kaleyra (kaleyra)
+# Kaleyra
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,191 +66,156 @@
 
 Kaleyra is a global omnichannel CPaaS provider (a Tata Communications company since October 2023) offering SMS, WhatsApp, RCS, Voice, Email, Verify (OTP), and Video communication APIs. Its REST APIs authenticate with an api-key header, address accounts by SID in the path, and are served from region-specific hosts for India, APAC, and EU data residency.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/apis.yml)
+**Areas:** CPaaS · Messaging · SMS · WhatsApp · Voice · OTP · India
 
-## Tags
+## Kaleyra on APIs.io
 
-- CPaaS
-- Messaging
-- SMS
-- WhatsApp
-- Voice
-- OTP
-- India
+Everything profiled for Kaleyra is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/kaleyra/](https://apis.io/providers/kaleyra/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (6)
 
-- **Created:** 2026-07-17
-- **Modified:** 2026-07-17
+- [Kaleyra Email API](https://apis.io/apis/kaleyra/kaleyra-email-api/) — Send single and batch transactional email (Email API v2) with domain management, templates, webhooks, and delivery statistics.
+- [Kaleyra Platform API](https://apis.io/apis/kaleyra/kaleyra-platform-api/) — Account-level platform operations - subaccount management, billing, numbers provisioning, callback profiles, consent, and blocklist management.
+- [Kaleyra Messages API](https://apis.io/apis/kaleyra/kaleyra-messages-api/) — Send SMS, WhatsApp, and RCS messages and read their status.
+- [Kaleyra Verify API](https://apis.io/apis/kaleyra/kaleyra-verify-api/) — Generate and validate one-time passwords (OTP).
+- [Kaleyra Video API](https://apis.io/apis/kaleyra/kaleyra-video-api/) — Kaleyra Video (WebRTC) room orchestration via REST.
+- [Kaleyra Voice API](https://apis.io/apis/kaleyra/kaleyra-voice-api/) — Click-to-call and outbound voice.
 
-## APIs
+### Published properties
 
-### Kaleyra SMS API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Send single and bulk SMS (MKT/TXN/OTP) via POST /v2/{sid}/messages, manage sender IDs and templates, and pull delivery status and logs. India DLT entity/template fields are supported.
+#### AsyncAPI (1)
 
-- **Human URL:** [https://developers.kaleyra.io/docs/sms-api](https://developers.kaleyra.io/docs/sms-api)
-- **Base URL:** `https://api.kaleyra.io`
+Event-driven and webhook contracts.
 
-#### Tags
+- [Kaleyra Webhooks](https://apis.io/asyncapis/kaleyra/kaleyra-webhooks/)
 
-- SMS
-- Messaging
-- OTP
+#### MCP servers (1)
 
-#### Properties
+Model Context Protocol servers that expose the API to agents.
 
-- [Documentation](https://developers.kaleyra.io/docs/sms-api)
-- [API Reference](https://developers.kaleyra.io/reference/single-sms-api)
-- [OpenAPI](openapi/kaleyra-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/kaleyra.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [kaleyra](https://apis.io/servers/kaleyra/kaleyra/)
 
-### Kaleyra WhatsApp API
+#### Agentic access (1)
 
-Send WhatsApp Business messages (text, media, interactive, template) over the WhatsApp API V2, with number registration, template management, group management, and WhatsApp Payment support.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- **Human URL:** [https://developers.kaleyra.io/docs/whatsapp-api-v2-overview](https://developers.kaleyra.io/docs/whatsapp-api-v2-overview)
-- **Base URL:** `https://api.kaleyra.io`
+- [Kaleyra Agentic Access](https://apis.io/agentic-access/kaleyra/kaleyra-agentic-access/)
 
-#### Tags
+#### Collections (8)
 
-- WhatsApp
-- Messaging
-- Templates
+Postman and Open Collection request collections.
 
-#### Properties
+- [Kaleyra CPaaS Messages API](https://apis.io/collections/kaleyra/open-kaleyra-messages-api/)
+- [Kaleyra CPaaS Messages Verify API](https://apis.io/collections/kaleyra/open-kaleyra-verify-api/)
+- [Kaleyra CPaaS Messages Video API](https://apis.io/collections/kaleyra/open-kaleyra-video-api/)
+- [Kaleyra CPaaS Messages Voice API](https://apis.io/collections/kaleyra/open-kaleyra-voice-api/)
+- [Kaleyra CPaaS Messages API](https://apis.io/collections/kaleyra/postman-kaleyra-messages-api/)
+- [Kaleyra CPaaS Messages Verify API](https://apis.io/collections/kaleyra/postman-kaleyra-verify-api/)
+- [Kaleyra CPaaS Messages Video API](https://apis.io/collections/kaleyra/postman-kaleyra-video-api/)
+- [Kaleyra CPaaS Messages Voice API](https://apis.io/collections/kaleyra/postman-kaleyra-voice-api/)
 
-- [Documentation](https://developers.kaleyra.io/docs/whatsapp-api-v2-overview)
-- [API Reference](https://developers.kaleyra.io/reference/whatsapp-messages-api-v2-overview)
-- [OpenAPI](openapi/kaleyra-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/kaleyra.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+#### Overlays (1)
 
-### Kaleyra RCS API
+OpenAPI overlays, including conversational phrasing for each operation.
 
-Send Rich Communication Services (RCS) messages, manage brands and agents, handle templates, and perform device capability lookups.
+- [Kaleyra Overlay](https://apis.io/overlays/kaleyra/kaleyra-overlay/)
 
-- **Human URL:** [https://developers.kaleyra.io/docs/rcs-overview](https://developers.kaleyra.io/docs/rcs-overview)
-- **Base URL:** `https://api.kaleyra.io`
+#### Security (4)
 
-#### Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- RCS
-- Messaging
-- Rich Messaging
+- [Kaleyra Authentication](https://apis.io/security/kaleyra/kaleyra-authentication/)
+- [Kaleyra Domain Security](https://apis.io/security/kaleyra/kaleyra-domain-security/)
+- [Kaleyra Trust Center](https://apis.io/security/kaleyra/kaleyra-trust-center/)
+- [Kaleyra Vulnerability Disclosure](https://apis.io/security/kaleyra/kaleyra-vulnerability-disclosure/)
 
-#### Properties
+#### Plans and pricing (1)
 
-- [Documentation](https://developers.kaleyra.io/docs/rcs-overview)
-- [OpenAPI](openapi/kaleyra-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/kaleyra.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+Published plans, tiers and prices.
 
-### Kaleyra Voice API
+- [Kaleyra Plans Pricing](https://apis.io/plans/kaleyra/kaleyra-plans-pricing/)
 
-Click-to-call bridging via POST /v1/{sid}/voice/click-to-call, outbound calling campaigns, call log pull, and call recording extraction.
+#### Rate limits (1)
 
-- **Human URL:** [https://developers.kaleyra.io/docs/voice-api](https://developers.kaleyra.io/docs/voice-api)
-- **Base URL:** `https://api.kaleyra.io`
+Published request limits.
 
-#### Tags
+- [Kaleyra Rate Limits](https://apis.io/rate-limits/kaleyra/kaleyra-rate-limits/)
 
-- Voice
-- Click to Call
-- IVR
+#### FinOps (1)
 
-#### Properties
+What the API costs to run, by operation.
 
-- [Documentation](https://developers.kaleyra.io/docs/voice-api)
-- [API Reference](https://developers.kaleyra.io/docs/click-to-call-api)
-- [OpenAPI](openapi/kaleyra-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/kaleyra.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Kaleyra Finops](https://apis.io/finops/kaleyra/kaleyra-finops/)
 
-### Kaleyra Verify (OTP) API
+## Where to find this API
 
-Generate and validate one-time passwords via POST /v1/{sid}/verify, with configurable multichannel verification flows (SMS, WhatsApp, Voice) and Verify templates.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- **Human URL:** [https://developers.kaleyra.io/docs/generating-otp](https://developers.kaleyra.io/docs/generating-otp)
-- **Base URL:** `https://api.kaleyra.io`
-
-#### Tags
-
-- OTP
-- Verify
-- Two Factor
-
-#### Properties
-
-- [Documentation](https://developers.kaleyra.io/docs/generating-otp)
-- [OpenAPI](openapi/kaleyra-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/kaleyra.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-
-### Kaleyra Email API
-
-Send single and batch transactional email (Email API v2) with domain management, templates, webhooks, and delivery statistics.
-
-- **Human URL:** [https://developers.kaleyra.io/reference/email-api-v2-overview](https://developers.kaleyra.io/reference/email-api-v2-overview)
-- **Base URL:** `https://api.kaleyra.io`
-
-#### Tags
-
-- Email
-- Transactional Email
-
-#### Properties
-
-- [Documentation](https://developers.kaleyra.io/reference/email-api-v2-overview)
-- [API Reference](https://developers.kaleyra.io/reference/email-api-v2-send-a-single-email)
-
-### Kaleyra Video API
-
-Create and orchestrate WebRTC video rooms via the Kaleyra Video REST API (POST /v2/rooms), plus recording, transcription, e-signature, and Web/Android/iOS SDK integration.
-
-- **Human URL:** [https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api](https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api)
-- **Base URL:** `https://api.kaleyra.io`
-
-#### Tags
-
-- Video
-- WebRTC
-- Conferencing
-
-#### Properties
-
-- [Documentation](https://developers.kaleyra.io/reference/video-make-a-video-call-with-rest-api)
-- [API Reference](https://developers.kaleyra.io/reference/video-v2-roomcall-postl)
-- [OpenAPI](openapi/kaleyra-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/kaleyra.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-
-### Kaleyra Platform API
-
-Account-level platform operations - subaccount management, billing, numbers provisioning, callback profiles, consent, and blocklist management.
-
-- **Human URL:** [https://developers.kaleyra.io/reference/api-reference-overview](https://developers.kaleyra.io/reference/api-reference-overview)
-- **Base URL:** `https://api.kaleyra.io`
-
-#### Tags
-
-- Platform
-- Subaccounts
-- Billing
-
-#### Properties
-
-- [Documentation](https://developers.kaleyra.io/reference/api-reference-overview)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/kaleyra)
 - [Website](https://www.kaleyra.com/)
 - [Documentation](https://developers.kaleyra.io/)
-- [Plans](plans/kaleyra-plans-pricing.yml)
-- [Rate Limits](rate-limits/kaleyra-rate-limits.yml)
-- [Fin Ops](finops/kaleyra-finops.yml)
+- [Getting started](https://developers.kaleyra.io/docs/kcloud-getting-started)
+- [API reference](https://developers.kaleyra.io/reference/api-reference-overview)
+- [Support](https://support.kaleyra.com/)
+- [Blog](https://www.kaleyra.com/blog/)
+- [Security](https://www.kaleyra.com/security/)
+- [Terms of service](https://www.kaleyra.com/terms-conditions/)
+- [Privacy policy](https://www.kaleyra.com/privacy-policy/)
+- [GitHub](https://github.com/kaleyra)
+- [Status](https://status.kaleyra.io/)
 
-## Acquisition
+## API Evangelist rating
 
-Kaleyra, Inc. was acquired by **Tata Communications** in an all-cash transaction (~US$100M) that completed on **October 5, 2023**. Kaleyra now operates as a Tata Communications company; the kaleyra.io developer platform and APIs remain in operation.
+**Kin Score 43.3** — developing · rubric 0.25.0 · scored 2026-10-23
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 56.7 |
+| Contract governance | 4.5 |
+| Operational transparency | 50.0 |
+| Developer ergonomics | 54.2 |
+| Access clarity | 21.1 |
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Agent readiness 26.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 23.3** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/kaleyra/](https://apis.io/providers/kaleyra/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Kaleyra: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/kaleyra/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
